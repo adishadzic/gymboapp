@@ -13,8 +13,9 @@
 -weekly report od strane aplikacije
 -pop up notification 30 min prije treninga
 
-Link na javni prototip: https://www.figma.com/file/kUk7px1A5A6TjWzzWldV35/Gymbo?node-id=0%3A1
+-Link na javni prototip: https://www.figma.com/file/kUk7px1A5A6TjWzzWldV35/Gymbo?node-id=0%3A1
 
+-Zaduženja - Adis: Napraviti "Choose a workout" i stranice svakog treninga te "Workout finished" i "Home" kartice
 # gymbo
 
 ## Project setup
