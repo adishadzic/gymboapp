@@ -1,6 +1,8 @@
-Naziv aplikacije: Gymbo
-Sastav tima: Alma Smajić, Adis Hadzic, Mihael Cukon
-Fakultet informatike u Puli (https://fipu.unipu.hr/)
+-Naziv aplikacije: Gymbo
+
+-Sastav tima: Alma Smajić, Adis Hadzic, Mihael Cukon
+
+-Fakultet informatike u Puli (https://fipu.unipu.hr/)
 
 # gymbo
 
