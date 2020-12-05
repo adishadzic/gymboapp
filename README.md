@@ -19,10 +19,10 @@
 
 -Link na javni prototip: https://www.figma.com/file/kUk7px1A5A6TjWzzWldV35/Gymbo?node-id=0%3A1
 
--Zaduženja 
-           - Adis: Napraviti "Choose a workout" i stranice svakog treninga te "Workout finished" i "Home" kartice
-           - Mihael: Napraviti "Splashscreen", "Create account", "Registration", "Login", "Choose plan"
-           - Alma: Napraviti "Parameters", pripadajuće modale uz njih, snimke vježbi i popis istih, "Loading screen" 
+-Zaduženja:
+ Adis: Napraviti "Choose a workout" i stranice svakog treninga te "Workout finished" i "Home" kartice
+ Mihael: Napraviti "Splashscreen", "Create account", "Registration", "Login", "Choose plan"
+ Alma: Napraviti "Parameters", pripadajuće modale uz njih, snimke vježbi i popis istih, "Loading screen" 
 
 ## Project setup
 ```
