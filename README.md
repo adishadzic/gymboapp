@@ -4,8 +4,6 @@
 
 -Fakultet informatike u Puli (https://fipu.unipu.hr/)
 
--sanfas
-
 # gymbo
 
 ## Project setup
