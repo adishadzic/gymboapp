@@ -29,3 +29,9 @@
 
   </div>
 </template>
+
+<style>
+h1{
+  margin-top: 20px;
+}
+</style>
