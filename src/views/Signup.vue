@@ -30,6 +30,35 @@
   </div>
 </template>
 
+<script>
+import { firebase } from '@/firebase';
+
+export default {
+  name: 'Signup',
+  data() {
+    return {
+      username: '',
+      password: '',
+      passwordConfirm: '',
+    };
+  },
+  methods: {
+    signup() {
+      firebase
+      .auth()
+      .createUserWithEmailAndPassword(this.username, this.password)
+      .then(function() {
+            console.log('Uspješna registracija');
+        }).catch(function() {
+          console.error('Došlo je do greške, error')
+        });
+      console.log('Nastavak');
+    },
+  },
+
+}
+</script>
+
 <style>
 h1{
   margin-top: 20px;
