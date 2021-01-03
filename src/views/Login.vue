@@ -7,12 +7,12 @@
         <div class="col-sm">
           <form>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email address</label>
-              <input type="email" 
+              <label for="exampleInputUsername">Username</label>
+              <input type="username" 
                      class="form-control"
-                     id="exampleInputEmail1" 
+                     id="exampleInputUsername" 
                      aria-describedby="emailHelp" 
-                     placeholder="Enter email" />
+                     placeholder="Enter username" />
             </div>
             <div class="form-group">
               <label for="exampleInputPassword1">Password</label>
