@@ -43,6 +43,10 @@
 .navbar{
   background-color: black;
 }
+
+.navbar{
+  background-color: black;
+}
 #nav {
   padding: 30px;
   a {
