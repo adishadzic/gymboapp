@@ -7,8 +7,16 @@
         <div class="col-sm">
           <form>
             <div class="form-group">
+              <label for="emailField">Full name</label>
+              <input type="fullName" v-model="username" class="form-control" id="fullNameField" aria-describedby="fullNameHelp" placeholder="e.g. Name Surname">
+            </div>
+            <div class="form-group">
               <label for="emailField">Email address</label>
               <input type="email" v-model="username" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email">
+            </div>
+            <div class="form-group">
+              <label for="emailField">Username</label>
+              <input type="username" v-model="username" class="form-control" id="usernameField" aria-describedby="usernameHelp" placeholder="e.g. anyNicknameInTheWorld">
             </div>
             <div class="form-group">
               <label for="passwordField">Password</label>
