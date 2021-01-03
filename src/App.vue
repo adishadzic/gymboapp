@@ -13,7 +13,7 @@
             <router-link to="/login" class="nav-link">Login</router-link>
           </li>
         <li class="nav-item">
-          <router-link to="/signup" class="nav-link">Signup</router-link>
+          <router-link to="/register" class="nav-link">Register</router-link>
         </li>
       </ul>
     </div>
@@ -34,10 +34,12 @@
   color: white;
   background-color: black;
   height:100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url('./assets/background.jpg');
+  background-size: cover;
 }
 
 .navbar{
-  background-color: black;
+  background-color:linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
 }
 
 #nav {
