@@ -19,7 +19,7 @@
     </div>
     
   </nav>
-  <div class="container">
+    <div class="container">
       <router-view/>
     </div>
   </div>
@@ -42,9 +42,15 @@
   background-color:linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
 }
 
+.navbar{
+  background-color: black;
+}
+
+.navbar{
+  background-color: black;
+}
 #nav {
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;

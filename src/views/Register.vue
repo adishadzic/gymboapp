@@ -30,7 +30,6 @@
 
 <script>
 import { firebase } from '@/firebase';
-
 export default {
   name: 'Register',
   data() {
@@ -53,7 +52,6 @@ export default {
       console.log('Nastavak');
     },
   },
-
 }
 </script>
 
