@@ -8,11 +8,11 @@
           <form>
             <div class="form-group">
               <label for="emailField">Full name</label>
-              <input type="fullName" v-model="username" class="form-control" id="fullNameField" aria-describedby="fullNameHelp" placeholder="e.g. Name Surname">
+              <input type="fullName" v-model="fullName" class="form-control" id="fullNameField" aria-describedby="fullNameHelp" placeholder="e.g. Name Surname">
             </div>
             <div class="form-group">
               <label for="emailField">Email address</label>
-              <input type="email" v-model="username" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email">
+              <input type="email" v-model="email" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email">
             </div>
             <div class="form-group">
               <label for="emailField">Username</label>
@@ -55,9 +55,9 @@ export default {
       .auth()
       .createUserWithEmailAndPassword(this.username, this.password) //pokusaj nac neki uvjet prijave da koristi sve nase podatke
       .then(function() {
-            console.log('Uspješna registracija');
+            alert('Uspješna registracija');
         }).catch(function() {
-          console.error('Došlo je do greške, error')
+          alert('Došlo je do greške, error');
         });
       console.log('Nastavak');
     },
