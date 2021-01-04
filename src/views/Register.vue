@@ -24,7 +24,8 @@
             </div>
             <div class="form-group">
               <label for="confirmPasswordField">Confirm Password</label>
-              <input type="password" v-model="passwordConfirm" class="form-control" id="confirmPasswordField" placeholder="Confirm password">
+              <input type="password" v-model="passwordConfirm" class="form-control" 
+              id="confirmPasswordField" placeholder="Confirm password">
             </div>
             <button type="button" @click="register" class="btn btn-primary mt-5">Proceed</button>
           </form>
