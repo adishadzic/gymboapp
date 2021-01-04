@@ -43,6 +43,8 @@ export default {
   name: 'Register',
   data() {
     return {
+      fullName: '',
+      email: '',
       username: '',
       password: '',
       passwordConfirm: '',
@@ -52,7 +54,7 @@ export default {
     register() {
       firebase
       .auth()
-      .createUserWithEmailAndPassword(this.username, this.password)
+      .createUserWithEmailAndPassword(this.username, this.password) //pokusaj nac neki uvjet prijave da koristi sve nase podatke
       .then(function() {
             console.log('Uspješna registracija');
         }).catch(function() {
