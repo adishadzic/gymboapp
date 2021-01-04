@@ -2,7 +2,7 @@
 <div id="app">
     <nav class="navbar navbar-expand-lg navbar-dark">
       <router-link to="/" class="navbar-brand">
-        <img src="@/assets/gymbo_logo.jpeg" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
+        <img src="@/assets/gymbo_logo.png" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
       </router-link>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -42,13 +42,6 @@
   background-color:linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
 }
 
-.navbar{
-  background-color: black;
-}
-
-.navbar{
-  background-color: black;
-}
 #nav {
   padding: 30px;
   a {
