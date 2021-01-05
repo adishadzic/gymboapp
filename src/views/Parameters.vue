@@ -1,13 +1,8 @@
 <template>
   <div>
     <b-button @click="show=true" variant="primary">Show Modal</b-button>
+    <b-modal v-model="show" title="Getting started">
 
-    <b-modal
-      v-model="show"
-      title="Getting started"
-      :footer-bg-variant="footerBgVariant"
-      :footer-text-variant="footerTextVariant"
-    >
       <b-container fluid>
         <b-row class="mb-1 text-center">
           <b-col cols="3"></b-col>
@@ -15,7 +10,7 @@
         </b-row>
 
         <b-row class="mb-1">
-          <b-col cols="3">Age</b-col>
+        <b-col cols="3">Age</b-col>
           <b-col>
             <b-form inline>
             <label class="sr-only" for="inline-form-input-age">Age</label>
@@ -24,11 +19,12 @@
                   class="mb-2 mr-sm-2 mb-sm-0"
                   placeholder="Enter your age"
                  ></b-form-input>
+            </b-form>
           </b-col>
         </b-row>
 
         <b-row class="mb-1">
-          <b-col cols="3">Height</b-col>
+        <b-col cols="3">Height</b-col>
          <b-col>
             <b-form inline>
             <label class="sr-only" for="inline-form-input-height">Height</label>
@@ -37,6 +33,7 @@
                   class="mb-2 mr-sm-2 mb-sm-0"
                   placeholder="Enter your height"
                  ></b-form-input>
+            </b-form>
           </b-col>
         </b-row>
 
@@ -50,6 +47,7 @@
                   class="mb-2 mr-sm-2 mb-sm-0"
                   placeholder="Enter your weight"
                  ></b-form-input>
+            </b-form>
           </b-col>
         </b-row>
 
@@ -57,7 +55,6 @@
           <b-col cols="3">Goal</b-col>
           <b-col>
             <b-form-select
-              v-model="footerBgVariant"
               :options="goals"
             ></b-form-select>
           </b-col>
@@ -67,8 +64,7 @@
           <b-col cols="3">Level</b-col>
           <b-col>
             <b-form-select
-              v-model="footerBgVariant"
-              :options="level"
+              :options="levels"
             ></b-form-select>
           </b-col>
         </b-row>
@@ -83,7 +79,7 @@
             class="float-right"
             @click="show=false"
           >
-            Close
+            Lace up!
           </b-button>
         </div>
       </template>
@@ -97,9 +93,7 @@
       return {
         show: false,
         goals: ['Maintain healthy lifestyle', 'Lose weight', 'Put on muscle mass'],
-        levels: ['primary', 'secondary', 'success', 'warning', 'danger', 'info', 'light', 'dark'],
-        footerBgVariant: 'warning',
-        footerTextVariant: 'dark'
+        levels: ['Beginner', 'Advanced', 'Intermediate'],
       }
     }
   }

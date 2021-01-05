@@ -18,6 +18,9 @@
         <li class="nav-item">
           <router-link to="/choose" class="nav-link">Choose</router-link>
         </li>
+         <li class="nav-item">
+          <router-link to="/parameters" class="nav-link">Parameters</router-link>
+        </li>
       </ul>
     </div>
     
