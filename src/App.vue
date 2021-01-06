@@ -9,10 +9,10 @@
       </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li v-if="!store.currentUser" class="nav-item">
             <router-link to="/login" class="nav-link">Login</router-link>
           </li>
-        <li class="nav-item">
+        <li v-if="!store.currentUser" class="nav-item">
           <router-link to="/register" class="nav-link">Register</router-link>
         </li>
         <li class="nav-item">
@@ -20,6 +20,9 @@
         </li>
          <li class="nav-item">
           <router-link to="/parameters" class="nav-link">Parameters</router-link>
+        </li>
+         <li v-if="store.currentUser" class="nav-item">
+          <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
         </li>
       </ul>
     </div>
@@ -30,6 +33,51 @@
     </div>
   </div>
 </template>
+
+<script>
+import store from "@/store";
+import { firebase } from "@/firebase";
+import router from "@/router";
+
+firebase.auth().onAuthStateChanged((user) =>  {
+  const currentRoute = router.currentRoute;
+
+  if (user) {
+    // User is signed in.
+    console.log("****", user.email);
+    store.currentUser = user.email;
+  } else {
+    // User is not signed in.
+    console.log("***", "no user");
+    store.currentUser = null;
+
+    //if ( currentRoute.meta.needsUser) {
+    //  router.push( { name: "login" }); }  //ovaj if je za home i korisnika
+    
+  }
+});
+
+export default {
+  name: "app",
+  data() {
+    return {
+      store,
+    };
+  },
+
+  methods: {
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.$router.push({ name: "Login" });
+        });
+    }
+  }
+  
+}
+</script>
 
 <style lang="scss">
 #app {
