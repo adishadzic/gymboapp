@@ -9,15 +9,15 @@
             
             
             <div class="form-group">
-              <label for="emailField">Username</label>
-              <input type="username" v-model="username" class="form-control" id="usernameField" aria-describedby="usernameHelp" placeholder="e.g. anyNicknameInTheWorld">
+              <label for="emailField">Email</label>
+              <input type="username" v-model="username" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter your email here...">
             </div>
             <div class="form-group">
               <label for="passwordField">Password</label>
               <input type="password" v-model="password" class="form-control" id="passwordField" placeholder="Password">
             </div>
             <div class="form-group">
-              <label for="passwordField">Confrim Password</label>
+              <label for="passwordField">Confirm Password</label>
               <input type="password" v-model="confirmPassword" class="form-control" id="passwordField" placeholder="Password">
             </div>
             

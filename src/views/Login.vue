@@ -7,8 +7,8 @@
         <div class="col-sm">
           <form>
             <div class="form-group">
-              <label for="exampleInputUsername">Username</label>
-              <input type="username"
+              <label for="exampleInputUsername">Email</label>
+              <input type="email"
                      v-model="username" 
                      class="form-control"
                      id="exampleInputUsername" 
