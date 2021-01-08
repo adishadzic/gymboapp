@@ -45,6 +45,31 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/Parameters.vue')
   },
+  {
+    path: '/mbeginner',
+    name: 'MBeginner',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/MBeginner.vue')
+  },
+  {
+    path: '/madvanced',
+    name: 'MAdvanced',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/MAdvanced.vue')
+  },
+  {
+    path: '/mintermediate',
+    name: 'MIntermediate',
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () => import(/* webpackChunkName: "about" */ '../views/MIntermediate.vue')
+  },
+
 ]
 
 const router = new VueRouter({
