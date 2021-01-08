@@ -56,6 +56,7 @@ export default {
             })
             .catch(function(e) {
               console.error( "greska", e);
+              alert("Korisnik ne postoji");
             });
       }
     }

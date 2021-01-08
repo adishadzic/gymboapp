@@ -14,6 +14,6 @@ import "firebase/firestore";
   firebase.initializeApp(firebaseConfig);
   export{firebase};
 
-  let db = firebase.firebase();
+  
 
  

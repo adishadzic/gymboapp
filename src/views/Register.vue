@@ -6,14 +6,8 @@
         <div class="col-sm"></div>
         <div class="col-sm">
           <form>
-            <div class="form-group">
-              <label for="emailField">Full name</label>
-              <input type="fullName" v-model="fullName" class="form-control" id="fullNameField" aria-describedby="fullNameHelp" placeholder="e.g. Name Surname">
-            </div>
-            <div class="form-group">
-              <label for="emailField">Email address</label>
-              <input type="email" v-model="email" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter email">
-            </div>
+            
+            
             <div class="form-group">
               <label for="emailField">Username</label>
               <input type="username" v-model="username" class="form-control" id="usernameField" aria-describedby="usernameHelp" placeholder="e.g. anyNicknameInTheWorld">
@@ -23,10 +17,10 @@
               <input type="password" v-model="password" class="form-control" id="passwordField" placeholder="Password">
             </div>
             <div class="form-group">
-              <label for="confirmPasswordField">Confirm Password</label>
-              <input type="password" v-model="passwordConfirm" class="form-control" 
-              id="confirmPasswordField" placeholder="Confirm password">
+              <label for="passwordField">Confrim Password</label>
+              <input type="password" v-model="confirmPassword" class="form-control" id="passwordField" placeholder="Password">
             </div>
+            
             <button type="button" @click="register" class="btn btn-primary mt-5">Proceed</button>
           </form>
         </div>
@@ -42,23 +36,23 @@ import { firebase } from '@/firebase';
 export default {
   name: 'Register',
   data() {
-    return {
-      fullName: '',
+    return {     
       email: '',
-      username: '',
-      password: '',
-      passwordConfirm: '',
+      password: '',      
     };
   },
   methods: {
     register() {
+      let that = this;
       firebase
       .auth()
       .createUserWithEmailAndPassword(this.username, this.password) //pokusaj nac neki uvjet prijave da koristi sve nase podatke
-      .then(function() {
-            alert('Uspješna registracija');
-        }).catch(function() {
-          alert('Došlo je do greške, error');
+      .then(function()   {
+              //alert('Uspješna registracija');
+              that.$router.replace({name: "Home" });  
+        })
+        .catch(function() {
+          alert('Korisnik već postoji');
         });
       console.log('Nastavak');
     },
