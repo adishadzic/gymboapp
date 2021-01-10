@@ -50,7 +50,8 @@ const routes = [
     name: 'view',
     component: () => import(/* webpackChunkName: "about" */ '../views/view.vue')
   },
-  {path: '/legsbeginner',
+  {
+    path: '/legsbeginner',
   name: 'legsbeginner',
   component: () => import(/* webpackChunkName: "about" */ '../views/LegsBeginner.vue')
   },
@@ -59,35 +60,6 @@ const routes = [
     name: 'MBeginner',
     component: () => import(/* webpackChunkName: "about" */ '../views/MBeginner.vue')
   },
-  {
-<<<<<<< Updated upstream
-    path: '/dashboard',
-    name: 'Dashboard',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue')
-  },
-  {
-    path: '/chooseworkout',
-    name: 'ChooseWorkout',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ChooseWorkout.vue')
-=======
-    path: '/madvanced',
-    name: 'MAdvanced',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MAdvanced.vue')
-  },
-  {
-    path: '/mintermediate',
-    name: 'MIntermediate',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MIntermediate.vue')
->>>>>>> Stashed changes
-  },
-  
-
 
 ]
 
