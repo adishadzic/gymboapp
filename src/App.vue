@@ -90,7 +90,7 @@ export default {
   text-align: center;
   color: white;
   background-color: black;
-  height:100vh;
+  height:140vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url('./assets/background.jpg');
   background-size: cover;
 }

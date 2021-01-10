@@ -25,7 +25,7 @@
 </div>
 </template>
 
-<style>
+<style scoped>
 ul, li{
     text-transform: uppercase;
 }
