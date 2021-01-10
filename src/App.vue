@@ -21,8 +21,13 @@
          <li class="nav-item">
           <router-link to="/parameters" class="nav-link">Parameters</router-link>
         </li>
+<<<<<<< Updated upstream
          <li class="nav-item">
           <router-link to="/chooseworkout" class="nav-link">ChooseWorkout</router-link>
+=======
+        <li class="nav-item">
+          <router-link to="/legsbeginner" class="nav-link">Legs B</router-link>
+>>>>>>> Stashed changes
         </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
