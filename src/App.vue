@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
       <router-link to="/" class="navbar-brand">
         <img src="@/assets/gymbo_logo.png" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
       </router-link>
@@ -91,7 +91,6 @@ export default {
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url('./assets/background.jpg');
   background-size: cover;
 }
-
 .navbar{
   background-color:linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
 }
