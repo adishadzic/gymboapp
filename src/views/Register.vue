@@ -9,8 +9,8 @@
             
             
             <div class="form-group">
-              <label for="emailField">Username</label>
-              <input type="username" v-model="username" class="form-control" id="usernameField" aria-describedby="usernameHelp" placeholder="e.g. anyNicknameInTheWorld" required>
+              <label for="emailField">Email</label>
+              <input type="username" v-model="username" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter your email here...">
             </div>
             <div class="form-group">
               <label for="passwordField">Password</label>
