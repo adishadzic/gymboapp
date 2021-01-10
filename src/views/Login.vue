@@ -12,16 +12,19 @@
                      v-model="username" 
                      class="form-control"
                      id="exampleInputUsername" 
-                     aria-describedby="emailHelp" 
+                     aria-describedby="emailHelp"
+                     required 
                      placeholder="Enter username" />
             </div>
-            <div class="form-group">
+            <div  class="form-group">
               <label for="exampleInputPassword1">Password</label>
               <input type="password"
                      v-model="password" 
                      class="form-control"
-                     id="exampleInputPassword1" 
+                     id="exampleInputPassword1"
+                     required 
                      placeholder="Password" />
+               <div v-if="password.lenght >1 && password.lenght <7 " class="text-danger">Password lenght should be grater than 6</div>
             </div>
             <button type="button" @click="login()" class="btn btn-primary">Get ripped</button>
           </form>

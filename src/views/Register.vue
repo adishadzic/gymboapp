@@ -10,15 +10,17 @@
             
             <div class="form-group">
               <label for="emailField">Username</label>
-              <input type="username" v-model="username" class="form-control" id="usernameField" aria-describedby="usernameHelp" placeholder="e.g. anyNicknameInTheWorld">
+              <input type="username" v-model="username" class="form-control" id="usernameField" aria-describedby="usernameHelp" placeholder="e.g. anyNicknameInTheWorld" required>
             </div>
             <div class="form-group">
               <label for="passwordField">Password</label>
-              <input type="password" v-model="password" class="form-control" id="passwordField" placeholder="Password">
+              <input type="password" v-model="password" class="form-control" id="password" placeholder="Password" required>
+              <div v-if="password.lenght >1 && password.lenght <7 " class="text-danger"> Password lenght should be grater than 6 </div>
             </div>
             <div class="form-group">
               <label for="passwordField">Confrim Password</label>
-              <input type="password" v-model="confirmPassword" class="form-control" id="passwordField" placeholder="Password">
+              <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword" placeholder="Password" required>
+              
             </div>
             
             <button type="button" @click="register" class="btn btn-primary mt-5">Proceed</button>
