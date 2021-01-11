@@ -1,27 +1,50 @@
 <template>
     <div class="intro">
-      <h1>How it works</h1>
+      <h1>Levels</h1>
     <div class="container">
-      <div class="row">
-    <div class="col">
-      <h5>Introductory video</h5>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Mdj711U31yU" allowfullscreen></iframe>
-      </div>
-    </div>
-    <div class="col">
-      <h5>Here goes a short description about our app + social media links</h5>
-      <br>
-    </div>
-  </div>
-  <div class="cta">
-    <button type="button" class="btn btn-primary">Get started</button>
+      <div class="coloumn">
+    <div>
+  <b-card
+    overlay
+    img-src="https://picsum.photos/900/250/?image=3"
+    img-alt="Beginner level"
+    text-variant="white"
+    title="Beginner"
+  >
+  <b-button href="#" variant="primary">Start</b-button>
+  </b-card>
+</div>
+
+  <div>
+  <b-card
+    overlay
+    img-src="https://picsum.photos/900/250/?image=3"
+    img-alt="Intermediate level"
+    text-variant="white"
+    title="Intermediate"
+  >
+  <b-button href="#" variant="primary">Start</b-button>
+  </b-card>
+</div>
+
+  <div>
+  <b-card
+    overlay
+    img-src="https://picsum.photos/900/250/?image=3"
+    img-alt="Advanced level"
+    text-variant="white"
+    title="Advanced"
+  >
+  <b-button href="#" variant="primary">Start</b-button>
+  </b-card>
+</div>
+
   </div>
     </div>
     </div>
 </template>
 
-<script>
+<script scoped>
 // @ is an alias to /src
 import HelloWorld from '@/components/HelloWorld.vue'
 
