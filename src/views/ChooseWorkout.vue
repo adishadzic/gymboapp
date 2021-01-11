@@ -1,108 +1,104 @@
 <template>
 
 <div class="row">
-<div class="card">
+<div class="card" >
   <div class="card-image">
   <img src="@/assets/push.jpg" class="main-image">
   </div>
   <div class="card-text">
-    <span class="date">4 days ago</span>
+    <br>
     <h2>PUSH</h2>
-    <p><br> <br> ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+    <p> A push workout contracts your muscles when weight is being pushed away from your body, meaning the work is done when the muscle contracts as you push.</p>
   </div>
   <div class="card-stats">
-    <div class="stat">
-      <div class="value">4<sup>m</sup></div>
-      <div class="type">read</div>
+    <div class="stat">      
+      <div class="type"></div>
+      <img src="@/assets/biceps-png.png" class="png-image">
     </div>
-    <div class="stat border">
-      <div class="value">5123</div>
-      <div class="type">views</div>
+    <div class="">
+      <div class="value"></div>
+      <div class="type"><br>45'</div>
     </div>
-    <div class="stat">
-      <div class="value">32</div>
-      <div class="type">comments</div>
-    </div>
+    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
   </div>
 </div>
 
 
 
+<div class="row">
 <div class="card">
   <div class="card-image">
   <img src="@/assets/pull.jpg" class="main-image">
   </div>
   <div class="card-text">
-    <span class="date">4 days ago</span>
-    <h2>PULL </h2>
-    <p><br> <br> ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+    <br>
+    <h2>PULL</h2>
+    <p>  Pull exercises are those where the muscles contract when weight is being pulled towards your body, meaning the work is done when the muscle contracts when you pull.</p>
   </div>
   <div class="card-stats">
-    <div class="stat">
-      <div class="value">4<sup>m</sup></div>
-      <div class="type">read</div>
+    <div class="stat">      
+      <div class="type"></div>
+      <img src="@/assets/triceps-png.png" class="png-image">
     </div>
-    <div class="stat border">
-      <div class="value">5123</div>
-      <div class="type">views</div>
+    <div class="">
+      <div class="value"></div>
+      <div class="type"><br>40'</div>
     </div>
-    <div class="stat">
-      <div class="value">32</div>
-      <div class="type">comments</div>
-    </div>
+    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
   </div>
 </div>
 
-<div class="card">
+<div class="row">
+<div class="card" >
   <div class="card-image">
   <img src="@/assets/legs.jpg" class="main-image">
   </div>
   <div class="card-text">
-    <span class="date">4 days ago</span>
+    <br>
     <h2>LEGS</h2>
-    <p><br> <br> ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+    <p><br> Work your legs hard to make the muscles grow and gain definition. </p>
   </div>
   <div class="card-stats">
-    <div class="stat">
-      <div class="value">4<sup>m</sup></div>
-      <div class="type">read</div>
+    <div class="stat">      
+      <div class="type"></div>
+      <img src="@/assets/legs-png.png" class="png-image">
     </div>
-    <div class="stat border">
-      <div class="value">5123</div>
-      <div class="type">views</div>
+    <div class="">
+      <div class="value"></div>
+      <div class="type"><br>30'</div>
     </div>
-    <div class="stat">
-      <div class="value">32</div>
-      <div class="type">comments</div>
-    </div>
+    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
   </div>
 </div>
 
+<div class="row">
 <div class="card">
   <div class="card-image">
   <img src="@/assets/core.jpg" class="main-image">
   </div>
   <div class="card-text">
-    <span class="date">5 days ago</span>
-    <h2>LEGS</h2>
-    <p><br> <br> ipsum dolor sit amet consectetur, Ducimus, repudiandae temporibus omnis illum maxime quod deserunt eligendi dolor</p>
+    <br>
+    <h2>CORE</h2>
+    <p> <br> Core exercises are an important part of a well-rounded fitness program.</p>
   </div>
   <div class="card-stats">
-    <div class="stat">
-      <div class="value">4<sup>m</sup></div>
-      <div class="type">read</div>
+    <div class="stat">      
+      <div class="type"></div>
+      <img src="@/assets/abs-png.png" class="png-image">
     </div>
-    <div class="stat border">
-      <div class="value">5123</div>
-      <div class="type">views</div>
+    <div class="">
+      <div class="value"></div>
+      <div class="type"><br>20'</div>
     </div>
-    <div class="stat">
-      <div class="value">32</div>
-      <div class="type">comments</div>
+    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
+  </div>
+</div>
+      
+    </div>
     </div>
   </div>
 </div>
-</div>
+
 
 
 
@@ -146,35 +142,36 @@
 
 .card-text {
   grid-area: text;
-  
-  
-  
 }
+
 .card-text .date {
   color: rgb(255, 7, 110);
   font-size:13px;
 }
+
 .card-text p {
-  color: red;
+  color: #939597;
   font-size:15px;
   font-weight: 300;
 }
+
 .card-text h2 {
   margin-top:0px;
   font-size:28px;
+  color:rgb(192,192,192)
 }
 
 
 
 
 .card-stats {
-  grid-area: stats; 
+   
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: 1fr;
   border-bottom-left-radius: 15px;
   border-bottom-right-radius: 15px;
-  background: rgb(58, 58, 58);
+  background:	rgb(32,32,32)
 }
 .card-stats .stat {
   display: flex;
@@ -185,6 +182,17 @@
   padding:10px;
 }
 
+.png-image{
+  width: 60px;
+  height: 75px;
+  padding-bottom: 15px;
+}
+
+.timer-image{
+  width: 60px;
+  height: 75px;
+  padding-bottom: 5px;
+}
 
 </style>
 
