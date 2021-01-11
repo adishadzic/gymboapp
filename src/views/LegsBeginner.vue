@@ -22,6 +22,57 @@
     >
       Squats 20x3 ( State: <strong>{{ status }}</strong> )
     </b-form-checkbox>
+    <br>
+     <b-form-checkbox
+      id="checkbox-1"
+      v-model="status"
+      name="checkbox-1"
+      value="done"
+      unchecked-value="Not done"
+    >
+      Walking lunges 15x4 ( State: <strong>{{ status }}</strong> )
+    </b-form-checkbox>
+    <br>
+     <b-form-checkbox
+      id="checkbox-1"
+      v-model="status"
+      name="checkbox-1"
+      value="done"
+      unchecked-value="Not done"
+    >
+      Split squat 12x4 ( State: <strong>{{ status }}</strong> )
+    </b-form-checkbox>
+    <br>
+     <b-form-checkbox
+      id="checkbox-1"
+      v-model="status"
+      name="checkbox-1"
+      value="done"
+      unchecked-value="Not done"
+    >
+      Lateral walk 30secx4 ( State: <strong>{{ status }}</strong> )
+    </b-form-checkbox>
+    <br>
+     <b-form-checkbox
+      id="checkbox-1"
+      v-model="status"
+      name="checkbox-1"
+      value="done"
+      unchecked-value="Not done"
+    >
+      Step-up 15x4 ( State: <strong>{{ status }}</strong> )
+    </b-form-checkbox>
+    <br>
+     <b-form-checkbox
+      id="checkbox-1"
+      v-model="status"
+      name="checkbox-1"
+      value="done"
+      unchecked-value="Not done"
+    >
+      Calf raise 20x3 ( State: <strong>{{ status }}</strong> )
+    </b-form-checkbox>
+    <br>
     </div>
 
   </div>
