@@ -6,7 +6,7 @@
     <div class="col">
       <h5>Workout video</h5>
       <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/watch?v=N5PN7G06pKg" allowfullscreen></iframe>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2m89AUgTxFk" allowfullscreen></iframe>
       </div>
     </div>
     
