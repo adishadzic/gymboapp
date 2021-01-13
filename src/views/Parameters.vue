@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="app">
     <b-modal v-model="show" title="Getting started">
       <b-container fluid>
         <b-row class="mb-1 text-center">
@@ -162,3 +162,5 @@ export default {
   },
 };
 </script>
+
+

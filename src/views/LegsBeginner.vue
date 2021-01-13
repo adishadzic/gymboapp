@@ -24,9 +24,9 @@
     </b-form-checkbox>
     <br>
      <b-form-checkbox
-      id="checkbox-1"
+      id="checkbox-2"
       v-model="status"
-      name="checkbox-1"
+      name="checkbox-2"
       value="done"
       unchecked-value="Not done"
     >

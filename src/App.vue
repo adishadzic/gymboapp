@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
       <router-link to="/" class="navbar-brand">
         <img src="@/assets/gymbo_logo.png" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
       </router-link>
@@ -93,25 +93,20 @@ export default {
   text-align: center;
   color: white;
   background-color: black;
-  height:140vh;
+  height: 140vh;
   background-image: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),url('./assets/background.jpg');
   background-size: cover;
 }
-.navbar{
-  background-color:linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85));
-}
+
 .navbar-nav{
   justify-content: end;
 }
 #nav {
   padding: 30px;
-  a {
-    font-weight: bold;
-    color: #2c3e50;
 
-    &.router-link-exact-active {
-      color: #42b983;
-    }
-  }
+&router-link:hover{
+  color: yellow;
 }
+}
+
 </style>
