@@ -23,6 +23,7 @@
         :value="option.value"
         :aria-describedby="ariaDescribedby"
         name="flavour-3a"
+        stacked
       >
         {{ option.text }}
       </b-form-checkbox>
@@ -45,7 +46,8 @@
           { text: 'Split squat 12x4', value: 'not_done' },
           { text: 'Lateral walk 30secx4', value: 'not_done' },
           { text: 'Step-up 15x4', value: 'not_done' },
-          { text: 'Calf raise 20x3 ', value: 'not_done' }
+          { text: 'Calf raise 20x3 ', value: 'not_done' },
+          { text: 'FINISHER: ', value:'not_done'}
         ]       
       }
     }

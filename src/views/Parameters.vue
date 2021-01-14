@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-modal v-model="show" title="Getting started">
+    <b-modal v-model="show" title="Getting started" centered>
       <b-container fluid>
         <b-row class="mb-1 text-center">
           <b-col cols="3"></b-col>
