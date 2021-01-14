@@ -12,10 +12,10 @@
                 <a class="nav-link" href="#">My Plan</a>
               </li>
               <li class="nav-item mb-2">
-                <a class="nav-link" href="#">Other</a>
+                <a class="nav-link" href="#">Motivation</a>
               </li>
               <li class="nav-item mb-2">
-                <a class="nav-link" href="#">Motivation</a>
+                <a class="nav-link" href="#">Webshopping</a>
               </li>
             </ul>
             </div>

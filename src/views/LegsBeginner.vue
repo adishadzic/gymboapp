@@ -11,12 +11,13 @@
     </div>
     
 <div class="col">
-      <h5>Exercise agenda</h5>
+      <h5 class="title">Exercise agenda</h5>
       <br>
     <b-form-group
       v-slot="{ ariaDescribedby }"
     >
       <b-form-checkbox
+        class="check"
         v-for="option in options"
         v-model="selected"
         :key="option.value"
@@ -28,6 +29,7 @@
         {{ option.text }}
       </b-form-checkbox>
     </b-form-group>
+    <b-button pill variant="primary" class="mt-3">Finish workout</b-button>
     <br>
     </div>
     </div>
@@ -55,10 +57,9 @@
 </script>
 
 <style>
-  .col{
-    margin-top: 20px;
-  }
-  .cta{
-    margin-top: 30px;
+  .check{
+    text-align: left;
+    right: 65%;
+    left: 35%;
   }
 </style>
