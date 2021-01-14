@@ -1,6 +1,6 @@
 <template>
-  <div class="app">
-    <b-modal v-model="show" title="Getting started">
+  <div>
+    <b-modal v-model="show" title="Getting started" centered>
       <b-container fluid>
         <b-row class="mb-1 text-center">
           <b-col cols="3"></b-col>
@@ -127,31 +127,58 @@ export default {
 
       if (selectedGoal === "goal1") {
         if (selectedLevel === "level1") {
-          this.$router.push("/MBeginner");
+          this.$router.push({
+            name: "view",
+            params: { level: "Beginer", goal: "Maintain healthy lifestyle" },
+          });
         } else if (selectedLevel === "level2") {
-          this.$router.push("/MAdvanced");
+          this.$router.push({
+            name: "view",
+            params: { level: "Advanced", goal: "Maintain healthy lifestyle" },
+          });
         } else if (selectedLevel === "level3") {
-          this.$router.push("/MIntermediate");
+          this.$router.push({
+            name: "view",
+            params: { level: "Intermediate", goal: "Maintain healthy lifestyle" },
+          });
         } else {
           console.error("No levels");
         }
       } else if (selectedGoal === "goal2") {
         if (selectedLevel === "level1") {
-          this.$router.push("/LBeginner");
+          this.$router.push({
+            name: "view",
+            params: { level: "Beginer", goal: "Lose weight" },
+          });
         } else if (selectedLevel === "level2") {
-          this.$router.push("/LAdvanced");
+          this.$router.push({
+            name: "view",
+            params: { level: "Advanced", goal: "Lose weight" },
+          });
         } else if (selectedLevel === "level3") {
-          this.$router.push("/LIntermediate");
+          this.$router.push({
+            name: "view",
+            params: { level: "Intermediate", goal: "Lose weight" },
+          });
         } else {
           console.error("No levels");
         }
       } else if (selectedGoal === "goal3") {
         if (selectedLevel === "level1") {
-          this.$router.push("/PBeginner");
+             this.$router.push({
+            name: "view",
+            params: { level: "Beginer", goal: "Put on muscle mass" },
+          });
         } else if (selectedLevel === "level2") {
-          this.$router.push("/PAdvanced");
+             this.$router.push({
+            name: "view",
+            params: { level: "Advanced", goal: "Put on muscle mass" },
+          });
         } else if (selectedLevel === "level3") {
-          this.$router.push("/PIntermediate");
+             this.$router.push({
+            name: "view",
+            params: { level: "Intermediate", goal: "Put on muscle mass" },
+          });
         } else {
           console.error("No levels");
         }
@@ -162,5 +189,3 @@ export default {
   },
 };
 </script>
-
-
