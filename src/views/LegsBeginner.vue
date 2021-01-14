@@ -26,7 +26,7 @@
         name="flavour-3a"
         stacked
       >
-        {{ option.text }}
+        {{ option.text }} 
       </b-form-checkbox>
     </b-form-group>
     <b-button pill variant="primary" class="mt-3">Finish workout</b-button>
@@ -34,7 +34,32 @@
     </div>
     </div>
   </div>
+  <b-container class="mt-4">
+      <b-row align-h="center">
+        <b-col cols="12" md="6">
+          <b-row style="border: 1px solid;" no-gutters>
+            <b-col>
+              an image/thumbnail
+            </b-col>
+            <b-col>
+              Pull ups
+            </b-col>
+            <b-col>
+              Workout:
+              <br>
+              8 reps
+              <br>
+              3 sets
+            </b-col>
+            <b-col>
+              check
+            </b-col>
+          </b-row>
+        </b-col>
+      </b-row>
+    </b-container>
 </div>
+
 </template>
 
 <script>

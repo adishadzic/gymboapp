@@ -103,10 +103,6 @@ export default {
 }
 #nav {
   padding: 30px;
-
-&router-link:hover{
-  color: yellow;
-}
 }
 
 </style>
