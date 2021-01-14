@@ -15,10 +15,10 @@
             <div class="form-group">
               <label for="passwordField">Password</label>
               <input type="password" v-model="password" class="form-control" id="password" placeholder="Password" required>
-              <div v-if="password.lenght >1 && password.lenght <7 " class="text-danger"> Password lenght should be grater than 6 </div>
+              <div v-if="password.length <7 " class="text-danger"> Password must contain at least 7 characters. </div>
             </div>
             <div class="form-group">
-              <label for="passwordField">Confrim Password</label>
+              <label for="passwordField">Confirm Password</label>
               <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword" placeholder="Password" required>
               
             </div>

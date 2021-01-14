@@ -3,7 +3,7 @@
     <div class="container-fluid">
       <div class="row">
         <nav class="col-md-2 d-none d-md-block sidebar">
-          <div class="sidebar-sticky">
+          <div class="sidebar-sticky mt-0">
             <ul class="nav flex-column">
               <li class="nav-item mb-2">
                 <a class="nav-link active" href="#">My Workouts</a>
@@ -21,7 +21,7 @@
             </div>
             </nav>
             <div class="workouts">
-              <div class="title"><h3>Workouts</h3></div>
+              <div class="title"><h4><strong>Workouts</strong></h4></div>
               <div class="row">
                   <div class="card" style="width: 18rem;">
                     <img src="@/assets/gym.jpg" class="card-img-top"><div class="card-img-overlay font-weight-bold">Pull</div>
@@ -79,6 +79,9 @@ ul, li{
 .nav{
     display: flex;
     height: 100vh;
+}
+.workouts{
+  background-color: whoit;
 }
 .workouts .title{
   text-align: left;

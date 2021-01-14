@@ -23,8 +23,8 @@
                      class="form-control"
                      id="exampleInputPassword1"
                      required 
-                     placeholder="Password" />
-               <div v-if="password.lenght >1 && password.lenght <7 " class="text-danger">Password lenght should be grater than 6</div>
+                     placeholder="Password" >
+               <div v-if="password.length >1 && password.length <7 " class="text-danger">Password must contain at least 7 characters</div>
             </div>
             <button type="button" @click="login()" class="btn btn-primary">Get ripped</button>
           </form>
