@@ -13,78 +13,40 @@
 <div class="col">
       <h5>Exercise agenda</h5>
       <br>
+    <b-form-group
+      v-slot="{ ariaDescribedby }"
+    >
       <b-form-checkbox
-      id="checkbox-1"
-      v-model="status"
-      name="checkbox-1"
-      value="done"
-      unchecked-value="Not done"
-    >
-      Squats 20x3 ( State: <strong>{{ status }}</strong> )
-    </b-form-checkbox>
-    <br>
-     <b-form-checkbox
-      id="checkbox-2"
-      v-model="status"
-      name="checkbox-2"
-      value="done"
-      unchecked-value="Not done"
-    >
-      Walking lunges 15x4 ( State: <strong>{{ status }}</strong> )
-    </b-form-checkbox>
-    <br>
-     <b-form-checkbox
-      id="checkbox-1"
-      v-model="status"
-      name="checkbox-1"
-      value="done"
-      unchecked-value="Not done"
-    >
-      Split squat 12x4 ( State: <strong>{{ status }}</strong> )
-    </b-form-checkbox>
-    <br>
-     <b-form-checkbox
-      id="checkbox-1"
-      v-model="status"
-      name="checkbox-1"
-      value="done"
-      unchecked-value="Not done"
-    >
-      Lateral walk 30secx4 ( State: <strong>{{ status }}</strong> )
-    </b-form-checkbox>
-    <br>
-     <b-form-checkbox
-      id="checkbox-1"
-      v-model="status"
-      name="checkbox-1"
-      value="done"
-      unchecked-value="Not done"
-    >
-      Step-up 15x4 ( State: <strong>{{ status }}</strong> )
-    </b-form-checkbox>
-    <br>
-     <b-form-checkbox
-      id="checkbox-1"
-      v-model="status"
-      name="checkbox-1"
-      value="done"
-      unchecked-value="Not done"
-    >
-      Calf raise 20x3 ( State: <strong>{{ status }}</strong> )
-    </b-form-checkbox>
+        v-for="option in options"
+        v-model="selected"
+        :key="option.value"
+        :value="option.value"
+        :aria-describedby="ariaDescribedby"
+        name="flavour-3a"
+      >
+        {{ option.text }}
+      </b-form-checkbox>
+    </b-form-group>
     <br>
     </div>
-
+    </div>
   </div>
-    </div>
-    </div>
+</div>
 </template>
 
 <script>
   export default {
     data() {
       return {
-        status: 'Not done'
+        status: [],
+         options: [
+          { text: 'Squats 20x3', value: 'not_done' },
+          { text: 'Walking lunges 15x4', value: 'not_done' },
+          { text: 'Split squat 12x4', value: 'not_done' },
+          { text: 'Lateral walk 30secx4', value: 'not_done' },
+          { text: 'Step-up 15x4', value: 'not_done' },
+          { text: 'Calf raise 20x3 ', value: 'not_done' }
+        ]       
       }
     }
   }
