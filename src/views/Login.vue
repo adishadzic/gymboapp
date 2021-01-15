@@ -24,7 +24,6 @@
                      id="exampleInputPassword1"
                      required 
                      placeholder="Password">
-               <div v-if="password.length >1 && password.length <7 " class="text-danger">Password must contain at least 7 characters</div>
             </div>
             <button type="button" @click="login()" class="btn btn-primary">Get ripped</button>
           </form>
@@ -43,12 +42,13 @@ export default {
       return {
         username: "",
         password: "",
+        passwordCheck:true,
       };
     },
     methods: {
       login() {
         console.log("login.." + this.username);
-
+       // if(password.length >5){
         firebase
             .auth()
             .signInWithEmailAndPassword(this.username, this.password)
@@ -62,6 +62,11 @@ export default {
               alert("Korisnik ne postoji");
             });
       }
+     /* else{
+        this.passwordCheck=false;
+        alert("nije unesena ispravna lozinka")
+      } 
+      }*/
     }
 }
 
