@@ -1,41 +1,40 @@
 <template>
-    <div class="intro">
-      <h1>Legs beginner</h1>
-    <div class="container">
-      <div class="row">
-    <div class="col">
-      <h5>Workout video</h5>
-      <div class="embed-responsive embed-responsive-16by9">
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2m89AUgTxFk" allowfullscreen></iframe>
-      </div>
-    </div>
+    <b-container>
+       <b-row align-h="center">
+            <b-col cols="12" md="6">
+                    <h1>Legs beginner</h1>
+                    <div class="video embed-responsive embed-responsive-16by9 mt-5">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2m89AUgTxFk" allowfullscreen></iframe>
+                    </div>
+            </b-col>
+        </b-row>
     
-<div class="col">
-      <h5 class="title">Exercise agenda</h5>
-      <br>
-    <b-form-group
-      v-slot="{ ariaDescribedby }"
-    >
-      <b-form-checkbox
-        class="check"
-        v-for="option in options"
-        v-model="selected"
-        :key="option.value"
-        :value="option.value"
-        :aria-describedby="ariaDescribedby"
-        name="flavour-3a"
-        stacked
-      >
-        {{ option.text }}
-      </b-form-checkbox>
-    </b-form-group>
-    <b-button pill variant="primary" class="mt-3">Finish workout</b-button>
-    <br>
-    </div>
-    </div>
-  </div>
-</div>
-</template>
+        <b-row>
+            <b-col>
+                <h5 class="title">Exercise agenda</h5>
+                <br>
+                <b-form-group
+                    v-slot="{ ariaDescribedby }"
+                >
+                    <b-form-checkbox
+                        class="check"
+                        v-for="option in options"
+                        v-model="selected"
+                        :key="option.value"
+                        :value="option.value"
+                        :aria-describedby="ariaDescribedby"
+                        name="flavour-3a"
+                        stacked
+                    >
+                        {{ option.text }}
+                    </b-form-checkbox>
+                </b-form-group>
+                <b-button pill variant="primary" class="mt-3">Finish workout</b-button>
+                <br>
+            </b-col>
+        </b-row>
+    </b-container>
+ </template>
 
 <script>
   export default {
@@ -57,9 +56,11 @@
 </script>
 
 <style>
-  .check{
-    text-align: left;
-    right: 65%;
-    left: 35%;
-  }
+.check{
+  text-align: left;
+  right: 65%;
+  left: 35%;
+  max-width:440px; 
+}
+  
 </style>

@@ -1,6 +1,6 @@
 <template>
 <div id="app">
-    <nav class="navbar sticky-top navbar-expand-lg navbar-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark">
       <router-link to="/" class="navbar-brand">
         <img src="@/assets/gymbo_logo.png" height="50" class="d-inline-block align-top" alt="" loading="lazy" />
       </router-link>
@@ -103,10 +103,6 @@ export default {
 }
 #nav {
   padding: 30px;
-
-&router-link:hover{
-  color: yellow;
-}
 }
 
 </style>
