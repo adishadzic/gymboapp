@@ -20,7 +20,7 @@
             <div class="form-group">
               <label for="passwordField">Confirm Password</label>
               <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword" placeholder="Password" required>
-              
+              <div v-if="confirmPassword != password" class="text-danger">Passwords must don't match</div>
             </div>
             
             <button type="button" @click="register" class="btn btn-primary mt-5">Proceed</button>
@@ -40,15 +40,18 @@ export default {
   data() {
     return {     
       email: '',
-      password: '',      
+      password: '',
+      confirmPassword: "",
+      passwordCheck:true,      
     };
   },
   methods: {
     register() {
       let that = this;
+      if(this.password == this.confirmPassword){
       firebase
       .auth()
-      .createUserWithEmailAndPassword(this.username, this.password) //pokusaj nac neki uvjet prijave da koristi sve nase podatke
+      .createUserWithEmailAndPassword(this.username, this.password) 
       .then(function()   {
               //alert('Uspješna registracija');
               that.$router.replace({name: "Home" });  
@@ -57,13 +60,22 @@ export default {
           alert('Korisnik već postoji');
         });
       console.log('Nastavak');
+    }
+    else{
+      this.passwordCheck=false;
+      alert("Passwords don't match");
+      }
     },
   },
 }
 </script>
 
 <style>
-h1{
+.h1{
   margin-top: 20px;
+}
+.text-danger{
+  margin-top:8px;
+  font-size: 13px;
 }
 </style>
