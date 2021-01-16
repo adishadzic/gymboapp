@@ -2,9 +2,9 @@
     <b-container>
        <b-row align-h="center">
             <b-col cols="12" md="6">
-                    <h1>Legs - beginner level</h1>
+                    <h1>Legs - intermediate level</h1>
                     <div class="video embed-responsive embed-responsive-16by9 mt-5">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2m89AUgTxFk" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Jbvb_MMGc8s" allowfullscreen></iframe>
                     </div>
             </b-col>
         </b-row>
@@ -47,13 +47,13 @@
       return {
         status: [],
            options: [
-          { status: 'Done', workoutName: 'Squats', reps: '8', sets: '3' },
-          { status: 'Done', workoutName: 'Walking Lunges', reps: '15', sets:'3' },
-          { status: 'Done', workoutName: 'Split Squat', reps:'15', sets:'4'},
-          { status: 'Done', workoutName: 'Dumbbell Deadlift', reps:'15', sets:'4'},
-          { status: 'Done', workoutName: 'Lateral Walk', reps:'30sec', sets:'4'},
-          { status: 'Done', workoutName: 'Step Up', reps:'15', sets:'4'},
-          { status: 'Done', workoutName: 'Calf Raise', reps:'20', sets:'3'}
+          { status: 'Done', workoutName: 'Jump Squats', reps: '12', sets: '3' },
+          { status: 'Done', workoutName: 'Touchdown Jacks', reps: '12', sets:'3' },
+          { status: 'Done', workoutName: 'Banded Step-up', reps:'10', sets:'3'},
+          { status: 'Done', workoutName: 'Curtsy Lunges', reps:'10', sets:'3'},
+          { status: 'Done', workoutName: 'Hip Bridge', reps:'10', sets:'3'},
+          { status: 'Done', workoutName: 'Single Leg Raise (L-R)', reps:'15', sets:'3'},
+          { status: 'Done', workoutName: 'Split Squat', reps:'12', sets:'3'}
         ]       
       }
     }

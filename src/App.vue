@@ -27,6 +27,12 @@
         <li class="nav-item">
           <router-link to="/chooseworkout" class="nav-link text-light">ČUZ</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/legsintermediate" class="nav-link text-light">LegsI</router-link>
+        </li>
+        <li class="nav-item">
+          <router-link to="/legsadvanced" class="nav-link text-light">LegsA</router-link>
+        </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
         </li>

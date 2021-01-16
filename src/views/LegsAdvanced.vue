@@ -2,9 +2,9 @@
     <b-container>
        <b-row align-h="center">
             <b-col cols="12" md="6">
-                    <h1>Legs - beginner level</h1>
+                    <h1>Legs - advanced level</h1>
                     <div class="video embed-responsive embed-responsive-16by9 mt-5">
-                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/2m89AUgTxFk" allowfullscreen></iframe>
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/RjexvOAsVtI" allowfullscreen></iframe>
                     </div>
             </b-col>
         </b-row>
@@ -20,8 +20,7 @@
               {{ option.workoutName }}
             </b-col>
             <b-col>
-              {{ option.reps }} reps
-              <br>
+              {{ option.reps }} reps /
               {{ option.sets }} sets
             </b-col>
             <b-col>
@@ -47,13 +46,13 @@
       return {
         status: [],
            options: [
-          { status: 'Done', workoutName: 'Squats', reps: '8', sets: '3' },
-          { status: 'Done', workoutName: 'Walking Lunges', reps: '15', sets:'3' },
-          { status: 'Done', workoutName: 'Split Squat', reps:'15', sets:'4'},
-          { status: 'Done', workoutName: 'Dumbbell Deadlift', reps:'15', sets:'4'},
-          { status: 'Done', workoutName: 'Lateral Walk', reps:'30sec', sets:'4'},
-          { status: 'Done', workoutName: 'Step Up', reps:'15', sets:'4'},
-          { status: 'Done', workoutName: 'Calf Raise', reps:'20', sets:'3'}
+          { status: 'Done', workoutName: 'Goblet Squat', reps: '12', sets: '3' },
+          { status: 'Done', workoutName: 'Lunges', reps: '10', sets:'3' },
+          { status: 'Done', workoutName: 'Romanian Deadlift', reps:'12', sets:'3'},
+          { status: 'Done', workoutName: 'Step Up', reps:'10', sets:'3'},
+          { status: 'Done', workoutName: 'Hip Thrust', reps:'12', sets:'3'},
+          { status: 'Done', workoutName: 'Sumo Squat', reps:'12', sets:'3'},
+          { status: 'Done', workoutName: 'Split Squat', reps:'8', sets:'3'}
         ]       
       }
     }
