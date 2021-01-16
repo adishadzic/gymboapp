@@ -20,11 +20,12 @@
         </b-col>
         </b-row>
     </b-container>
+    <b-col>
     <div class="title ml-4 mt-3"><h4><strong>Workouts</strong></h4></div>
         <b-row class="ml-4">
           <workout-card v-for="card in cards" :key="card.url" :info="card" />
         </b-row>
-      
+    </b-col>
 </div>
 
 </template>
@@ -33,9 +34,18 @@
 import WorkoutCard from '@/components/WorkoutCard.vue';
 let cards = [];
 cards = [
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg"},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg"},
-  {url:"https://images.unsplash.com/photo-1434596922112-19c563067271?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
 ];
 export default {
   name: 'Dashboard',
@@ -54,6 +64,7 @@ export default {
 ul, li{
     text-transform: uppercase;
     color: black;
+    text-align: left;
 }
 .container-fluid{
     position: fixed;
@@ -61,29 +72,17 @@ ul, li{
     z-index: 100;
     padding: 0;
 }
-.sidebar .nav-link {
-  font-weight: 500;
-  color: white;
-}
-.nav a:hover {
+/*.nav a:hover {
     background: #122143 none repeat scroll 0 0; 
     border-left: 10px solid #5584ff;
     display: block;
     padding-left: 15px;
-}
-.sidebar-sticky{
-    overflow-y: auto;
-    top: 48px;
-}
+}*/
 .nav{
     display: flex;
     height: 100vh;
 }
 .title{
   text-align: left;
-}
-.workouts .card-img-overlay{
-  position: absolute;
-  top: 70%;
 }
 </style>
