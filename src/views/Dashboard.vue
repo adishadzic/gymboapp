@@ -22,34 +22,38 @@
             </nav>
             <div class="workouts">
               <div class="title"><h4><strong>Workouts</strong></h4></div>
-              <div class="row">
-                  <div class="card" style="width: 18rem;">
-                    <img src="@/assets/gym.jpg" class="card-img-top"><div class="card-img-overlay font-weight-bold">Pull</div>
-                  </div>
-                  <div class="card ml-3" style="width: 18rem;">
-                    <img src="@/assets/gym1.jpg" class="card-img-top"><div class="card-img-overlay font-weight-bold">Push</div>
-                  </div>
-                  <div class="card ml-3" style="width: 18rem;">
-                    <img src="@/assets/gym.jpg" class="card-img-top"><div class="card-img-overlay font-weight-bold">Core</div>
-                  </div>
-                  <div class="card ml-3" style="width: 18rem;">
-                    <img src="@/assets/gym1.jpg" class="card-img-top"><div class="card-img-overlay font-weight-bold">Legs</div>
-                  </div>
-              </div>
-              <div class="row">
-                <div class="card mt-3" style="width: 18rem;">
-                    <img src="@/assets/gym.jpg" class="card-img-top"><div class="card-img-overlay font-weight-bold">Pull & Push</div>
-                  </div>
-                  <div class="card mt-3 ml-3" style="width: 18rem;">
-                    <img src="@/assets/gym1.jpg" class="card-img-top"><div class="card-img-overlay font-weight-bold">Cardio</div>
-                  </div>
-              </div>
+             <div class="row">
+                <div class="card">
+                  <workout-card v-for="card in cards" :key="card.url" :info="card" />
+                </div>
+             </div>
               <div class="title mt-5"><h3>My plan</h3></div>
             </div>
       </div>
     </div>
 </div>
 </template>
+
+<script>
+import WorkoutCard from '@/components/WorkoutCard.vue';
+let cards = [];
+cards = [
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/799406930261966898/gym.jpg"},
+  {url:"https://images.unsplash.com/photo-1434596922112-19c563067271?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"},
+  {url:"https://images.unsplash.com/photo-1434596922112-19c563067271?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"},
+];
+export default {
+  name: 'Dashboard',
+  data: function(){
+      return {
+        cards: cards,
+    }
+  },
+  components: {
+    WorkoutCard,
+  },
+};
+</script>
 
 <style scoped>
 ul, li{
@@ -61,7 +65,6 @@ ul, li{
     z-index: 100;
     padding: 0;
 }
-
 .sidebar .nav-link {
   font-weight: 500;
   color: white;
@@ -79,9 +82,6 @@ ul, li{
 .nav{
     display: flex;
     height: 100vh;
-}
-.workouts{
-  background-color: whoit;
 }
 .workouts .title{
   text-align: left;
