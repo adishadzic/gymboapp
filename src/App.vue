@@ -10,22 +10,22 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li v-if="!store.currentUser" class="nav-item">
-            <router-link to="/login" class="nav-link">Login</router-link>
+            <router-link to="/login" class="nav-link text-light">Login</router-link>
           </li>
         <li v-if="!store.currentUser" class="nav-item">
-          <router-link to="/register" class="nav-link">Register</router-link>
+          <router-link to="/register" class="nav-link text-light">Register</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/choose" class="nav-link">Choose</router-link>
+          <router-link to="/choose" class="nav-link text-light">Choose</router-link>
         </li>
          <li class="nav-item">
-          <router-link to="/parameters" class="nav-link">Parameters</router-link>
+          <router-link to="/parameters" class="nav-link text-light">Parameters</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/legsbeginner" class="nav-link">Legs B</router-link>
+          <router-link to="/legsbeginner" class="nav-link text-light">Legs B</router-link>
         </li>
         <li class="nav-item">
-          <router-link to="/chooseworkout" class="nav-link">ČUZ</router-link>
+          <router-link to="/chooseworkout" class="nav-link text-light">ČUZ</router-link>
         </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
