@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-h="center">
       <b-col cols="12" md="6">
-        <h1>Legs - advanced level</h1>
+        <h1>Core - beginner level</h1>
         <div class="video embed-responsive embed-responsive-16by9 mt-5">
           <iframe
             class="embed-responsive-item"
@@ -49,13 +49,12 @@ export default {
   data() {
     return {
       options: [
-        { status: "Done", workoutName: "Jump Squats", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Lunges", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Romanian Deadlift", reps: "12", sets: "3"},
-        { status: "Done", workoutName: "Step Up", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Hip Thrust", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Sumo Squat", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Split Squat", reps: "8", sets: "3" },
+        { status: "Done", workoutName: "Crunches", reps: "10", sets: "3" },
+        { status: "Done", workoutName: "Alternating Bird Dogs", reps: "10", sets: "3" },
+        { status: "Done", workoutName: "Russian Twists", reps: "10", sets: "3"},
+        { status: "Done", workoutName: "Raised Leg Hold", reps: "30sec", sets: "3" },
+        { status: "Done", workoutName: "Plank Hold", reps: "30sec", sets: "3" },
+        { status: "Done", workoutName: "Flutter Kicks", reps: "10", sets: "3" }
       ],
     };
   },

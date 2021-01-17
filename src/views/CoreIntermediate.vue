@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-h="center">
       <b-col cols="12" md="6">
-        <h1>Legs - advanced level</h1>
+        <h1>Core - beginner level</h1>
         <div class="video embed-responsive embed-responsive-16by9 mt-5">
           <iframe
             class="embed-responsive-item"
@@ -49,13 +49,12 @@ export default {
   data() {
     return {
       options: [
-        { status: "Done", workoutName: "Jump Squats", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Lunges", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Romanian Deadlift", reps: "12", sets: "3"},
-        { status: "Done", workoutName: "Step Up", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Hip Thrust", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Sumo Squat", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Split Squat", reps: "8", sets: "3" },
+        { status: "Done", workoutName: "Plank Jack", reps: "40sec", sets: "4" },
+        { status: "Done", workoutName: "Side Plank", reps: "40sec", sets: "4" },
+        { status: "Done", workoutName: "Leg Raise", reps: "40sec", sets: "4"},
+        { status: "Done", workoutName: "Hell Touch", reps: "40sec", sets: "4" },
+        { status: "Done", workoutName: "Raise Leg Hold", reps: "40sec", sets: "4" },
+        { status: "Done", workoutName: "Plank", reps: "40sec", sets: "4" }
       ],
     };
   },
