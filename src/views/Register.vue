@@ -20,7 +20,7 @@
             <div class="form-group">
               <label for="passwordField">Confirm Password</label>
               <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword" placeholder="Password" required>
-              <div v-if="confirmPassword != password" class="text-danger">Passwords must don't match</div>
+              <div v-if="confirmPassword != password" class="text-danger">Passwords must match</div>
             </div>
             
             <button type="button" @click="register" class="btn btn-primary mt-5">Proceed</button>
