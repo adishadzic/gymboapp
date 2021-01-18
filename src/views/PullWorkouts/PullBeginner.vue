@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-h="center">
       <b-col cols="12" md="6">
-        <h1>Legs - advanced level</h1>
+        <h1>Pull - advanced level</h1>
         <div class="video embed-responsive embed-responsive-16by9 mt-5">
           <iframe
             class="embed-responsive-item"
@@ -49,13 +49,14 @@ export default {
   data() {
     return {
       options: [
-        { status: "Done", workoutName: "Jump Squats", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Lunges", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Romanian Deadlift", reps: "12", sets: "3"},
-        { status: "Done", workoutName: "Step Up", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Hip Thrust", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Sumo Squat", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Split Squat", reps: "8", sets: "3" },
+        { status: "Done", workoutName: "Dumbbell Shrugs", reps: "12", sets: "4" },
+        { status: "Done", workoutName: "Barbell Bicep Curls", reps: "12", sets: "4" },
+        { status: "Done", workoutName: "Seated Band Rows", reps: "12", sets: "4"},
+        { status: "Done", workoutName: "Bicep Curl", reps: "12", sets: "4" },
+        { status: "Done", workoutName: "Dumbbell Hamer Curl", reps: "12", sets: "4" },
+        { status: "Done", workoutName: "Dumbbell Row", reps: "12", sets: "4" },
+        { status: "Done", workoutName: "Bent Over Band Rows", reps: "12", sets: "4" },
+        { status: "Done", workoutName: "Concentration Curl", reps: "12", sets: "4" },
       ],
     };
   },

@@ -53,7 +53,7 @@ const routes = [
   {
     path: '/legsbeginner',
   name: 'legsbeginner',
-  component: () => import(/* webpackChunkName: "about" */ '../views/LegsBeginner.vue')
+  component: () => import(/* webpackChunkName: "about" */ '../views/LegsWorkouts/LegsBeginner.vue')
   },
   {
     path: '/mbeginner',
@@ -83,22 +83,6 @@ const routes = [
     // this generates a separate chunk (about.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
     component: () => import(/* webpackChunkName: "about" */ '../views/LevelCards.vue')
-  },
-  {
-    path: '/legsintermediate',
-    name: 'LegsI',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LegsIntermediate.vue')
-  },
-  {
-    path: '/legsadvanced',
-    name: 'LegsA',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LegsAdvanced.vue')
   },
 ]
 
