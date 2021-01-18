@@ -33,6 +33,9 @@
         <li class="nav-item">
           <router-link to="/legsadvanced" class="nav-link text-light">LegsA</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/levelcards" class="nav-link text-light">levelcards</router-link>
+        </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
         </li>
