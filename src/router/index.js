@@ -16,90 +16,79 @@ const routes = [
   {
     path: '/register',
     name: 'Register',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Register.vue')
+    component: () => import('../views/Auth/Register.vue')
   },
   {
     path: '/login',
     name: 'Login',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Login.vue')
+    component: () => import('../views/Auth/Login.vue')
   },
   {
     path: '/choose',
     name: 'Choose',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Choose.vue')
+    component: () => import('../views/Choose.vue')
   },
   {
     path: '/parameters',
     name: 'Parameters',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Parameters.vue')
+    component: () => import('../views/Parameters.vue')
   },
   {
     path: '/view',
     name: 'view',
-    component: () => import(/* webpackChunkName: "about" */ '../views/view.vue')
+    component: () => import('../views/view.vue')
   },
   {
     path: '/legsbeginner',
   name: 'legsbeginner',
-  component: () => import(/* webpackChunkName: "about" */ '../views/LegsBeginner.vue')
+  component: () => import('../views/LegsBeginner.vue')
   },
   {
     path: '/mbeginner',
     name: 'MBeginner',
-    component: () => import(/* webpackChunkName: "about" */ '../views/MBeginner.vue')
+    component: () => import('../views/MBeginner.vue')
   },
   {
     path: '/dashboard',
     name: 'Dashboard',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/Dashboard.vue')
+    component: () => import('../views/Dashboard.vue')
   },
   {
     path: '/chooseworkout',
     name: 'ChooseWorkout',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/ChooseWorkout.vue')
+    component: () => import('../views/ChooseWorkout.vue')
   },
   {
     path: '/levelcards',
     name: 'LevelCards',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LevelCards.vue')
+    component: () => import('../views/LevelCards.vue')
   },
   {
     path: '/legsintermediate',
     name: 'LegsI',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LegsIntermediate.vue')
+    component: () => import('../views/LegsIntermediate.vue')
   },
   {
     path: '/legsadvanced',
     name: 'LegsA',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/LegsAdvanced.vue')
+    component: () => import('../views/LegsAdvanced.vue')
   },
+  {
+    path: '/coreadvanced',
+    name: 'CoreAdvanced',
+    component: () => import('../views/CoreAdvanced.vue')
+  },
+  {
+    path: '/corebeginner',
+    name: 'CoreBeginner',
+    component: () => import('../views/CoreBeginner.vue')
+  },
+  {
+    path: '/coreintermediate',
+    name: 'CoreIntermediate',
+    component: () => import('../views/CoreIntermediate.vue')
+  },
+
 ]
 
 const router = new VueRouter({

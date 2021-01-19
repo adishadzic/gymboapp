@@ -21,20 +21,11 @@
          <li class="nav-item">
           <router-link to="/parameters" class="nav-link text-light">Parameters</router-link>
         </li>
-        <li class="nav-item">
-          <router-link to="/legsbeginner" class="nav-link text-light">Legs B</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/chooseworkout" class="nav-link text-light">ČUZ</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/legsintermediate" class="nav-link text-light">LegsI</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/legsadvanced" class="nav-link text-light">LegsA</router-link>
-        </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
+        </li>
+        <li>
+          <b-avatar v-if="store.currentUser" button @click="onClick" icon="star-fill"></b-avatar>
         </li>
       </ul>
     </div>
@@ -85,7 +76,17 @@ export default {
         .then(() => {
           this.$router.push({ name: "Login" });
         });
-    }
+    },
+    onClick() {
+        this.$bvModal.msgBoxOk('User name: Fred Flintstone', {
+          title: 'User Info',
+          size: 'sm',
+          buttonSize: 'sm',
+          okVariant: 'success',
+          headerClass: 'p-2 border-bottom-0',
+          footerClass: 'p-2 border-top-0'
+        })
+      }
   }
   
 }

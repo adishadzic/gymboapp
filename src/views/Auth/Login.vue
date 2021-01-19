@@ -14,7 +14,7 @@ zz<template>
                      id="exampleInputUsername" 
                      aria-describedby="emailHelp"
                      required 
-                     placeholder="Enter username" />
+                     placeholder="Enter your email" />
             </div>
             <div  class="form-group">
               <label for="exampleInputPassword1">Password</label>
@@ -25,7 +25,8 @@ zz<template>
                      required 
                      placeholder="Password">
             </div>
-            <button type="button" @click="login()" class="btn btn-primary">Get ripped</button>
+            <div v-if="passwordCheck==false" class="text-danger">The password is invalid</div>
+            <button type="button" @click="login()" class="btn btn-primary fb-send">Let me in</button>
           </form>
         </div>
         <div class="col-sm"></div>
@@ -43,31 +44,33 @@ export default {
         username: "",
         password: "",
         passwordCheck:true,
+        
       };
     },
     methods: {
       login() {
+        var check=this;
         console.log("login.." + this.username);
-       // if(password.length >5){
+       
         firebase
             .auth()
             .signInWithEmailAndPassword(this.username, this.password)
             .then((result) => {
               console.log("uspjesna prijava", result);
-
+              check.passwordCheck=true;
               this.$router.replace({name: "Home" });
             })
+            
+             
             .catch(function(e) {
               console.error( "greska", e);
-              alert("Korisnik ne postoji");
+              //alert("Korisnik ne postoji");
+              check.passwordCheck=false;
+              
             });
       }
-     /* else{
-        this.passwordCheck=false;
-        alert("nije unesena ispravna lozinka")
-      } 
-      }*/
     }
+     
 }
 
 </script>
@@ -75,5 +78,10 @@ export default {
 <style>
 h1{
   margin-top: 20px;
+}
+.text-danger{
+  margin-top: 0px;
+  margin-bottom:20px;
+  font-size: 13px;
 }
 </style>

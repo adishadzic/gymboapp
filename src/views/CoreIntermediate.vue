@@ -40,7 +40,7 @@
         </b-col>
       </b-row>
     </b-container>
-    <b-button pill variant="primary" class="mt-3">Finish workout</b-button>
+    <b-button pill variant="primary" class="mt-3" @click="clickToDashboard">Finish workout</b-button>
   </b-container>
 </template>
 
@@ -58,6 +58,11 @@ export default {
       ],
     };
   },
+  methods: {
+    clickToDashboard(){
+      this.$router.push('/Dashboard');
+    }
+  }
 };
 </script>
 
