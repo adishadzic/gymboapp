@@ -1,6 +1,6 @@
 <template>
 
-<div class="row">
+<div class="row"> 
 <div class="card" >
   <div class="card-image">
   <img src="@/assets/push.jpg" class="main-image">
@@ -13,13 +13,13 @@
   <div class="card-stats">
     <div class="stat">      
       <div class="type"></div>
-      <img src="@/assets/biceps-png.png" class="png-image">
+      <img src="@/assets/biceps.png" class="png-image">
     </div>
     <div class="">
       <div class="value"></div>
       <div class="type"><br>45'</div>
     </div>
-    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
+    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
   </div>
 </div>
 
@@ -38,13 +38,13 @@
   <div class="card-stats">
     <div class="stat">      
       <div class="type"></div>
-      <img src="@/assets/triceps-png.png" class="png-image">
+      <img src="@/assets/triceps.png" class="png-image">
     </div>
     <div class="">
       <div class="value"></div>
       <div class="type"><br>40'</div>
     </div>
-    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
+    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
   </div>
 </div>
 
@@ -61,13 +61,13 @@
   <div class="card-stats">
     <div class="stat">      
       <div class="type"></div>
-      <img src="@/assets/legs-png.png" class="png-image">
+      <img src="@/assets/legs.png" class="png-image">
     </div>
     <div class="">
       <div class="value"></div>
       <div class="type"><br>30'</div>
     </div>
-    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
+    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
   </div>
 </div>
 
@@ -84,13 +84,13 @@
   <div class="card-stats">
     <div class="stat">      
       <div class="type"></div>
-      <img src="@/assets/abs-png.png" class="png-image">
+      <img src="@/assets/abs.png" class="png-image">
     </div>
     <div class="">
       <div class="value"></div>
       <div class="type"><br>20'</div>
     </div>
-    <div class="value"><img src="@/assets/timer-png.png" class="timer-image"> </div>
+    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
   </div>
 </div>
       
@@ -144,10 +144,7 @@
   grid-area: text;
 }
 
-.card-text .date {
-  color: rgb(255, 7, 110);
-  font-size:13px;
-}
+
 
 .card-text p {
   color: #939597;
@@ -183,8 +180,9 @@
 }
 
 .png-image{
-  width: 60px;
-  height: 75px;
+  margin-top: 5px;
+  width: 50px;
+  height: 65px;
   padding-bottom: 15px;
 }
 
