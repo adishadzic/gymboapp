@@ -1,7 +1,8 @@
 <template>
-      <div class="card">
-            <img class="card-img-top" :src="info.url" />
+      <div class="card ">
+            <img router to="/LevelCards" class="card-img-top" :src="info.url" />
             <div class="centered">{{ info.description }}</div>
+            <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
       </div>
 </template>
 

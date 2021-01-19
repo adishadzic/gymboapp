@@ -10,22 +10,21 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="@/assets/gym.jpg" alt="First slide">
         <div class="carousel-caption">
-            <h1>Make me a custom plan</h1>
-            <p>cuz im lazybones</p>
+            <h1>Choose a plan</h1>
         </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="@/assets/gym1.jpg" alt="Second slide">
         <div class="carousel-caption">
-            <h1>I'mma choose a plan</h1>
-            <p>Me know what me doing</p>
+            <h1>Choose a workout</h1>
+            <p></p>
         </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="@/assets/gym2.jpg" alt="Third slide">
         <div class="carousel-caption">
-            <h1>I'mma make my own plan</h1>
-            <p>cuz I think I'm the smartest</p>
+            <h1>DIY workout</h1>
+            <p>Make your own workout from hundreds of excercises</p>
         </div>
     </div>
   </div>
@@ -46,3 +45,4 @@
     margin-top: 25px;
 }
 </style>
+

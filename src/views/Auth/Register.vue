@@ -7,10 +7,13 @@
         <div class="col-sm">
           <form>
             
-            
+            <div class="form-group">
+              <label form="exampleInputFullName">Full name</label>
+              <input type="text" class="form-control basic-input" id="exampleInputFullName" placeholder="e.g. John Doe"/>
+            </div>
             <div class="form-group">
               <label for="emailField">Email</label>
-              <input type="username" v-model="username" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="Enter your email here...">
+              <input type="username" v-model="username" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="e.g. johndoe@gmail.com">
             </div>
             <div class="form-group">
               <label for="passwordField">Password</label>
@@ -19,7 +22,7 @@
             </div>
             <div class="form-group">
               <label for="passwordField">Confirm Password</label>
-              <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword" placeholder="Password" required>
+              <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
               <div v-if="confirmPassword != password" class="text-danger">Passwords must match</div>
             </div>
             

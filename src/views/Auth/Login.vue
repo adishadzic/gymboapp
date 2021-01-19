@@ -14,7 +14,7 @@ zz<template>
                      id="exampleInputUsername" 
                      aria-describedby="emailHelp"
                      required 
-                     placeholder="Enter username" />
+                     placeholder="Enter your email" />
             </div>
             <div  class="form-group">
               <label for="exampleInputPassword1">Password</label>
@@ -26,7 +26,7 @@ zz<template>
                      placeholder="Password">
             </div>
             <div v-if="passwordCheck==false" class="text-danger">The password is invalid</div>
-            <button type="button" @click="login()" class="btn btn-primary">Get ripped</button>
+            <button type="button" @click="login()" class="btn btn-primary fb-send">Let me in</button>
           </form>
         </div>
         <div class="col-sm"></div>
