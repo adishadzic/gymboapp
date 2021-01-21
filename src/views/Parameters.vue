@@ -3,90 +3,58 @@
     <b-modal v-model="show" title="Getting started" centered>
       <b-container fluid>
         <b-row class="mb-1 text-center">
-          <b-col cols="3"></b-col>
-          <b-col style="display: flex">Please fill out the following</b-col>
+          <b-col cols="12" class="mb-2">Please fill out the following</b-col>
         </b-row>
 
         <b-row class="mb-1">
-          <b-col class="ml-5">Age</b-col>
+          <b-col class="text-center">Age</b-col>
           <b-col>
             <b-form inline>
               <label class="sr-only" for="inline-form-input-age">Age</label>
-              <b-form-input
-                class="mr-4"
-                id="inline-form-input-age"
-                placeholder="Enter your age"
-                v-model="age"
-              ></b-form-input>
+              <b-form-input id="inline-form-input-age" placeholder="Enter your age" v-model="age"></b-form-input>
             </b-form>
           </b-col>
         </b-row>
 
         <b-row class="mb-1">
-          <b-col class="ml-5">Height</b-col>
+          <b-col class="text-center">Height</b-col>
           <b-col>
             <b-form inline>
-              <label class="sr-only" for="inline-form-input-height"
-                >Height</label
-              >
-              <b-form-input
-                class="mr-4"
-                id="inline-form-input-height"
-                placeholder="Enter your height"
-                v-model="height"
-              ></b-form-input>
+              <label class="sr-only" for="inline-form-input-height">Height</label>
+              <b-form-input id="inline-form-input-height" placeholder="Enter your height" v-model="height"></b-form-input>
             </b-form>
           </b-col>
         </b-row>
 
         <b-row>
-          <b-col class="ml-5">Weight</b-col>
+          <b-col class="text-center">Weight</b-col>
           <b-col>
             <b-form inline>
-              <label class="sr-only" for="inline-form-input-weight"
-                >Weight</label>
-              <b-form-input
-                class="mr-4"
-                id="inline-form-input-weight"
-                placeholder="Enter your weight"
-                v-model="weight"
-              ></b-form-input>
+              <label class="sr-only" for="inline-form-input-weight">Weight</label>
+              <b-form-input id="inline-form-input-weight" placeholder="Enter your weight" v-model="weight"></b-form-input>
             </b-form>
           </b-col>
         </b-row>
 
         <b-row>
-          <b-col class="ml-5">Goal</b-col>
-          <b-col class="mr-5">
-            <b-form-select
-              v-model="selectedGoal"
-              :options="goals"
-            ></b-form-select>
+          <b-col class="text-center">Goal</b-col>
+          <b-col class="text-center">
+            <b-form-select v-model="selectedGoal" :options="goals"></b-form-select>
           </b-col>
         </b-row>
 
         <b-row>
-          <b-col class="ml-5">Level</b-col>
-          <b-col class="mr-5">
-            <b-form-select
-              v-model="selectedLevel"
-              :options="levels"
-            ></b-form-select>
+          <b-col class="text-center">Level</b-col>
+          <b-col class="text-center">
+            <b-form-select v-model="selectedLevel" :options="levels"></b-form-select>
           </b-col>
         </b-row>
       </b-container>
 
       <template #modal-footer>
-        <b-button
-          pill
-          variant="primary"
-          size="sm"
-          :disabled="
+        <b-button pill variant="primary" size="sm" :disabled="
             !age || !height || !weight || !selectedGoal || !selectedLevel
-          "
-          @click="onLaceUp"
-          >Lace up!</b-button
-        >
+          " @click="onLaceUp">Lace up!</b-button>
       </template>
     </b-modal>
   </div>
