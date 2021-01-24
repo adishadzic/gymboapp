@@ -26,7 +26,22 @@ zz<template>
                      placeholder="Password">
             </div>
             <div v-if="passwordCheck==false" class="text-danger">The password is invalid</div>
-            <button type="button" @click="login()" class="btn btn-primary fb-send">Let me in</button>
+            <button type="button" @click="login()" class="btn btn-primary fb-send">Login</button>
+            <br>
+            <div class="mt-5">
+              
+							<button type="button"	@click="logInWithGoogle()"	class="btn btn-dark">
+               <img src="@/assets/google.png" class="google-logo" height="22">
+								Sign in with Google
+							</button>
+						</div><br>
+						<p class="forgot-password">
+							You don't have an account?
+							<router-link :to=" {name: 'Register' }">Register</router-link>
+						</p>
+						<div v-show="errorMessage" class="alert alert-danger" role="alert">
+							{{ errorMessage }}
+						</div>
           </form>
         </div>
         <div class="col-sm"></div>
@@ -44,6 +59,7 @@ export default {
         username: "",
         password: "",
         passwordCheck:true,
+        errorMessage: "",
         
       };
     },
@@ -68,7 +84,23 @@ export default {
               check.passwordCheck=false;
               
             });
-      }
+      },
+      logInWithGoogle() {
+        var check=this;
+        console.log("Login with Google");
+        const provider = new firebase.auth.GoogleAuthProvider();
+        firebase     
+                .auth()
+                .signInWithPopup(provider)
+                .then((result) => {
+                      store.currentUser = result.additionalUserInfo.profile.email;
+                      this.$router.replace ({ name: "Home" });
+                      store.token = result.credential.accessToken;
+                })
+                .catch(function(e) {
+              console.error( "greska", e);
+				});
+    },
     }
      
 }
@@ -84,4 +116,5 @@ h1{
   margin-bottom:20px;
   font-size: 13px;
 }
+
 </style>

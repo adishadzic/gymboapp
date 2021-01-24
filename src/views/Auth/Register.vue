@@ -25,8 +25,20 @@
               <input type="password" v-model="confirmPassword" class="form-control" id="confirmPassword" placeholder="Confirm password" required>
               <div v-if="confirmPassword != password" class="text-danger">Passwords must match</div>
             </div>
+            <div class="form-check">
+            <input
+              class="form-check-input"
+              type="checkbox"
+              name="TermsCheck"
+              id="TermsCheck"
+              v-model="TermsCheck"
+            />
+            <label class="form-check-label" for="TermsCheck">
+              I have read and accept the terms and conditions
+            </label>
+          </div>
+            <button type="button" @click="register()" class="btn btn-primary mt-5">Proceed</button>
             
-            <button type="button" @click="register" class="btn btn-primary mt-5">Proceed</button>
           </form>
         </div>
         <div class="col-sm">
@@ -41,17 +53,23 @@ import { firebase } from '@/firebase';
 export default {
   name: 'Register',
   data() {
-    return {     
+    return {   
+      fullName: "",  
       email: '',
       password: '',
       confirmPassword: "",
-      passwordCheck:true,      
+      passwordCheck:true,  
+      TermsCheck:{
+        accept: true
+      },    
     };
   },
   methods: {
     register() {
       let that = this;
       if(this.password == this.confirmPassword){
+        if (this.TermsCheck == false) {
+        alert("You have to accept Terms of service!")
       firebase
       .auth()
       .createUserWithEmailAndPassword(this.username, this.password) 
@@ -59,17 +77,51 @@ export default {
               //alert('Uspješna registracija');
               that.$router.replace({name: "Home" });  
         })
-        .catch(function() {
-          alert('Korisnik već postoji');
-        });
+      .then((user) => {
+        firebase 
+          .auth()
+          .currentUser.updateProfile({ displayName: this.fullName });
+        this.verifyEmail();
+      })
+      .then(() => {
+        this.fullName = "";
+        this.email = "";
+        this.password = "";
+        firebase
+          .auth()
+          .signout()
+          .then(() => {
+            alert("Potrebno je verificirati e-mail prije korištenja aplikacije pomoću poslanog linka.")
+            this.$router.push({ name: "Login" });
+          });
+      })
+       /*  .catch(function() {
+          alert('Korisnik već postoji');/-
+        }); */
       console.log('Nastavak');
     }
+      }
     else{
       this.passwordCheck=false;
       alert("Passwords don't match");
       }
+       
+    },
+    verifyEmail() {
+      firebase  
+        .auth()
+        .currentUser.sendEmailVerification()
+        .then(function () {
+          //verification email sent
+          console.log("Verification email sent");
+        })
+        .catch(function (error) {
+          //Error occured. Inspect error.code.
+          console.error("verifyError " + error);
+        });
     },
   },
+  
 }
 </script>
 
