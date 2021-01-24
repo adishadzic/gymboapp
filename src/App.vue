@@ -21,6 +21,9 @@
          <li class="nav-item">
           <router-link to="/parameters" class="nav-link text-light">Parameters</router-link>
         </li>
+        <li class="nav-item">
+          <router-link to="/chooseworkout" class="nav-link text-light">ČUZZZZZZZ</router-link>
+        </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
         </li>

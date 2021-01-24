@@ -1,106 +1,74 @@
 <template>
-
-<div class="row"> 
-<div class="card" >
-  <div class="card-image">
-  <img src="@/assets/push.jpg" class="main-image">
-  </div>
-  <div class="card-text">
-    <br>
-    <h2>PUSH</h2>
-    <p> A push workout contracts your muscles when weight is being pushed away from your body, meaning the work is done when the muscle contracts as you push.</p>
-  </div>
-  <div class="card-stats">
-    <div class="stat">      
-      <div class="type"></div>
-      <img src="@/assets/biceps.png" class="png-image">
-    </div>
-    <div class="">
-      <div class="value"></div>
-      <div class="type"><br>45'</div>
-    </div>
-    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
-  </div>
-</div>
-
-
-
+<div class="app">
 <div class="row">
-<div class="card">
-  <div class="card-image">
-  <img src="@/assets/pull.jpg" class="main-image">
-  </div>
-  <div class="card-text">
-    <br>
-    <h2>PULL</h2>
-    <p>  Pull exercises are those where the muscles contract when weight is being pulled towards your body, meaning the work is done when the muscle contracts when you pull.</p>
-  </div>
-  <div class="card-stats">
-    <div class="stat">      
-      <div class="type"></div>
-      <img src="@/assets/triceps.png" class="png-image">
+  <div class="card" >
+    <div class="card-image">
+      <img src="@/assets/push1.jpg" class="main-image">
     </div>
-    <div class="">
-      <div class="value"></div>
-      <div class="type"><br>40'</div>
+    <div class="card-text">
+      <br>
+      <div class="myDIV">
+        <h2>PUSH</h2>
+      </div>
+      <div class="hide">   <br>Legs workout - these workouts target your quads, hamstrings, gluteus and calves.
+        3 levels: Beginner, Intermediate, Advanced.
+        Program duration depends on level you choose; typically 3 weeks. 
+        Workout timer: 45-60min
+        Required equipment: none (bodyweight) or dumbbells/kettlebells.
+      </div>
     </div>
-    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
+  </div>
+  <div class="row">
+    <div class="card">
+      <div class="card-image">
+        <img src="@/assets/pull2.jpg" class="main-image">
+      </div>
+      <div class="card-text">
+        <br>
+        <div class="myDIV">
+          <h2>PULL</h2>
+        </div>
+        <div class="hide">  <br> <br> meaning the work is done when the muscle contracts when you pull.</div>
+      </div>
+    </div>
   </div>
 </div>
 
 <div class="row">
-<div class="card" >
-  <div class="card-image">
-  <img src="@/assets/legs.jpg" class="main-image">
-  </div>
-  <div class="card-text">
-    <br>
-    <h2>LEGS</h2>
-    <p><br> Work your legs hard to make the muscles grow and gain definition. </p>
-  </div>
-  <div class="card-stats">
-    <div class="stat">      
-      <div class="type"></div>
-      <img src="@/assets/legs.png" class="png-image">
+  <div class="card" >
+    <div class="card-image">
+      <img src="@/assets/push1.jpg" class="main-image">
     </div>
-    <div class="">
-      <div class="value"></div>
-      <div class="type"><br>30'</div>
+    <div class="card-text">
+      <br>
+      <div class="myDIV">
+        <h2>PUSH</h2>
+      </div>
+      <div class="hide">   <br>Legs workout - these workouts target your quads, hamstrings, gluteus and calves.
+        3 levels: Beginner, Intermediate, Advanced.
+        Program duration depends on level you choose; typically 3 weeks. 
+        Workout timer: 45-60min
+        Required equipment: none (bodyweight) or dumbbells/kettlebells.
+      </div>
     </div>
-    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
   </div>
-</div>
-
-<div class="row">
-<div class="card">
-  <div class="card-image">
-  <img src="@/assets/core.jpg" class="main-image">
-  </div>
-  <div class="card-text">
-    <br>
-    <h2>CORE</h2>
-    <p> <br> Core exercises are an important part of a well-rounded fitness program.</p>
-  </div>
-  <div class="card-stats">
-    <div class="stat">      
-      <div class="type"></div>
-      <img src="@/assets/abs.png" class="png-image">
-    </div>
-    <div class="">
-      <div class="value"></div>
-      <div class="type"><br>20'</div>
-    </div>
-    <div class="value"><img src="@/assets/timer.png" class="timer-image"> </div>
-  </div>
-</div>
-      
-    </div>
+  <div class="row">
+    <div class="card">
+      <div class="card-image">
+        <img src="@/assets/pull2.jpg" class="main-image">
+      </div>
+      <div class="card-text">
+        <br>
+        <div class="myDIV">
+          <h2>PULL</h2>
+        </div>
+        <div class="hide">  <br> <br> meaning the work is done when the muscle contracts when you pull.</div>
+      </div>
     </div>
   </div>
 </div>
 
-
-
+</div>
 
 
 
@@ -115,11 +83,11 @@
   grid-template-rows: 210px 210px 80px;
   grid-template-areas: "image" "text" "stats";
   border-radius: 18px;
-  background: white;
+  background: none;
   box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
   text-align: center;
   width: 210px;
-  height: 210px;
+  height: 300px;
 }
 
 .card:hover {
@@ -136,7 +104,7 @@
 .main-image {
   border-radius: 15px;
   background-size: cover;
-  height: 210px;
+  height: 300px;
   width: 210px;
 }
 
@@ -154,8 +122,8 @@
 
 .card-text h2 {
   margin-top:0px;
-  font-size:28px;
-  color:rgb(192,192,192)
+  font-size:40px;
+  color:rgb(255, 255, 255)
 }
 
 
@@ -190,6 +158,16 @@
   width: 60px;
   height: 75px;
   padding-bottom: 5px;
+}
+
+.hide {
+  display: none;
+
+}
+
+.myDIV:hover + .hide {
+  display: block;
+  color: grey;
 }
 
 </style>
