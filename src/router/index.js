@@ -99,11 +99,6 @@ const routes = [
     component: () => import('../views/view.vue')
   },
   {
-    path: '/mbeginner',
-    name: 'MBeginner',
-    component: () => import('../views/MBeginner.vue')
-  },
-  {
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('../views/Dashboard.vue')
