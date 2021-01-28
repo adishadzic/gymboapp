@@ -127,7 +127,6 @@
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 }
 .card {
-
   transition: 0.5s ease;
   cursor: pointer;
   margin:30px;
@@ -139,28 +138,19 @@
   height: 210px;
   width: 210px;
 }
-
 .card-text {
   grid-area: text;
 }
-
-
-
 .card-text p {
   color: #939597;
   font-size:15px;
   font-weight: 300;
 }
-
 .card-text h2 {
   margin-top:0px;
   font-size:28px;
   color:rgb(192,192,192)
 }
-
-
-
-
 .card-stats {
    
   display: grid;
@@ -178,19 +168,16 @@
   color: white;
   padding:10px;
 }
-
 .png-image{
   margin-top: 5px;
   width: 50px;
   height: 65px;
   padding-bottom: 15px;
 }
-
 .timer-image{
   width: 60px;
   height: 75px;
   padding-bottom: 5px;
 }
-
 </style>
 

@@ -41,12 +41,7 @@ const routes = [
   {
     path: '/legsbeginner',
   name: 'legsbeginner',
-  component: () => import('../views/LegsBeginner.vue')
-  },
-  {
-    path: '/mbeginner',
-    name: 'MBeginner',
-    component: () => import('../views/MBeginner.vue')
+  component: () => import('../views/LegsWorkouts/LegsBeginner.vue')
   },
   {
     path: '/dashboard',
@@ -66,27 +61,27 @@ const routes = [
   {
     path: '/legsintermediate',
     name: 'LegsI',
-    component: () => import('../views/LegsIntermediate.vue')
+    component: () => import('../views/LegsWorkouts/LegsIntermediate.vue')
   },
   {
     path: '/legsadvanced',
     name: 'LegsA',
-    component: () => import('../views/LegsAdvanced.vue')
+    component: () => import('../views/LegsWorkouts/LegsAdvanced.vue')
   },
   {
     path: '/coreadvanced',
     name: 'CoreAdvanced',
-    component: () => import('../views/CoreAdvanced.vue')
+    component: () => import('../views/CoreWorkouts/CoreAdvanced.vue')
   },
   {
     path: '/corebeginner',
     name: 'CoreBeginner',
-    component: () => import('../views/CoreBeginner.vue')
+    component: () => import('../views/CoreWorkouts/CoreBeginner.vue')
   },
   {
     path: '/coreintermediate',
     name: 'CoreIntermediate',
-    component: () => import('../views/CoreIntermediate.vue')
+    component: () => import('../views/CoreWorkouts/CoreIntermediate.vue')
   },
 
 ]

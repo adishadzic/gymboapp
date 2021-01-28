@@ -17,9 +17,6 @@
                 <router-link to="/" class="nav-link text-light">Web shop</router-link>
               </li>
               <li class="nav-item mb-3">
-                <router-link to="/" class="nav-link text-light">Web shop</router-link>
-              </li>
-              <li class="nav-item mb-3">
                 <router-link to="/" class="nav-link text-light">Account</router-link>
               </li>
             </ul>
@@ -27,7 +24,8 @@
         </b-row>
     </b-container>
     <b-col>
-
+    <div class="title ml-4 mt-3"><h4><strong>My Plan</strong></h4></div>
+    <b-row class="ml-4"><h1>asdfasf</h1></b-row>
     <div class="title ml-4 mt-3"><h4><strong>Workouts</strong></h4></div>
         <b-row class="ml-4">
           <workout-card v-for="card in cards" :key="card.url" :info="card" />
@@ -39,21 +37,14 @@
 
 <script>
 import WorkoutCard from '@/components/WorkoutCard.vue';
+
 let cards = [];
+
 cards = [
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push',},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull'},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Legs'},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push', route: "/home"},
+  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull', route: "/home"},
 ];
+
 export default {
   name: 'Dashboard',
   data: function(){

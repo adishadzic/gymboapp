@@ -1,8 +1,7 @@
 <template>
-      <div class="card ">
-            <img router to="/LevelCards" class="card-img-top" :src="info.url" />
+      <div class="card">
+            <a :href="info.route"><img class="card-img-top" :src="info.url"/></a>
             <div class="centered">{{ info.description }}</div>
-            <a href="#" class="btn btn-primary stretched-link">Go somewhere</a>
       </div>
 </template>
 
@@ -18,14 +17,20 @@ export default {
       margin: 6px;
       border: none;
 }
-.card:hover {
+.card img:hover {
+  opacity: 1.0;
+}
+/* .card:hover {
   transform: scale(1.15);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-}
+} */
+
 .card img{
+      opacity: 0.8;
       width: 10rem;
 }
 .card .centered{
+  color: rgb(255, 255, 255);     
   position: absolute;
   top: 50%;
   left: 50%;
