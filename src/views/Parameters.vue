@@ -11,7 +11,7 @@
           <b-col>
             <b-form inline>
               <label class="sr-only" for="inline-form-input-age">Age</label>
-              <b-form-input id="inline-form-input-age" placeholder="Enter your age" v-model="age"></b-form-input>
+              <b-form-input id="inline-form-input-age" placeholder="Enter your age" v-model="age" type="number"></b-form-input>
             </b-form>
           </b-col>
         </b-row>
@@ -21,7 +21,7 @@
           <b-col>
             <b-form inline>
               <label class="sr-only" for="inline-form-input-height">Height</label>
-              <b-form-input id="inline-form-input-height" placeholder="Enter your height" v-model="height"></b-form-input>
+              <b-form-input id="inline-form-input-height" placeholder="Enter your height" v-model="height" type="number"></b-form-input>
             </b-form>
           </b-col>
         </b-row>
@@ -31,7 +31,7 @@
           <b-col>
             <b-form inline>
               <label class="sr-only" for="inline-form-input-weight">Weight</label>
-              <b-form-input id="inline-form-input-weight" placeholder="Enter your weight" v-model="weight"></b-form-input>
+              <b-form-input id="inline-form-input-weight" placeholder="Enter your weight" v-model="weight" type="number"></b-form-input>
             </b-form>
           </b-col>
         </b-row>
