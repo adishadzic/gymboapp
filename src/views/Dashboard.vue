@@ -8,7 +8,7 @@
                 <router-link to="/myplan" class="nav-link text-light">My Plan</router-link>
               </li>
               <li class="nav-item mb-3">
-                <router-link to="/" class="nav-link text-light">Workouts</router-link>
+                <router-link to="/login" class="nav-link text-light">Workouts</router-link>
               </li>
               <li class="nav-item mb-3">
                 <router-link to="/" class="nav-link text-light">Motivation</router-link>
@@ -23,38 +23,43 @@
         </b-col>
         </b-row>
     </b-container>
-    <b-col>
-    <div class="title ml-4 mt-3"><h4><strong>My Plan</strong></h4></div>
-    <b-row class="ml-4"><h1>asdfasf</h1></b-row>
+    <b-row class="ml-4"><h1></h1></b-row>
+    
     <div class="title ml-4 mt-3"><h4><strong>Workouts</strong></h4></div>
-        <b-row class="ml-4">
-          <workout-card v-for="card in cards" :key="card.url" :info="card" />
-        </b-row>
-    </b-col>
+    <b-row>
+        <div class="container" style="max-width: 500px; text-align: left;">
+          <div id="cards">
+            <test-card v-for="card in cards" :key="card.naslov" :info="card" />
+          </div>
+          <footer id="footer"></footer>
+        </div>
+    </b-row>
 </div>
 
 </template>
 
 <script>
-import WorkoutCard from '@/components/WorkoutCard.vue';
+import TestCard from '@/components/TestCard.vue';
 
 let cards = [];
 
 cards = [
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090855645904916/gym1.jpg", description: 'Push', route: "/home"},
-  {url:"https://cdn.discordapp.com/attachments/700685922299019265/800090863342321674/gym.jpg", description: 'Pull', route: "/home"},
+  {
+    img: require('@/assets/gym.jpg'),
+    route: '/login',
+  },
 ];
 
 export default {
   name: 'Dashboard',
-  data: function(){
-      return {
-        cards: cards,
-    }
+  data: function() {
+    return {
+      cards,
+    };
   },
   components: {
-    WorkoutCard,
-  },
+    TestCard,
+  }
 };
 </script>
 
@@ -67,14 +72,7 @@ ul, li{
 .container-fluid{
     position: fixed;
     left: 0;
-    z-index: 100;
     padding: 0;
-}
-.nav a:hover {
-    background: #122143 none repeat scroll 0 0; 
-    border-left: 5px solid #5584ff;
-    display: block;
-    padding-left: 15px;
 }
 .nav{
     display: flex;
@@ -83,4 +81,5 @@ ul, li{
 .title{
   text-align: left;
 }
+
 </style>

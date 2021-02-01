@@ -9,6 +9,9 @@
       </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <router-link to="/dashboard" class="nav-link text-light">dash</router-link>
+        </li>
         <li v-if="!store.currentUser" class="nav-item">
             <router-link to="/login" class="nav-link text-light">Login</router-link>
           </li>
