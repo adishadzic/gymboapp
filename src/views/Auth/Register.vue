@@ -32,10 +32,8 @@
               name="TermsCheck"
               id="TermsCheck"
               v-model="TermsCheck"
-            />
-            <label class="form-check-label" for="TermsCheck">
-              I have read and accept the terms and conditions
-            </label>
+            >
+            <label for="terms"> I have read and accept the terms and conditions </label>
           </div>
             <button type="button" @click="register()" class="btn btn-primary mt-5">Proceed</button>
             
@@ -66,10 +64,10 @@ export default {
   },
   methods: {
     register() {
+      if(this.TermsCheck){
       let that = this;
-      if(this.password == this.confirmPassword){
-        if (this.TermsCheck == false) {
-        alert("You have to accept Terms of service!")
+      if(this.password == this.confirmPassword ){
+        
       firebase
       .auth()
       .createUserWithEmailAndPassword(this.username, this.password) 
@@ -99,13 +97,17 @@ export default {
           alert('Korisnik već postoji');/-
         }); */
       console.log('Nastavak');
-    }
       }
-    else{
+    else {
       this.passwordCheck=false;
       alert("Passwords don't match");
+      
       }
-       
+      }
+      else {
+        this.TermsCheck == false;
+        alert("You have to accept Terms of service!");
+      }
     },
     verifyEmail() {
       firebase  
