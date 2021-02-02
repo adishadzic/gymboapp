@@ -1,9 +1,8 @@
 <template>
-  <div class="container" style="max-width: 500px;">
-    <div class="card">
+    <div class="card mt-3" style="max-width: 10rem;">
       <a :href="info.route"><img class="card-img-top" :src="info.img" /></a>
+      <div class="centered">{{ info.description }}</div>
     </div>
-  </div>
 </template>
 
 <script>
@@ -15,16 +14,13 @@ export default {
 
 <style>
 .card{
-      margin: 6px;
       border: none;
 }
 .card:hover {
-  transform: scale(1.15);
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 } 
-
 .card img{
-      opacity: 0.8;
+      opacity: 0.9;
       width: 10rem;
 }
 .card img:hover{
@@ -33,7 +29,7 @@ export default {
 .card .centered{
   color: rgb(255, 255, 255);     
   position: absolute;
-  top: 50%;
-  left: 50%;
+  top: 45%;
+  left: 42%;
 }
 </style>

@@ -58,7 +58,7 @@ export default {
       confirmPassword: "",
       passwordCheck:true,  
       TermsCheck:{
-        accept: true
+        accept: false
       },    
     };
   },
