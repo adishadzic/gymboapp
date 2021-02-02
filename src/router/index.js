@@ -3,7 +3,7 @@ import VueRouter from 'vue-router'
 import PageNotFound from "../views/PageNotFound.vue";
 import Workouts from "../views/Workouts.vue";
 import MyPlan from "../views/MyPlan.vue";
-import WebShop from "../views/WebShop.vue";
+import Pics from "../views/Pics.vue";
 
 Vue.use(VueRouter)
 
@@ -114,11 +114,16 @@ const routes = [
         component: MyPlan,
       },
       {
-        path: '/dashboard/webshop',
-        name: 'WebShop',
-        component: WebShop,
-      }
+        path: '/dashboard/pics',
+        name: 'Pics',
+        component: Pics,
+      },
     ]
+  },
+  {
+    path: '/editprofile',
+    name: 'Edit',
+    component: () => import('../views/EditProfile.vue'),
   },
   {
     path: '/chooseworkout',

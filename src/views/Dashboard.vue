@@ -5,14 +5,15 @@
         <div class="col-0 image">
           <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
           <h3 class="mt-3">User Userić</h3>
+          <router-link to="/editprofile">
           <button type="button" class="btn btn-secondary">Edit Profile</button>
-
+          </router-link>
         </div>
-        <div class="ml-5"><router-link to="/dashboard/workouts" class="nav-link text-light active"><img src="@/assets/dumbbell.png" class="dumbbell-logo mr-1" height="25">Workouts</router-link>
+        <div class="ml-5"><router-link to="/dashboard/workouts" class="nav-link text-light active"><img src="@/assets/dumbbell.png" class="dumbbell-logo1 mr-1" height="25">Workouts</router-link>
         </div>
         <div class="ml-5"><router-link to="/dashboard/myplan" class="nav-link text-light"><img src="@/assets/pencil.png" class="dumbbell-logo mr-1" height="20">My Plan</router-link>
         </div>
-        <div class="ml-5"><router-link to="/dashboard/webshop" class="nav-link text-light"><img src="@/assets/image.png" class="dumbbell-logo mr-1" height="20">Pics</router-link>
+        <div class="ml-5"><router-link to="/dashboard/pics" class="nav-link text-light"><img src="@/assets/image.png" class="dumbbell-logo mr-1" height="20">Pics</router-link>
         </div>
       </div>
 </div>
