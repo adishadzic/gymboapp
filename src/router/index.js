@@ -1,10 +1,6 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PageNotFound from "../views/PageNotFound.vue";
-import Workouts from "../views/Workouts.vue";
-import MyPlan from "../views/MyPlan.vue";
-import Pics from "../views/Pics.vue";
-
 Vue.use(VueRouter)
 
 const routes = [
@@ -102,23 +98,26 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('../views/Dashboard.vue'),
-    children: [
-      {
-        path: '/dashboard/workouts',
-        name: 'Workouts',
-        component: Workouts,
-      },
-      {
-        path: '/dashboard/myplan',
-        name: 'MyPlan',
-        component: MyPlan,
-      },
-      {
-        path: '/dashboard/pics',
-        name: 'Pics',
-        component: Pics,
-      },
-    ]
+  },
+  {
+    path: '/dashboard/workouts',
+    name: 'Workouts',
+    component: () => import('../views/Workouts.vue'),
+  },
+  {
+    path: '/dashboard/myplan',
+    name: 'MyPlan',
+    component: () => import('../views/MyPlan.vue'),
+  },
+  {
+    path: '/dashboard/pics',
+    name: 'Pics',
+    component: () => import('../views/Pics.vue'),
+  },
+  {
+    path: '/dashboard/BMI',
+    name: 'BMI',
+    component: () => import('../views/BMI.vue'),
   },
   {
     path: '/editprofile',
