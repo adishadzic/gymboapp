@@ -1,5 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
+import PageNotFound from "../views/PageNotFound.vue";
+import Workouts from "../views/Workouts.vue";
+import MyPlan from "../views/MyPlan.vue";
+import WebShop from "../views/WebShop.vue";
 
 Vue.use(VueRouter)
 
@@ -97,7 +101,24 @@ const routes = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: () => import('../views/Dashboard.vue')
+    component: () => import('../views/Dashboard.vue'),
+    children: [
+      {
+        path: '/dashboard/workouts',
+        name: 'Workouts',
+        component: Workouts,
+      },
+      {
+        path: '/dashboard/myplan',
+        name: 'MyPlan',
+        component: MyPlan,
+      },
+      {
+        path: '/dashboard/webshop',
+        name: 'WebShop',
+        component: WebShop,
+      }
+    ]
   },
   {
     path: '/chooseworkout',
@@ -109,7 +130,11 @@ const routes = [
     name: 'LevelCards',
     component: () => import('../views/LevelCards.vue')
   },
-]
+  {
+    path: '*',
+    component: PageNotFound,
+  }
+];
 
 const router = new VueRouter({
   mode: 'history',

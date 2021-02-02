@@ -1,45 +1,26 @@
 <template>
 <div class="app">
-    <b-container fluid>
-      <b-row>
-        <b-col cols="2">
-          <ul class="nav list-group">
-              <li class="nav-item mb-3">
-                <router-link to="/myplan" class="nav-link text-light">My Plan</router-link>
-              </li>
-              <li class="nav-item mb-3">
-                <router-link to="/login" class="nav-link text-light">Workouts</router-link>
-              </li>
-              <li class="nav-item mb-3">
-                <router-link to="/" class="nav-link text-light">Motivation</router-link>
-              </li>
-              <li class="nav-item mb-3">
-                <router-link to="/" class="nav-link text-light">Web shop</router-link>
-              </li>
-              <li class="nav-item mb-3">
-                <router-link to="/" class="nav-link text-light">Account</router-link>
-              </li>
-            </ul>
-        </b-col>
-        </b-row>
-    </b-container>
-    <b-row class="ml-4"><h1></h1></b-row>
-    
-    <div class="title ml-4 mt-3"><h4><strong>Workouts</strong></h4></div>
-    <b-row>
-        <div class="container" style="max-width: 500px; text-align: left;">
-          <div id="cards">
-            <test-card v-for="card in cards" :key="card.naslov" :info="card" />
-          </div>
-          <footer id="footer"></footer>
+  <br>
+      <div class="row mt-5">
+        <div class="col-0 image">
+          <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
+          <h3 class="mt-3">User Userić</h3>
+          <button type="button" class="btn btn-secondary">Edit Profile</button>
+
         </div>
-    </b-row>
+        <div class="ml-5"><router-link to="/dashboard/workouts" class="nav-link text-light active"><img src="@/assets/dumbbell.png" class="dumbbell-logo mr-1" height="25">Workouts</router-link>
+        </div>
+        <div class="ml-5"><router-link to="/dashboard/myplan" class="nav-link text-light"><img src="@/assets/pencil.png" class="dumbbell-logo mr-1" height="20">My Plan</router-link>
+        </div>
+        <div class="ml-5"><router-link to="/dashboard/webshop" class="nav-link text-light"><img src="@/assets/image.png" class="dumbbell-logo mr-1" height="20">Pics</router-link>
+        </div>
+      </div>
 </div>
 
 </template>
 
 <script>
-import TestCard from '@/components/TestCard.vue';
+/* import TestCard from '@/components/TestCard.vue';
 
 let cards = [];
 
@@ -60,26 +41,28 @@ export default {
   components: {
     TestCard,
   }
-};
+}; */
 </script>
 
 <style scoped>
-ul, li{
-    text-transform: uppercase;
-    color: black;
-    text-align: left;
+a.router-link-active{
+  background: gray;
 }
-.container-fluid{
-    position: fixed;
-    left: 0;
-    padding: 0;
+/* .nav-link:hover{
+  background-color: gray;
 }
-.nav{
-    display: flex;
-    height: 100vh;
+.nav-link:focus{
+  background-color: red;
+} */
+.image{
+  margin-left: -120px;
 }
-.title{
-  text-align: left;
+.avatar {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
 }
-
+.dumbbell-logo{
+  margin-top: -2px;
+}
 </style>
