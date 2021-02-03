@@ -10,14 +10,13 @@
     <div class="carousel-item active">
       <img class="d-block w-100" src="@/assets/gym.jpg" alt="First slide">
         <div class="carousel-caption">
-            <h1>Choose a plan</h1>
+            <router-link to="/parameters" class="nav-link text-light" ><h1>Make a plan</h1></router-link>
         </div>
     </div>
     <div class="carousel-item">
       <img class="d-block w-100" src="@/assets/gym1.jpg" alt="Second slide">
         <div class="carousel-caption">
-            <h1>Choose a workout</h1>
-            <p></p>
+            <router-link to="/chooseworkout" class="nav-link text-light"><h1>Choose a workout</h1></router-link>
         </div>
     </div>
     <div class="carousel-item">
@@ -45,4 +44,5 @@
     margin-top: 25px;
 }
 </style>
+
 
