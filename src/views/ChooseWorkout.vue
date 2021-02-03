@@ -1,173 +1,180 @@
 <template>
-<div class="app">
-<div class="row">
-  <div class="card" >
-    <div class="card-image">
-      <img src="@/assets/push1.jpg" class="main-image">
-    </div>
-    <div class="card-text">
-      <br>
-      <div class="myDIV">
-        <h2>PUSH</h2>
-      </div>
-      <div class="hide">   <br>Legs workout - these workouts target your quads, hamstrings, gluteus and calves.
-        3 levels: Beginner, Intermediate, Advanced.
-        Program duration depends on level you choose; typically 3 weeks. 
-        Workout timer: 45-60min
-        Required equipment: none (bodyweight) or dumbbells/kettlebells.
-      </div>
-    </div>
-  </div>
-  <div class="row">
+  <div class="container">
+  <div class="wrapper">
+    
+    <div class="row">
     <div class="card">
-      <div class="card-image">
-        <img src="@/assets/pull2.jpg" class="main-image">
-      </div>
-      <div class="card-text">
-        <br>
-        <div class="myDIV">
-          <h2>PULL</h2>
-        </div>
-        <div class="hide">  <br> <br> meaning the work is done when the muscle contracts when you pull.</div>
+      <img class="img" src="@/assets/push1.jpg">
+      <div class="info">
+        <h1>PUSH</h1>
+        <p>blablablablablanbla</p>
+        <a href="#" class="btn">Read more</a>
       </div>
     </div>
-  </div>
-</div>
+    
 
-<div class="row">
-  <div class="card" >
-    <div class="card-image">
-      <img src="@/assets/push1.jpg" class="main-image">
-    </div>
-    <div class="card-text">
-      <br>
-      <div class="myDIV">
-        <h2>PUSH</h2>
-      </div>
-      <div class="hide">   <br>Legs workout - these workouts target your quads, hamstrings, gluteus and calves.
-        3 levels: Beginner, Intermediate, Advanced.
-        Program duration depends on level you choose; typically 3 weeks. 
-        Workout timer: 45-60min
-        Required equipment: none (bodyweight) or dumbbells/kettlebells.
-      </div>
-    </div>
-  </div>
-  <div class="row">
+    
     <div class="card">
-      <div class="card-image">
-        <img src="@/assets/pull2.jpg" class="main-image">
-      </div>
-      <div class="card-text">
-        <br>
-        <div class="myDIV">
-          <h2>PULL</h2>
-        </div>
-        <div class="hide">  <br> <br> meaning the work is done when the muscle contracts when you pull.</div>
+      <img src="@/assets/pull1.jpg">
+      <div class="info">
+        <h1>PULL</h1>
+        <p>blablablablablanbla</p>
+        <a href="#" class="btn">Read more</a>
       </div>
     </div>
+    
+
+     
+     <div class="card">
+      <img class="img" src="@/assets/legs.jpg">
+      <div class="info">
+        <h1>LEGS</h1>
+        <p>blablablablablanbla</p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+    </div>
+    
+
+    
+    <div class="card">
+      <img src="@/assets/core.jpg">
+      <div class="info">
+        <h1>CORE</h1>
+        <p>blablablablablanbla</p>
+        <a href="#" class="btn">Read more</a>
+      </div>
+    </div>
+    </div>
+     
+
   </div>
-</div>
-
-</div>
-
-
-
-
+  </div>
 </template>
 
 <style>
 
-.card {
-  display: grid;
-  grid-template-columns: 210px;
-  grid-template-rows: 210px 210px 80px;
-  grid-template-areas: "image" "text" "stats";
-  border-radius: 18px;
-  background: none;
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.9);
-  text-align: center;
-  width: 210px;
-  height: 300px;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "lato", sans-serif;
 }
 
-.card:hover {
-  transform: scale(1.15);
-  box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
-}
-.card {
-
-  transition: 0.5s ease;
-  cursor: pointer;
-  margin:30px;
-}
-
-.main-image {
-  border-radius: 15px;
-  background-size: cover;
-  height: 300px;
-  width: 210px;
-}
-
-.card-text {
-  grid-area: text;
-}
-
-
-
-.card-text p {
-  color: #939597;
-  font-size:15px;
-  font-weight: 300;
-}
-
-.card-text h2 {
-  margin-top:0px;
-  font-size:40px;
-  color:rgb(255, 255, 255)
-}
-
-
-
-
-.card-stats {
-   
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  border-bottom-left-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background:	rgb(32,32,32)
-}
-.card-stats .stat {
+template{
+  width: 100%;
+  height: 100%;
   display: flex;
-  align-items: center;
   justify-content: center;
-  flex-direction: column;
-  color: white;
-  padding:10px;
+  align-items: center;
+  background: #222;
 }
 
-.png-image{
-  margin-top: 5px;
-  width: 50px;
-  height: 65px;
-  padding-bottom: 15px;
+.container{
+  width: 90%;
+  margin: 50px auto;
 }
 
-.timer-image{
-  width: 60px;
-  height: 75px;
-  padding-bottom: 5px;
+.wrapper{
+  display: flex;
+  width: 70%;
+  justify-content: space-around;
 }
 
-.hide {
-  display: none;
-
+.card{
+  width: 280px;
+  height: 360px;
+  padding: 2rem 1rem;
+  background: rgb(58, 58, 58);
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  box-shadow: 0px 7px 10px rgb(0, 0, 0, 0.5);
+  transition: 0.5 ease-in-out;
+  margin-bottom: 80px;
 }
 
-.myDIV:hover + .hide {
+.card:hover{
+  transform: translateY(20px);
+}
+
+.card:before{
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   display: block;
-  color: grey;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(78, 78, 78, 0.5),rgb(0, 0, 0));
+  z-index: 2;
+  transition: 0.5s all;
+  opacity: 0;
+  
+}
+
+.card:hover:before{
+  opacity: 1;
+}
+
+.card img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.card .info{
+  position: relative;
+  left: 0;
+  z-index: 3;
+  color: rgb(207, 207, 207);
+  opacity: 0;
+  transform: translateY(30px);
+  transition: 0.5 all;
+  padding-right: 110px;
+  padding-top: 180px;
+  
+}
+
+.card:hover .info{
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.card.info h1{
+  margin: 0;
+}
+
+.card .info p{
+  letter-spacing: 1px;
+  font-size: 15px;
+  margin-top: 8px;
+  margin-bottom: 20px;
+}
+
+.card .info .btn{
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  background: rgb(51, 51, 51);
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.4s ease-in-out;
+}
+
+.card .info .btn:hover{
+  box-shadow: 0px 4px 4px rgba(49, 49, 49, 0.5);
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-flow: wrap;
 }
 
 </style>
+
