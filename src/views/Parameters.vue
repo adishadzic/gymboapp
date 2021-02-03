@@ -11,7 +11,7 @@
           <b-col>
             <b-form inline>
               <label class="sr-only" for="inline-form-input-age">Age</label>
-              <b-form-input id="inline-form-input-age" placeholder="Enter your age" v-model="age" type="number"></b-form-input>
+              <b-form-input id="inline-form-input-age" placeholder="Enter your age" v-model="age" type="number" maxlenght="2"></b-form-input>
             </b-form>
           </b-col>
         </b-row>
