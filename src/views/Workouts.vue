@@ -6,7 +6,7 @@
       <b-row class="d-flex inline-flex justify-content-start">
         <b-col class="mr-4 ml-3">
           <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
-          <h3 class="mt-3">User Userić</h3>
+          <h3 class="mt-3">{{ store.currentUser }}</h3>
           <router-link to="/editprofile">
           <button type="button" class="btn btn-secondary">Edit Profile</button>
           </router-link>
@@ -42,6 +42,8 @@
 
 <script>
 import TestCard from '@/components/TestCard.vue';
+import { firebase } from '@/firebase';
+import store from '@/store';
 
 let cards = [];
 
@@ -57,6 +59,7 @@ export default {
   data: function() {
     return {
       cards,
+      store
     };
   },
   components: {
