@@ -52,7 +52,7 @@ export default {
         { status: "Done", workoutName: "Plank Jack", reps: "40sec", sets: "4" },
         { status: "Done", workoutName: "Side Plank", reps: "40sec", sets: "4" },
         { status: "Done", workoutName: "Leg Raise", reps: "40sec", sets: "4"},
-        { status: "Done", workoutName: "Hell Touch", reps: "40sec", sets: "4" },
+        { status: "Done", workoutName: "Heel Touch", reps: "40sec", sets: "4" },
         { status: "Done", workoutName: "Raise Leg Hold", reps: "40sec", sets: "4" },
         { status: "Done", workoutName: "Plank", reps: "40sec", sets: "4" }
       ],
