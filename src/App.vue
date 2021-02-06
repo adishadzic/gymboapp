@@ -19,6 +19,9 @@
           <router-link to="/register" class="nav-link text-light">Register</router-link>
         </li>
         <li class="nav-item">
+          <img src="https://img.icons8.com/material/24/ffffff/bell.png" width="35" height="35"/>
+        </li>
+        <li class="nav-item">
           <router-link to="/choose" class="nav-link text-light">Choose</router-link>
         </li>
          <li class="nav-item">
@@ -46,6 +49,7 @@
 <script>
 import store from "@/store";
 import { firebase } from "@/firebase";
+import { db } from "@/firebase";
 import router from "@/router";
 
 firebase.auth().onAuthStateChanged((user) =>  {
@@ -74,6 +78,10 @@ export default {
     };
   },
 
+  mounted(){
+    this.created();
+  },
+
   methods: {
     logout() {
       firebase
@@ -83,6 +91,38 @@ export default {
           this.$router.push({ name: "Login" });
         });
     },
+
+    created(){
+      const self = this;
+      firebase.auth().onAuthStateChanged((user) => {
+        const currentRoute = router.currentRoute;
+        
+        console.log("Login checking");
+
+        if (user){
+          self.authenticated = true
+          console.log("Current user - ", user.email)
+          store.currentUser = user.email;
+          db.collection("Users")
+            .doc(self.store.currentUser)
+            .get()
+            .then(doc => {
+              if (doc.exists){
+                console.log("Document data: ", doc.data());
+                store.displayName = doc.data().name;
+                store.currentUser = doc.data().email;
+              }
+              else{
+                console.log("Document undefined");
+              }
+            });
+        }else{
+          console.log("User unknown");
+          store.currentUser = null;
+        }
+      });
+    },
+
     onClick() {
         this.$bvModal.msgBoxOk('User name: Fred Flintstone', {
           title: 'User Info',
@@ -117,5 +157,6 @@ export default {
 #nav {
   padding: 30px;
 }
+
 
 </style>

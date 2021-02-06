@@ -8,8 +8,8 @@
           <form>
             
             <div class="form-group">
-              <label form="exampleInputFullName">Full name</label>
-              <input type="text" class="form-control basic-input" id="exampleInputFullName" placeholder="e.g. John Doe"/>
+              <label form="fullName">Full name</label>
+              <input type="text" v-model="name" class="form-control basic-input" id="name" name="name" placeholder="e.g. John Doe"/>
             </div>
             <div class="form-group">
               <label for="emailField">Email</label>
@@ -48,11 +48,14 @@
 
 <script>
 import { firebase } from '@/firebase';
+import { db } from '@/firebase';
+import store from '@/store';
+
 export default {
   name: 'Register',
   data() {
     return {   
-      fullName: "",  
+      name: "",  
       email: '',
       password: '',
       confirmPassword: "",
@@ -64,24 +67,44 @@ export default {
   },
   methods: {
     register() {
+      let id = this.email;
       if(this.TermsCheck){
       let that = this;
       if(this.password == this.confirmPassword ){
         
       firebase
       .auth()
-      .createUserWithEmailAndPassword(this.email, this.password) 
+      .createUserWithEmailAndPassword(that.email, that.password) 
       .then(function()   {
+          db.collection("Users").doc(id).set({
+            name: that.name, 
+            email: that.email,
+            password: that.password
+          })
+          .then((doc) => {
+            console.log("Saved", doc)
+          })
+          .catch(function(error){
+            console.error("An error occured", error)
+          });
+
+          store.displayName = that.name;
+          store.currentUser = that.email;
+          store.password = that.password;
               //alert('Uspješna registracija');
               that.$router.replace({name: "Home" });  
         })
-      .then((user) => {
+        .catch(function(error){
+          console.error("An error occured", error)
+        })
+
+      /* .then((user) => {
         firebase 
           .auth()
           .currentUser.updateProfile({ displayName: this.fullName });
         this.verifyEmail();
-      })
-      .then(() => {
+      }) */
+      /* .then(() => {
         this.fullName = "";
         this.email = "";
         this.password = "";
@@ -92,24 +115,25 @@ export default {
             alert("Potrebno je verificirati e-mail prije korištenja aplikacije pomoću poslanog linka.")
             this.$router.push({ name: "Login" });
           });
-      })
+      }) */
        /*  .catch(function() {
           alert('Korisnik već postoji');/-
         }); */
-      console.log('Nastavak');
-      }
+      /* console.log('Nastavak');
+      } */
+    }
     else {
       this.passwordCheck=false;
       alert("Passwords don't match");
       
       }
-      }
+    }
       else {
         this.TermsCheck == false;
         alert("You have to accept Terms of service!");
       }
     },
-    verifyEmail() {
+    /* verifyEmail() {
       firebase  
         .auth()
         .currentUser.sendEmailVerification()
@@ -121,7 +145,7 @@ export default {
           //Error occured. Inspect error.code.
           console.error("verifyError " + error);
         });
-    },
+    } */
   },
   
 }

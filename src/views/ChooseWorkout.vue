@@ -7,7 +7,7 @@
       <img class="img" src="@/assets/push1.jpg">
       <div class="info">
         <h1>PUSH</h1>
-        <p>blablablablablanbla</p>
+        <p>Focus on: chest, shoulders and triceps.</p>
         <a href="#" class="btn">Read more</a>
       </div>
     </div>
