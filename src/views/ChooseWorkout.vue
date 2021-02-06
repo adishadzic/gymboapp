@@ -4,10 +4,10 @@
     
     <div class="row">
     <div class="card">
-      <img class="img" src="@/assets/push1.jpg">
+      <img class="img" src="@/assets/push.jpg">
       <div class="info">
         <h1>PUSH</h1>
-        <p>blablablablablanbla</p>
+        <p>These workouts target your chest, shoulders, and triceps.</p>
         <a href="#" class="btn">Read more</a>
       </div>
     </div>
@@ -15,10 +15,10 @@
 
     
     <div class="card">
-      <img src="@/assets/pull1.jpg">
+      <img src="@/assets/pull2.jpg">
       <div class="info">
         <h1>PULL</h1>
-        <p>blablablablablanbla</p>
+        <p>These workouts target your back, biceps, and forearms.</p>
         <a href="#" class="btn">Read more</a>
       </div>
     </div>
@@ -26,10 +26,10 @@
 
      
      <div class="card">
-      <img class="img" src="@/assets/legs.jpg">
+      <img class="img" src="@/assets/legs2.jpg">
       <div class="info">
         <h1>LEGS</h1>
-        <p>blablablablablanbla</p>
+        <p>These workouts target your hamstrings, quads, and gluteus</p>
         <a href="#" class="btn">Read more</a>
       </div>
     </div>
@@ -37,10 +37,10 @@
 
     
     <div class="card">
-      <img src="@/assets/core.jpg">
+      <img src="@/assets/core2.jpg">
       <div class="info">
         <h1>CORE</h1>
-        <p>blablablablablanbla</p>
+        <p>These workouts target your abdominal muscles.</p>
         <a href="#" class="btn">Read more</a>
       </div>
     </div>
@@ -93,6 +93,7 @@ template{
   box-shadow: 0px 7px 10px rgb(0, 0, 0, 0.5);
   transition: 0.5 ease-in-out;
   margin-bottom: 80px;
+  border-radius: 18px;
 }
 
 .card:hover{
@@ -111,7 +112,7 @@ template{
   z-index: 2;
   transition: 0.5s all;
   opacity: 0;
-  
+  border-radius: 18px;
 }
 
 .card:hover:before{
@@ -125,6 +126,7 @@ template{
   position: absolute;
   top: 0;
   left: 0;
+  border-radius: 18px;
 }
 
 .card .info{
@@ -136,7 +138,7 @@ template{
   transform: translateY(30px);
   transition: 0.5 all;
   padding-right: 110px;
-  padding-top: 180px;
+  padding-top: 150px;
   
 }
 
@@ -147,13 +149,15 @@ template{
 
 .card.info h1{
   margin: 0;
+  color: rgb(100, 100, 100);
 }
 
 .card .info p{
   letter-spacing: 1px;
-  font-size: 15px;
+  font-size: 11px;
   margin-top: 8px;
   margin-bottom: 20px;
+  color: rgb(143, 143, 143);
 }
 
 .card .info .btn{
