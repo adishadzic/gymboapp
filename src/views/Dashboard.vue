@@ -6,7 +6,8 @@
       <b-row class="d-flex inline-flex justify-content-start">
         <b-col class="mr-4 ml-3">
           <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
-          <h3 class="mt-3">User Userić</h3>
+          <h3 class="mt-3">Full name:</h3>
+          <p>{{ store.fullName }}</p>
           <router-link to="/editprofile">
           <button type="button" class="btn btn-secondary">Edit Profile</button>
           </router-link>
@@ -38,6 +39,28 @@
 </template>
 
 <script>
+
+import { firebase } from '@/firebase';
+import store from '@/store';
+
+export default {
+  data() {
+    return {
+      store,
+    };
+  },
+methods: {
+    logout() {
+      firebase
+        .auth()
+        .signOut()
+        .then(() => {
+          this.store.fullName = null;
+        });
+    },
+  },
+}
+
 </script>
 
 <style scoped>
