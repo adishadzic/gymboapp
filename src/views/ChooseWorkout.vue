@@ -51,7 +51,7 @@
   </div>
 </template>
 
-<style>
+<style scoped>
 
 *{
   padding: 0;
@@ -72,6 +72,8 @@ template{
 .container{
   width: 90%;
   margin: 50px auto;
+  display: flex;
+  justify-content: center;
 }
 
 .wrapper{

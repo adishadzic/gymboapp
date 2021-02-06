@@ -20,11 +20,11 @@ export default {
   box-shadow: 5px 5px 15px rgba(0,0,0,0.6);
 } 
 .card img{
-      opacity: 0.9;
+       opacity: 1.0;
       width: 10rem;
 }
 .card img:hover{
-  opacity: 1.0;
+  opacity: 0.8;
 }
 .card .centered{
   color: rgb(255, 255, 255);     

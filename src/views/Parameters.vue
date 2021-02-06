@@ -92,7 +92,7 @@ export default {
       if (selectedGoal === "goal1") {
         if (selectedLevel === "level1") {
           this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Beginer", goal: "Maintain healthy lifestyle" },
           });
         } else if (selectedLevel === "level2") {
