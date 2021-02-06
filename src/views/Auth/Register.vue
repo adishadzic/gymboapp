@@ -13,7 +13,7 @@
             </div>
             <div class="form-group">
               <label for="emailField">Email</label>
-              <input type="username" v-model="username" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="e.g. johndoe@gmail.com">
+              <input type="email" v-model="email" class="form-control" id="emailField" aria-describedby="emailHelp" placeholder="e.g. johndoe@gmail.com">
             </div>
             <div class="form-group">
               <label for="passwordField">Password</label>
@@ -31,7 +31,7 @@
               type="checkbox"
               name="TermsCheck"
               id="TermsCheck"
-              v-model="TermsCheck"
+              v-model="TermsCheck.accept"
             >
             <label for="terms"> I have read and accept the terms and conditions </label>
           </div>
@@ -70,7 +70,7 @@ export default {
         
       firebase
       .auth()
-      .createUserWithEmailAndPassword(this.username, this.password) 
+      .createUserWithEmailAndPassword(this.email, this.password) 
       .then(function()   {
               //alert('Uspješna registracija');
               that.$router.replace({name: "Home" });  
@@ -87,7 +87,7 @@ export default {
         this.password = "";
         firebase
           .auth()
-          .signout()
+          .signOut()
           .then(() => {
             alert("Potrebno je verificirati e-mail prije korištenja aplikacije pomoću poslanog linka.")
             this.$router.push({ name: "Login" });

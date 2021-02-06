@@ -30,7 +30,23 @@
               <router-link to="/dashboard/BMI" class="nav-link text-light"><img src="@/assets/bmi1.png" class="mr-1" height="20">BMI</router-link>
             </b-col>
           </b-row>
-          <b-row>
+          <b-row class="ml-5 mt-4">
+            <h3>Week 1</h3> 
+          </b-row>
+          <b-row class="ml-4">
+            <week-one class="ml-2" v-for="card in week1" :key="card.id" :info="card" />
+          </b-row>
+          <b-row class="ml-5 mt-4">
+            <h3>Week 2</h3> 
+          </b-row>
+          <b-row class="ml-4">
+            <week-two class="ml-2" v-for="card in week2" :key="card.id" :info="card" />
+          </b-row>
+          <b-row class="ml-5 mt-4">
+            <h3>Week 3</h3> 
+          </b-row>
+          <b-row class="ml-4">
+            <week-three class="ml-2" v-for="card in week3" :key="card.id" :info="card" />
           </b-row>
         </b-col>
       </b-row>
@@ -38,17 +54,49 @@
 </div>
 
 </template>
-
 <script>
+import WeekOne from '@/components/WeekOne.vue';
+import WeekTwo from '../components/WeekTwo.vue';
+import WeekThree from '@/components/WeekThree.vue';
 import { firebase } from '@/firebase';
 import store from '@/store';
 
+let week1, week2, week3 = [];
+
+week1 = [
+  {title: "Whole Body", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+];
+
+week2 = [
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+];
+
+week3 = [
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+];
+
 export default {
+  name: 'MyPlan',
   data() {
     return {
+      week1,
+      week2,
+      week3,
       store,
     };
   },
+  components: {
+    WeekOne,
+    WeekTwo,
+    WeekThree,
+  }
 }
 </script>
 

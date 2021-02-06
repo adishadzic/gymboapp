@@ -104,15 +104,6 @@ export default {
 </script>
 
 <style scoped>
-a.router-link-active{
-  background: gray;
-}
-/* .nav-link:hover{
-  background-color: gray;
-}
-.nav-link:focus{
-  background-color: red;
-} */
 .image{
   margin-left: -120px;
 }

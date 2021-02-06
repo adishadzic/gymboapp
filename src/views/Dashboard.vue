@@ -15,7 +15,7 @@
         <b-col cols="8">
           <b-row no-gutters>
             <b-col>
-              <router-link to="/dashboard/workouts" class="nav-link text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Workouts</router-link>
+              <router-link to="/dashboard/workouts" class="nav-link active text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Workouts</router-link>
             </b-col>
         
             <b-col>
@@ -51,6 +51,19 @@ export default {
 </script>
 
 <style scoped>
+.nav-link::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+  margin-top: 10px;
+}
+.nav-link:hover::after{
+  width: 100%;
+  transition: width .7s;
+}
 .container {
   margin-left: -150px;
 }
