@@ -7,8 +7,8 @@
       <img class="img" src="@/assets/push.jpg">
       <div class="info">
         <h1>PUSH</h1>
-        <p>These workouts target your chest, shoulders, and triceps.</p>
-        <a href="/parameters" class="btn">Read more</a>
+        <p>Focus on: chest, shoulders and triceps.</p>
+        <a href="#" class="btn">Read more</a>
       </div>
     </div>
     
