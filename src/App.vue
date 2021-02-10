@@ -9,7 +9,7 @@
       </button>
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
+        <li v-if="store.currentUser" class="nav-item">
           <router-link to="/dashboard" class="nav-link text-light">dash</router-link>
         </li>
         <li v-if="!store.currentUser" class="nav-item">
@@ -18,17 +18,8 @@
         <li v-if="!store.currentUser" class="nav-item">
           <router-link to="/register" class="nav-link text-light">Register</router-link>
         </li>
-        <li class="nav-item">
+        <li v-if="store.currentUser" class="nav-item">
           <img src="https://img.icons8.com/material/24/ffffff/bell.png" width="35" height="35"/>
-        </li>
-        <li class="nav-item">
-          <router-link to="/choose" class="nav-link text-light">Choose</router-link>
-        </li>
-         <li class="nav-item">
-          <router-link to="/parameters" class="nav-link text-light">Parameters</router-link>
-        </li>
-        <li class="nav-item">
-          <router-link to="/chooseworkout" class="nav-link text-light">ČUZZZZZZZ</router-link>
         </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>

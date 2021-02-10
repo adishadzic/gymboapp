@@ -135,6 +135,26 @@ const routes = [
     component: () => import('../views/LevelCards.vue')
   },
   {
+    path: '/push',
+    name: 'Push',
+    component: () => import('../views/CardsLevel/Push.vue')
+  },
+  {
+    path: '/pull',
+    name: 'Pull',
+    component: () => import('../views/CardsLevel/Pull.vue')
+  },
+  {
+    path: '/legs',
+    name: 'Legs',
+    component: () => import('../views/CardsLevel/Legs.vue')
+  },
+  {
+    path: '/core',
+    name: 'Core',
+    component: () => import('../views/CardsLevel/Core.vue')
+  },
+  {
     path: '*',
     component: PageNotFound,
   }

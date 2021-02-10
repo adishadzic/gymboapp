@@ -1,76 +1,61 @@
 <template>
-  <div class="container">
-  <div class="wrapper">
-    
-    <div class="row">
+
+<div class="container">
+<div class="wrapper">
+<div class="row">
     <div class="card">
-      <img class="img" src="@/assets/push.jpg">
+      <img class="img" src="@/assets/pull6.jpg">
       <div class="info">
-        <h1>PUSH</h1>
+        <h1>BEGINNER</h1>
         <p>Workouts that target your chest, shoulders and triceps.</p>
-        <b-button pill variant="primary" class="btn" @click="goToPush">GO TO</b-button>
+        <b-button pill variant="primary" class="btn" @click="goToPullB">GO TO</b-button>
       </div>
     </div>
-    
+</div> 
 
-    
+<div class="row">
     <div class="card">
-      <img src="@/assets/pull2.jpg">
+      <img class="img" src="@/assets/pull3.jpg">
       <div class="info">
-        <h1>PULL</h1>
-        <p>These workouts target your back, biceps, and forearms.</p>
-        <b-button pill variant="primary" class="btn" @click="goToPull">GO TO</b-button>
+        <h1>INTERMEDIATE</h1>
+        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <b-button pill variant="primary" class="btn" @click="goToPullI">GO TO</b-button>
       </div>
     </div>
-    
+</div>
 
-     
-     <div class="card">
-      <img class="img" src="@/assets/legs2.jpg">
-      <div class="info">
-        <h1>LEGS</h1>
-        <p>These workouts target your hamstrings, quads, and gluteus</p>
-        <b-button pill variant="primary" class="btn" @click="goToLegs">GO TO</b-button>
-      </div>
-    </div>
-    
-
-    
+<div class="row">
     <div class="card">
-      <img src="@/assets/core2.jpg">
+      <img class="img" src="@/assets/pull5.jpg">
       <div class="info">
-        <h1>CORE</h1>
-        <p>Workouts that target your abdominal muscles.</p>
-        <b-button pill variant="primary" class="btn" @click="goToCore">GO TO</b-button>
+        <h1>ADVANCED</h1>
+        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <b-button pill variant="primary" class="btn" @click="goToPullA">GO TO</b-button>
       </div>
     </div>
-    </div>
-     
+</div>
 
-  </div>
-  </div>
+</div>
+</div>  
 </template>
 
 <script>
 export default {
-  methods: {
-    goToPush(){
-      this.$router.push("/Push");
-    },
-    goToPull(){
-      this.$router.push("/Pull");
-    },
-    goToLegs(){
-      this.$router.push("/Legs");
-    },
-    goToCore(){
-      this.$router.push("/Core");
-    },
-  }
+   methods: {
+        goToPullB (){
+            this.$router.push("/PullBeginner");
+        },
+        goToPullI (){
+            this.$router.push("/PullIntermediate");
+        },
+        goToPullA (){
+            this.$router.push("/PullAdvanced");
+        },
+    } 
 }
 </script>
 
-<style scoped>
+<style>
 
 *{
   padding: 0;
@@ -113,6 +98,8 @@ template{
   transition: 0.5 ease-in-out;
   margin-bottom: 80px;
   border-radius: 18px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 .card:hover{
@@ -156,7 +143,6 @@ template{
   opacity: 0;
   transform: translateY(30px);
   transition: 0.5 all;
-  padding-right: 110px;
   padding-top: 165px;
   
 }
@@ -164,6 +150,10 @@ template{
 .card:hover .info{
   opacity: 1;
   transform: translateY(0px);
+}
+
+.card:hover .info h1{
+    font-size: 2rem;
 }
 
 .card.info h1{
@@ -203,4 +193,3 @@ template{
 }
 
 </style>
-
