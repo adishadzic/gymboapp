@@ -2,7 +2,7 @@
   <b-container>
     <b-row align-h="center">
       <b-col cols="12" md="6">
-        <h1>Pull - advanced level</h1>
+        <h1>Pull - beginner level</h1>
         <div class="video embed-responsive embed-responsive-16by9 mt-5">
           <iframe
             class="embed-responsive-item"
