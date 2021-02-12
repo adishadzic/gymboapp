@@ -30,8 +30,23 @@
               <router-link to="/dashboard/BMI" class="nav-link text-light"><img src="@/assets/bmi1.png" class="mr-1" height="20">BMI</router-link>
             </b-col>
           </b-row>
+          <b-row class="ml-5 mt-4">
+            <h3>Beginner</h3> 
+          </b-row>
           <b-row class="content">
-              <test-card class="ml-3" v-for="card in cards" :key="card.url" :info="card" />
+              <WorkoutOne class="ml-3" v-for="card in workout1" :key="card.url" :info="card" />
+          </b-row>
+          <b-row class="ml-5 mt-4">
+            <h3>Intermediate</h3> 
+          </b-row>
+          <b-row class="content">
+              <WorkoutTwo class="ml-3" v-for="card in workout2" :key="card.url" :info="card" />
+          </b-row>
+          <b-row class="ml-5 mt-4">
+            <h3>Advanced</h3> 
+          </b-row>
+          <b-row class="content">
+              <WorkoutThree class="ml-3" v-for="card in workout3" :key="card.url" :info="card" />
           </b-row>
         </b-col>
       </b-row>
@@ -41,37 +56,48 @@
 </template>
 
 <script>
-import TestCard from '@/components/TestCard.vue';
+import WorkoutOne from '@/components/WorkoutOne.vue';
+import WorkoutTwo from '@/components/WorkoutTwo.vue';
+import WorkoutThree from '@/components/WorkoutThree.vue';
 import { firebase } from '@/firebase';
 import store from '@/store';
 
-let cards = [];
+let workout1, workout2, workout3 = [];
 
-cards = [
+workout1 = [
   {img: require('@/assets/pull.jpg'), route: '/pullbeginner', description: "Pull"},
-  {img: require('@/assets/pushup.jpg'), route: '/login', description: "Push"},
-  {img: require('@/assets/legs.jpg'), route: '/login', description: "Legs"},
-  {img: require('@/assets/core.jpg'), route: '/login', description: "Core"},
-  {img: require('@/assets/pull.jpg'), route: '/pullbeginner', description: "Pull"},
-  {img: require('@/assets/pushup.jpg'), route: '/login', description: "Push"},
-  {img: require('@/assets/legs.jpg'), route: '/login', description: "Legs"},
-  {img: require('@/assets/core.jpg'), route: '/login', description: "Core"},
-  {img: require('@/assets/pull.jpg'), route: '/pullbeginner', description: "Pull"},
-  {img: require('@/assets/pushup.jpg'), route: '/login', description: "Push"},
-  {img: require('@/assets/legs.jpg'), route: '/login', description: "Legs"},
-  {img: require('@/assets/core.jpg'), route: '/login', description: "Core"},
+  {img: require('@/assets/pushup.jpg'), route: '/pushbeginner', description: "Push"},
+  {img: require('@/assets/legs.jpg'), route: '/legsbeginner', description: "Legs"},
+  {img: require('@/assets/core.jpg'), route: '/corebeginner', description: "Core"}
 ];
 
+workout2 = [
+  {img: require('@/assets/pull.jpg'), route: '/pullintermediate', description: "Pull"},
+  {img: require('@/assets/pushup.jpg'), route: '/pushintermediate', description: "Push"},
+  {img: require('@/assets/legs.jpg'), route: '/legsintermediate', description: "Legs"},
+  {img: require('@/assets/core.jpg'), route: '/legsintermediate', description: "Core"}
+];
+
+workout3 = [
+  {img: require('@/assets/pull.jpg'), route: '/pulladvanced', description: "Pull"},
+  {img: require('@/assets/pushup.jpg'), route: '/pushadvanced', description: "Push"},
+  {img: require('@/assets/legs.jpg'), route: '/legsadvanced', description: "Legs"},
+  {img: require('@/assets/core.jpg'), route: '/coreadvanced', description: "Core"}
+];
 export default {
   name: 'Dashboard',
   data: function() {
     return {
-      cards,
+      workout1,
+      workout2,
+      workout3,
       store
     };
   },
   components: {
-    TestCard, 
+    WorkoutOne,
+    WorkoutTwo,
+    WorkoutThree 
   }
 }; 
 </script>

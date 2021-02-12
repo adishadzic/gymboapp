@@ -8,7 +8,7 @@
 <script>
 export default {
   props: ['info'],
-  name: 'TestCard',
+  name: 'WorkoutOne',
 };
 </script>
 
