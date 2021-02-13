@@ -22,19 +22,11 @@
             v-for="(option, data) in options"
             :key="data"
           >
-            <b-col> //image from options </b-col>
-            <b-col>
-              {{ option.workoutName }}
-            </b-col>
-            <b-col> {{ option.reps }} reps / {{ option.sets }} sets </b-col>
-            <b-col>
-              <b-form-checkbox
-                v-model="selected"
-                :aria-describedby="ariaDescribedby"
-                name="checkbox-status"
-              >
-                {{ option.status }}
-              </b-form-checkbox>
+            <b-col><img class="image" :src="option.img" /></b-col>
+            <b-col id="workoutName">{{ option.workoutName }}</b-col>
+            <b-col id="repsAndsets"> {{ option.reps }} reps / {{ option.sets }} sets </b-col>
+            <b-col id="box">
+              <b-form-checkbox>{{ option.status }}</b-form-checkbox>
             </b-col>
           </b-row>
         </b-col>
@@ -49,12 +41,12 @@ export default {
   data() {
     return {
       options: [
-        { status: "Done", workoutName: "Anti-rotational plate Push Away", reps: "45sec", sets: "4" },
-        { status: "Done", workoutName: "Side-to-side Tilts", reps: "10", sets: "4" },
-        { status: "Done", workoutName: "Up-down Plank", reps: "10", sets: "4"},
-        { status: "Done", workoutName: "Plank Shoulder Taps", reps: "30sec", sets: "4" },
-        { status: "Done", workoutName: "V-sits", reps: "30sec", sets: "4" },
-        { status: "Done", workoutName: "Windshield Wipers", reps: "10", sets: "4" }
+        { img: require('@/assets/plankJacks.png'), status: "Done", workoutName: "Anti-rotational plate Push Away", reps: "45sec", sets: "4" },
+        { img: require('@/assets/squats.png'), status: "Done", workoutName: "Side-to-side Tilts", reps: "10", sets: "4" },
+        { img: require('@/assets/squats.png'), status: "Done", workoutName: "Up-down Plank", reps: "10", sets: "4"},
+        { img: require('@/assets/squats.png'), status: "Done", workoutName: "Plank Shoulder Taps", reps: "30sec", sets: "4" },
+        { img: require('@/assets/squats.png'), status: "Done", workoutName: "V-sits", reps: "30sec", sets: "4" },
+        { img: require('@/assets/squats.png'), status: "Done", workoutName: "Windshield Wipers", reps: "10", sets: "4" }
       ],
     };
   },
@@ -75,5 +67,11 @@ export default {
 }
 #agenda {
   margin-top: 20px;
+}
+.image{
+  width: 130px;
+}
+#workoutName, #repsAndsets, #box{
+  margin: auto;
 }
 </style>
