@@ -7,7 +7,7 @@
       <img class="img" src="@/assets/legs4.jpg">
       <div class="info">
         <h1>BEGINNER</h1>
-        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <p>These workouts target your hamstrings, quads, and gluteus.</p>
         <b-button pill variant="primary" class="btn" @click="goToLegsB">GO TO</b-button>
       </div>
     </div>
@@ -18,7 +18,7 @@
       <img class="img" src="@/assets/legs1.jpg">
       <div class="info">
         <h1>INTERMEDIATE</h1>
-        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <p>These workouts target your hamstrings, quads, and gluteus.</p>
         <b-button pill variant="primary" class="btn" @click="goToLegsI">GO TO</b-button>
       </div>
     </div>
@@ -29,7 +29,7 @@
       <img class="img" src="@/assets/legs3.jpg">
       <div class="info">
         <h1>ADVANCED</h1>
-        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <p>These workouts target your hamstrings, quads, and gluteus.</p>
         <b-button pill variant="primary" class="btn" @click="goToLegsA">GO TO</b-button>
       </div>
     </div>

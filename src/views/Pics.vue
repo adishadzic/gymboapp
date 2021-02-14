@@ -9,6 +9,23 @@
           <router-link to="/editprofile">
             <button type="button" class="btn btn-secondary">Edit Profile</button>
           </router-link>
+          <div class="form-group mt-5"  >
+            <croppa :width="250" :height="250" placeholder="Upload picture"  v-model="imageReference" :margin="auto"></croppa>
+            <form @submit.prevent="postNewImage" class="mb-5">
+          
+          <div class="form-group">
+            <label for="imageDescription">Description</label>
+            <input
+              v-model="newImageDescription"
+              type="text"
+              class="form-control "
+              placeholder="Enter: #before or #after, height, weight "
+              id="imageDescription"
+              />
+          </div>
+          <button type="submit" class="btn btn-primary ml-2">Post image</button>
+        </form>
+          </div>
         </b-col>
         <b-col cols="8">
           <b-row no-gutters>
@@ -26,35 +43,18 @@
             </b-col>
           </b-row>
           <b-row>
+            <b-row class="mt-5 ml-5">
+             <before-after-card v-for="card in cards" :key="card.id" :info="card" />
           </b-row>
+             <div class="col-8">
+        <!-- nova forma za post -->
+        
+      </div>
+          </b-row>
+          
         </b-col>
       </b-row>
     </b-container>
-    <br> <br>
-    <div class="row">
-      <div class="col-8">
-        <!-- nova forma za post -->
-        <form @submit.prevent="postNewImage" class="mb-5">
-          <div class="form-group">
-            <croppa :width="400" :height="400" placeholder="ucitaj sliku" v-model="imageReference"></croppa>
-          </div>
-          <div class="form-group">
-            <label for="imageDescription">Description</label>
-            <input
-              v-model="newImageDescription"
-              type="text"
-              class="form-control ml-2"
-              placeholder="Enter: height, kilos, volume"
-              id="imageDescription"
-              />
-          </div>
-          <button type="submit" class="btn btn-primary ml-2">Post image</button>
-        </form>
-      </div>
-    </div>
-    <div class="row">
-      <before-after-card v-for="card in cards" :key="card.id" :info="card" />
-    </div>
   </div>
 </template>
 <script>
@@ -88,7 +88,6 @@
     methods: {
       getPosts(){
         db.collection("Posts")
-        .limit(2)
         .orderBy("posted_at", "asc")
         .get()
         .then((query) => {
@@ -128,7 +127,7 @@
           })
           .then((doc) => {
               console.log("spremljeno", doc)
-              alert("Slika je uspjesno postana!");
+              alert("Image posted successfully");
               this.newImageDescription = "";
               this.imageReference.remove();
   

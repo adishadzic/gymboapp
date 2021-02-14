@@ -6,6 +6,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -27,6 +28,13 @@
             <p>Make your own workout from hundreds of excercises</p>
         </div>
     </div>
+    <div class="carousel-item">
+      <img class="d-block w-100" src="@/assets/gym8.jpg" alt="Fourth slide">
+        <div class="carousel-caption">
+            <a class="nav-link text-light" style="font-size=40px"  href="https://gymbofipu.wordpress.com/"> <h1>Go to webshop! </h1></a>
+        </div>
+    </div>
+    
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

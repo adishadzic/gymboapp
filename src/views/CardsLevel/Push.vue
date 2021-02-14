@@ -18,7 +18,7 @@
       <img class="img" src="@/assets/push2.jpg">
       <div class="info">
         <h1>INTERMEDIATE</h1>
-        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <p>Workouts that target your chest, shoulders and triceps. </p>
         <b-button pill variant="primary" class="btn" @click="goToPushI">GO TO</b-button>
       </div>
     </div>

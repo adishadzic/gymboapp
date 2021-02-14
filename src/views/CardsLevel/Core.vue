@@ -7,7 +7,7 @@
       <img class="img" src="@/assets/core3.jpg">
       <div class="info">
         <h1>BEGINNER</h1>
-        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <p>Workouts that target your abdominal muscles.</p>
         <b-button pill variant="primary" class="btn" @click="goToCoreB">GO TO</b-button>
       </div>
     </div>
@@ -18,7 +18,7 @@
       <img class="img" src="@/assets/core1.jpg">
       <div class="info">
         <h1>INTERMEDIATE</h1>
-        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <p>Workouts that target your abdominal muscles.</p>
         <b-button pill variant="primary" class="btn" @click="goToCoreI">GO TO</b-button>
       </div>
     </div>
@@ -29,7 +29,7 @@
       <img class="img" src="@/assets/core4.jpg">
       <div class="info">
         <h1>ADVANCED</h1>
-        <p>Workouts that target your chest, shoulders and triceps.</p>
+        <p>Workouts that target your abdominal muscles.</p>
         <b-button pill variant="primary" class="btn" @click="goToCoreA">GO TO</b-button>
       </div>
     </div>
