@@ -56,11 +56,7 @@ firebase.auth().onAuthStateChanged((user) =>  {
   } else {
     // User is not signed in.
     console.log("***", "no user");
-    store.currentUser = null;
-
-    //if ( currentRoute.meta.needsUser) {
-    //  router.push( { name: "login" }); }  //ovaj if je za home i korisnika
-    
+    store.currentUser = null;    
   }
 });
 
@@ -68,10 +64,8 @@ export default {
   name: "app",
   data() {
     return {
-      store,
-      count: 0,
+      store, 
       workoutHours: 18,
-      workoutMinutes: 0
     };
   },
 
@@ -141,8 +135,7 @@ export default {
           const vNodesMsg = w(
             'p',
             { class: ['text-center', 'mb-0'] },
-            [
-              w('b-spinner', { props: { type: 'grow', small: true } }),
+            [w('b-spinner', { props: { type: 'grow', small: true } }),
                ' Your workout begins in ' + timeMessage,
               w('b-spinner', { props: { type: 'grow', small: true } })
             ]
@@ -151,8 +144,7 @@ export default {
           const vNodesTitle = w(
             'div',
             { class: ['d-flex', 'flex-grow-1', 'align-items-baseline', 'mr-2'] },
-            [
-              w('strong', { class: 'mr-2' }, 'Workout Reminder'),
+            [ w('strong', { class: 'mr-2' }, 'Workout Reminder'),
               w('small', { class: 'ml-auto text-italics' }, 'Just now')
             ]
           )

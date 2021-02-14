@@ -4,7 +4,7 @@
       <div class="embed-responsive embed-responsive-16by9">
       </div>
         <div class="cta mt-3">
-    <button type="button" class="btn btn-primary">Get started</button>
+     <b-button pill variant="primary" class="mt-3" @click="clickToChoose">Finish workout</b-button>
   </div>
   </div>
   <div class="col-5">
@@ -15,12 +15,18 @@
 </template>
 
 <script>
-
+  export default {
+   methods: {
+    clickToChoose(){
+      this.$router.push('/Choose');
+    }
+  }
+}
 </script>
 
 <style>
 .img-present-vid {
-  position: relative; /* can play with absolutes too */
+  position: relative;
   left: 100px;
 }
 

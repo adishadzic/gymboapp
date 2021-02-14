@@ -44,7 +44,7 @@ export default {
         { img: require('@/assets/jumpSquat.png'), status: "Done", workoutName: "Jump Squats", reps: "12", sets: "3" },
         { img: require('@/assets/touchdownJacks.png'), status: "Done", workoutName: "Touchdown Jacks", reps: "12", sets: "3" },
         { img: require('@/assets/stepUp.png'), status: "Done", workoutName: "Step-up", reps: "10", sets: "3"},
-        /*{ img: require('@/assets/curtsyLunge.png'), status: "Done", workoutName: "Curtsy Lunge", reps: "10", sets: "3" }, */
+        { img: require('@/assets/curtsyLunge.png'), status: "Done", workoutName: "Curtsy Lunge", reps: "10", sets: "3" },
         { img: require('@/assets/hipThrust.png'), status: "Done", workoutName: "Hip Thrust", reps: "10", sets: "3" },
         { img: require('@/assets/splitSquat.png'), status: "Done", workoutName: "Split Squat", reps: "12", sets: "3" },
       ],

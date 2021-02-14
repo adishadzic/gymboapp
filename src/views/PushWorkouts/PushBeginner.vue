@@ -6,7 +6,7 @@
         <div class="video embed-responsive embed-responsive-16by9 mt-5">
           <iframe
             class="embed-responsive-item"
-            src="https://www.youtube.com/embed/RjexvOAsVtI"
+            src="https://www.youtube.com/embed/qZlM0IMHcHk"
             allowfullscreen
           ></iframe>
         </div>
@@ -22,19 +22,11 @@
             v-for="(option, data) in options"
             :key="data"
           >
-            <b-col> //image from options </b-col>
-            <b-col>
-              {{ option.workoutName }}
-            </b-col>
-            <b-col> {{ option.reps }} reps / {{ option.sets }} sets </b-col>
-            <b-col>
-              <b-form-checkbox
-                v-model="selected"
-                :aria-describedby="ariaDescribedby"
-                name="checkbox-status"
-              >
-                {{ option.status }}
-              </b-form-checkbox>
+            <b-col><img class="image" :src="option.img"/></b-col>
+            <b-col id="workoutName">{{ option.workoutName }}</b-col>
+            <b-col id="repsAndsets"> {{ option.reps }} reps / {{ option.sets }} sets </b-col>
+            <b-col id="box">
+              <b-form-checkbox>{{ option.status }}</b-form-checkbox>
             </b-col>
           </b-row>
         </b-col>
@@ -49,14 +41,10 @@ export default {
   data() {
     return {
       options: [
-        { status: "Done", workoutName: "Bodyweight Tricep Dips", reps: "8", sets: "5" },
-        { status: "Done", workoutName: "Dumbbell Lateral Shoulder Raise", reps: "8", sets: "5" },
-        { status: "Done", workoutName: "Push Ups", reps: "8", sets: "5"},
-        { status: "Done", workoutName: "Side Lateral Raise", reps: "8", sets: "5" },
-        { status: "Done", workoutName: "Lying Triceps Extension", reps: "8", sets: "5" },
-        { status: "Done", workoutName: "Bent Over Lateral Raise", reps: "8", sets: "5" },
-        { status: "Done", workoutName: "Decline Pushup", reps: "8", sets: "5" },
-        { status: "Done", workoutName: "Feet-elevated Side Plank", reps: "8", sets: "5" },
+        { img: require('@/assets/tricepDips.png'), status: "Done", workoutName: "Bodyweight Tricep Dips", reps: "8", sets: "5" },
+        { img: require('@/assets/sideLateralRaise.png'), status: "Done", workoutName: "Dumbbell Lateral Raise", reps: "8", sets: "5" },
+        { img: require('@/assets/pushUps.png'), status: "Done", workoutName: "Push Ups", reps: "8", sets: "5"},
+        { img: require('@/assets/overheadTricepExtension.png'), status: "Done", workoutName: "Triceps Extension", reps: "8", sets: "5" },
       ],
     };
   },
@@ -77,5 +65,11 @@ export default {
 }
 #agenda {
   margin-top: 20px;
+}
+.image{
+  width: 130px;
+}
+#workoutName, #repsAndsets, #box{
+  margin: auto;
 }
 </style>

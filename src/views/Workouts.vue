@@ -75,7 +75,7 @@ workout2 = [
   {img: require('@/assets/pull.jpg'), route: '/pullintermediate', description: "Pull"},
   {img: require('@/assets/pushup.jpg'), route: '/pushintermediate', description: "Push"},
   {img: require('@/assets/legs.jpg'), route: '/legsintermediate', description: "Legs"},
-  {img: require('@/assets/core.jpg'), route: '/legsintermediate', description: "Core"}
+  {img: require('@/assets/core.jpg'), route: '/coreintermediate', description: "Core"}
 ];
 
 workout3 = [
