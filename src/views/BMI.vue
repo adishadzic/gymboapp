@@ -59,7 +59,7 @@
               >
             </b-col>
           </b-row>
-          <b-row class="my-1 mt-3">
+          <b-row class="my-1 mt-4">
             <b-col sm="3" class="mt-2">
               <label :for="`type-Height`"> Height </label>
             </b-col>
@@ -89,6 +89,9 @@
               >
                 Your BMI index is {{ bmi }}
               </b-toast>
+               <b-row class="my-1 mt-3">
+                  <img class="presenting-bmi" src=@/assets/bmi-chart.png style="right:-40%"/>
+               </b-row>
             </b-col>
           </b-row>
         </b-col>
@@ -155,5 +158,9 @@
     width: 300px;
     height: 300px;
     border-radius: 50%;
+  }
+  .presenting-bmi{
+    position: absolute;
+    height: 200px;
   }
 </style>

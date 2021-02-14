@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li v-if="store.currentUser" class="nav-item">
-          <router-link to="/dashboard" class="nav-link text-light">dash</router-link>
+          <router-link to="/dashboard" class="nav-link text-light mr-2">Dashboard</router-link>
         </li>
         <li v-if="!store.currentUser" class="nav-item">
             <router-link to="/login" class="nav-link text-light">Login</router-link>
@@ -19,7 +19,10 @@
           <router-link to="/register" class="nav-link text-light">Register</router-link>
         </li>
         <li v-if="store.currentUser" class="nav-item">
-          <img src="https://img.icons8.com/material/24/ffffff/bell.png" width="35" height="35"/>
+          <img src="@/assets/notification-bell.png" class="notification mr-2" @click="showToast" width="35" height="35"/>
+        </li>
+        <li v-if="store.currentUser" class="nav-item">
+          <a href="https://gymbofipu.wordpress.com/" target="_blank"><img src="@/assets/shopping-cart.png" class="shopping-cart mr-2" width="35" height="35"/></a>
         </li>
         <li v-if="store.currentUser" class="nav-item">
           <router-link to="/choose" class="nav-link text-light">Choose</router-link>
@@ -79,6 +82,8 @@ import router from "@/router";
    if(router.name !== 'login'){
     router.push({ name: "Login" })
     } 
+    console.log("***", "no user");
+    store.currentUser = null;    
   }
 });  */
 
@@ -86,14 +91,15 @@ export default {
   name: "app",
   data() {
     return {
-      store,
+      store, 
+      workoutHours: 18,
     };
   },
 
   mounted(){
     this.created();
   },
-
+  
   methods: {
     logout() {
       firebase
@@ -103,6 +109,79 @@ export default {
           this.$router.push({ name: "Login" });
         });
     },
+
+      howLongUntil() {
+        let date = new Date()
+        const hours = date.getHours()
+        const minutes = date.getMinutes()
+        let hoursLeft = 0
+        let minutesLeft = 0
+        const targetHour = 18
+        let str = ''
+        //22:55
+        //is it before or after 18:00 right now?
+        //it is 18:00 or later
+        if(hours >= targetHour){
+          //it's after 18:00, how many hours in the rest of the day
+          hoursLeft = 24 - hours //24-22= 2
+          //if we are over 0 minutes, add 1 hour from remaining day hours
+          //if over 0 minutes, find the minutes difference
+          if(minutes > 0){
+            hoursLeft--
+            //2-1= 1 hour
+            minutesLeft =  60 - minutes
+            //60-55=5 minutes
+            //1 hour & 5 minutes till midnight
+          }
+          //add 18 hours to get tomorrows hours + todays remaining hours
+          hoursLeft = hoursLeft + 18
+          //1+18=19 hours
+          //19 hours and 5 minutes until 18:00 tomorrow
+          str = hoursLeft + " hours & " + minutesLeft + " minutes"
+        } else {
+          //it's before 6pm, so this will be more normal
+          //how many hours before 18 is it right now?
+          hoursLeft = targetHour - hours
+          //if you are any minutes into the hour, deduct 1 hour
+          //also find number of minutes left
+          if(minutes > 0){
+            hoursLeft--
+            minutesLeft =  60 - minutes
+          }
+          str = hoursLeft + " hours &" + minutesLeft + " minutes"
+        }
+        return str;
+      },
+
+      showToast() {
+          const timeMessage = this.howLongUntil()
+          console.log(timeMessage)
+          // Use a shorter name for this.$createElement
+          const w = this.$createElement
+          // Create the message
+          const vNodesMsg = w(
+            'p',
+            { class: ['text-center', 'mb-0'] },
+            [w('b-spinner', { props: { type: 'grow', small: true } }),
+               ' Your workout begins in ' + timeMessage,
+              w('b-spinner', { props: { type: 'grow', small: true } })
+            ]
+          )
+          // Create the title
+          const vNodesTitle = w(
+            'div',
+            { class: ['d-flex', 'flex-grow-1', 'align-items-baseline', 'mr-2'] },
+            [ w('strong', { class: 'mr-2' }, 'Workout Reminder'),
+              w('small', { class: 'ml-auto text-italics' }, 'Just now')
+            ]
+          )
+          // Pass the VNodes as an array for message and title
+          this.$bvToast.toast([vNodesMsg], {
+            title: [vNodesTitle],
+            solid: true,
+            variant: 'info'
+          })
+        },
 
     created(){
       const self = this;
@@ -136,7 +215,6 @@ export default {
       });
     },
   }
-  
 }
 </script>
 
@@ -160,5 +238,8 @@ export default {
   padding: 30px;
 }
 
-
+.notification, .shopping{
+  cursor: pointer;
+  cursor: hand;
+}
 </style>

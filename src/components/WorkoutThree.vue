@@ -8,14 +8,11 @@
 <script>
 export default {
   props: ['info'],
-  name: 'TestCard',
+  name: 'WorkoutThree',
 };
 </script>
 
 <style>
-.card-img-top{
-  border: none;
-}
 .card{
       border: none;
 }

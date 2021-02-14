@@ -2,11 +2,11 @@
   <b-container>
     <b-row align-h="center">
       <b-col cols="12" md="6">
-        <h1>Legs - advanced level</h1>
+        <h1>Legs - intermediate level</h1>
         <div class="video embed-responsive embed-responsive-16by9 mt-5">
           <iframe
             class="embed-responsive-item"
-            src="https://www.youtube.com/embed/RjexvOAsVtI"
+            src="https://www.youtube.com/embed/WdGmrNcnapY"
             allowfullscreen
           ></iframe>
         </div>
@@ -22,19 +22,11 @@
             v-for="(option, data) in options"
             :key="data"
           >
-            <b-col> //image from options </b-col>
-            <b-col>
-              {{ option.workoutName }}
-            </b-col>
-            <b-col> {{ option.reps }} reps / {{ option.sets }} sets </b-col>
-            <b-col>
-              <b-form-checkbox
-                v-model="selected"
-                :aria-describedby="ariaDescribedby"
-                name="checkbox-status"
-              >
-                {{ option.status }}
-              </b-form-checkbox>
+            <b-col><img class="image" :src="option.img" /></b-col>
+            <b-col id="workoutName">{{ option.workoutName }}</b-col>
+            <b-col id="repsAndsets"> {{ option.reps }} reps / {{ option.sets }} sets </b-col>
+            <b-col id="box">
+              <b-form-checkbox>{{ option.status }}</b-form-checkbox>
             </b-col>
           </b-row>
         </b-col>
@@ -49,13 +41,12 @@ export default {
   data() {
     return {
       options: [
-        { status: "Done", workoutName: "Jump Squats", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Touchdown Jacks", reps: "12", sets: "3" },
-        { status: "Done", workoutName: "Banded Step-up", reps: "10", sets: "3"},
-        { status: "Done", workoutName: "Curtsy Lunge", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Hip Thrust", reps: "10", sets: "3" },
-        { status: "Done", workoutName: "Single Leg Raise (L-R)", reps: "15", sets: "3" },
-        { status: "Done", workoutName: "Split Squat", reps: "12", sets: "3" },
+        { img: require('@/assets/jumpSquat.png'), status: "Done", workoutName: "Jump Squats", reps: "12", sets: "3" },
+        { img: require('@/assets/touchdownJacks.png'), status: "Done", workoutName: "Touchdown Jacks", reps: "12", sets: "3" },
+        { img: require('@/assets/stepUp.png'), status: "Done", workoutName: "Step-up", reps: "10", sets: "3"},
+        { img: require('@/assets/curtsyLunge.png'), status: "Done", workoutName: "Curtsy Lunge", reps: "10", sets: "3" },
+        { img: require('@/assets/hipThrust.png'), status: "Done", workoutName: "Hip Thrust", reps: "10", sets: "3" },
+        { img: require('@/assets/splitSquat.png'), status: "Done", workoutName: "Split Squat", reps: "12", sets: "3" },
       ],
     };
   },
@@ -76,5 +67,11 @@ export default {
 }
 #agenda {
   margin-top: 20px;
+}
+.image{
+  width: 130px;
+}
+#workoutName, #repsAndsets, #box{
+  margin: auto;
 }
 </style>
