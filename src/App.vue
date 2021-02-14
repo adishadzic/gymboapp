@@ -24,21 +24,6 @@
         <li v-if="store.currentUser" class="nav-item">
           <a href="https://gymbofipu.wordpress.com/" target="_blank"><img src="@/assets/shopping-cart.png" class="shopping-cart mr-2" width="35" height="35"/></a>
         </li>
-        <li v-if="store.currentUser" class="nav-item">
-          <router-link to="/choose" class="nav-link text-light">Choose</router-link>
-        </li>
-         <li v-if="store.currentUser" class="nav-item">
-          <router-link to="/parameters" class="nav-link text-light">Parameters</router-link>
-        </li>
-        <li v-if="store.currentUser" class="nav-item">
-          <router-link to="/chooseworkout" class="nav-link text-light">ČUZZZZZZZ</router-link>
-        </li>
-        <li v-if="store.currentUser" class="nav-item">
-          <a href="https://gymbofipu.wordpress.com/" target="_blank" class="nav-link text-light">Web shop</a>
-        </li>
-        <li class="mt-2">
-          <p>({{store.currentUser}})</p>
-        </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
         </li>

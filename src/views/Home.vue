@@ -5,7 +5,7 @@
         <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/5qap5aO4i9A" allowfullscreen></iframe>
       </div>
         <div class="cta mt-3">
-     <b-button pill variant="primary" class="mt-3" @click="clickToChoose">Finish workout</b-button>
+     <b-button pill variant="primary" class="mt-3" @click="clickToChoose">Get started</b-button>
   </div>
   </div>
   <div class="col-5">
