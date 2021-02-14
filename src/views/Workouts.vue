@@ -6,7 +6,7 @@
       <b-row class="d-flex inline-flex justify-content-start">
         <b-col class="mr-4 ml-3">
           <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
-          <h3 class="mt-3">{{ store.currentUser }}</h3>
+          <h3 class="mt-3">{{ store.displayName }}</h3>
           <router-link to="/editprofile">
           <button type="button" class="btn btn-secondary">Edit Profile</button>
           </router-link>
@@ -14,6 +14,10 @@
 
         <b-col cols="8">
           <b-row no-gutters>
+            <b-col>
+              <router-link to="/dashboard/overview" class="nav-link active text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Overview</router-link>
+            </b-col>
+
             <b-col>
               <router-link to="/dashboard/workouts" class="nav-link text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Workouts</router-link>
             </b-col>
@@ -75,7 +79,7 @@ workout2 = [
   {img: require('@/assets/pull.jpg'), route: '/pullintermediate', description: "Pull"},
   {img: require('@/assets/pushup.jpg'), route: '/pushintermediate', description: "Push"},
   {img: require('@/assets/legs.jpg'), route: '/legsintermediate', description: "Legs"},
-  {img: require('@/assets/core.jpg'), route: '/legsintermediate', description: "Core"}
+  {img: require('@/assets/core.jpg'), route: '/coreintermediate', description: "Core"}
 ];
 
 workout3 = [
@@ -103,7 +107,6 @@ export default {
 </script>
 <style scoped>
 .content{
-  margin-top: 20px;
   margin-left: 20px;
 }
 .container {
@@ -124,6 +127,19 @@ a.router-link-active::after{
 a.router-link-active:hover::after{
   width: 100%;
   transition: width .3s;
+}
+.nav-link::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+  margin-top: 10px;
+}
+.nav-link:hover::after{
+  width: 100%;
+  transition: width .7s;
 }
 .avatar {
   width: 300px;

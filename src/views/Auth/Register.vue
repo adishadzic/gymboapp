@@ -92,7 +92,7 @@ export default {
           store.currentUser = that.email;
           store.password = that.password;
               //alert('Uspješna registracija');
-              that.$router.replace({name: "Home" });  
+              that.$router.replace({name: "Parameters" });  
         })
         .catch(function(error){
           console.error("An error occured", error)

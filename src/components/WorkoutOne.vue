@@ -13,6 +13,9 @@ export default {
 </script>
 
 <style>
+.card-img-top{
+  border: none;
+}
 .card{
       border: none;
 }

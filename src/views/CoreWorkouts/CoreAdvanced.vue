@@ -45,7 +45,7 @@ export default {
         { img: require('@/assets/squats.png'), status: "Done", workoutName: "Side-to-side Tilts", reps: "10", sets: "4" },
         { img: require('@/assets/squats.png'), status: "Done", workoutName: "Up-down Plank", reps: "10", sets: "4"},
         { img: require('@/assets/squats.png'), status: "Done", workoutName: "Plank Shoulder Taps", reps: "30sec", sets: "4" },
-        { img: require('@/assets/squats.png'), status: "Done", workoutName: "V-sits", reps: "30sec", sets: "4" },
+        { img: require('@/assets/squats.png'), status: "Done", workoutName: "Advanced Leg Raise", reps: "30sec", sets: "4" },
         { img: require('@/assets/squats.png'), status: "Done", workoutName: "Windshield Wipers", reps: "10", sets: "4" }
       ],
     };

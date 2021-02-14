@@ -45,7 +45,7 @@ export default {
         { img: require('@/assets/plankJacks.png'), status: "Done", workoutName: "Alternating Bird Dogs", reps: "10", sets: "3" },
         { img: require('@/assets/plankJacks.png'), status: "Done", workoutName: "Russian Twists", reps: "10", sets: "3"},
         { img: require('@/assets/plankJacks.png'), status: "Done", workoutName: "Raised Leg Hold", reps: "30sec", sets: "3" },
-        { img: require('@/assets/plankJacks.png'), status: "Done", workoutName: "Plank Hold", reps: "30sec", sets: "3" },
+        { img: require('@/assets/plank.png'), status: "Done", workoutName: "Plank Hold", reps: "30sec", sets: "3" },
         { img: require('@/assets/plankJacks.png'), status: "Done", workoutName: "Flutter Kicks", reps: "10", sets: "3" } 
       ],
     };

@@ -27,9 +27,6 @@
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
         </li>
-        <li>
-          <b-avatar v-if="store.currentUser" button @click="onClick" icon="star-fill"></b-avatar>
-        </li>
       </ul>
     </div>
     
@@ -46,32 +43,41 @@ import { firebase } from "@/firebase";
 import { db } from "@/firebase";
 import router from "@/router";
 
-firebase.auth().onAuthStateChanged((user) =>  {
+/* firebase.auth().onAuthStateChanged((user) => {
   const currentRoute = router.currentRoute;
 
+  console.log('Provjera stanja logina!');
   if (user) {
     // User is signed in.
-    console.log("****", user.email);
+    console.log(user.email);
     store.currentUser = user.email;
+
+    if(!currentRoute.meta.needsUser) {
+      router.push({ name: "Home" })
+    }
   } else {
     // User is not signed in.
-    console.log("***", "no user");
+    console.log('No user');
     store.currentUser = null;
 
-    //if ( currentRoute.meta.needsUser) {
-    //  router.push( { name: "login" }); }  //ovaj if je za home i korisnika
-    
+
+    if(currentRoute.meta.needsUser) {
+      router.push({ name: "Login" })
+    }
+   if(router.name !== 'login'){
+    router.push({ name: "Login" })
+    } 
+    console.log("***", "no user");
+    store.currentUser = null;    
   }
-});
+});  */
 
 export default {
   name: "app",
   data() {
     return {
-      store,
-      count: 0,
+      store, 
       workoutHours: 18,
-      workoutMinutes: 0
     };
   },
 
@@ -141,8 +147,7 @@ export default {
           const vNodesMsg = w(
             'p',
             { class: ['text-center', 'mb-0'] },
-            [
-              w('b-spinner', { props: { type: 'grow', small: true } }),
+            [w('b-spinner', { props: { type: 'grow', small: true } }),
                ' Your workout begins in ' + timeMessage,
               w('b-spinner', { props: { type: 'grow', small: true } })
             ]
@@ -151,8 +156,7 @@ export default {
           const vNodesTitle = w(
             'div',
             { class: ['d-flex', 'flex-grow-1', 'align-items-baseline', 'mr-2'] },
-            [
-              w('strong', { class: 'mr-2' }, 'Workout Reminder'),
+            [ w('strong', { class: 'mr-2' }, 'Workout Reminder'),
               w('small', { class: 'ml-auto text-italics' }, 'Just now')
             ]
           )
@@ -183,6 +187,7 @@ export default {
                 console.log("Document data: ", doc.data());
                 store.displayName = doc.data().name;
                 store.currentUser = doc.data().email;
+                store.password = doc.data().password;
               }
               else{
                 console.log("Document undefined");
@@ -194,19 +199,8 @@ export default {
         }
       });
     },
-
-    onClick() {
-        this.$bvModal.msgBoxOk('User name: Fred Flintstone', {
-          title: 'User Info',
-          size: 'sm',
-          buttonSize: 'sm',
-          okVariant: 'success',
-          headerClass: 'p-2 border-bottom-0',
-          footerClass: 'p-2 border-top-0'
-        })
-      }
-    },
   }
+}
 </script>
 
 <style lang="scss">
@@ -233,5 +227,4 @@ export default {
   cursor: pointer;
   cursor: hand;
 }
-
 </style>
