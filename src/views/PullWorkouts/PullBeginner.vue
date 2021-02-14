@@ -29,25 +29,30 @@
             <b-col> {{ option.reps }} reps / {{ option.sets }} sets </b-col>
             <b-col>
               <b-form-checkbox
-                v-model="selected"
-                :aria-describedby="ariaDescribedby"
                 name="checkbox-status"
               >
-                {{ option.status }}
+              {{ option.status }}
               </b-form-checkbox>
             </b-col>
           </b-row>
         </b-col>
       </b-row>
     </b-container>
-    <b-button pill variant="primary" class="mt-3" @click="clickToDashboard">Finish workout</b-button>
+    <b-button pill variant="primary" class="mt-3" v-model="progress.workout" @click="clickToDashboard">Finish workout</b-button>
   </b-container>
 </template>
 
 <script>
+import store from "@/store";
+import { firebase } from '@/firebase';
+import { db } from '@/firebase';
+
 export default {
   data() {
     return {
+      progress: {
+        workout: true
+      },
       options: [
         { status: "Done", workoutName: "Dumbbell Shrugs", reps: "12", sets: "4" },
         { status: "Done", workoutName: "Barbell Bicep Curls", reps: "12", sets: "4" },
@@ -62,7 +67,14 @@ export default {
   },
   methods: {
     clickToDashboard(){
-      this.$router.push('/Dashboard');
+      db.collection("Users").doc(this.$store.currentUser.uid).set(that.progress, {merge:true})
+      .then(function(docRef) {
+        console.log("Document written with ID: ", docRef.id);
+        this.$router.push('/Dashboard');
+      })
+      .catch(function(error) {
+        console.error("Error adding document: ", error)
+      })
     }
   }
 };

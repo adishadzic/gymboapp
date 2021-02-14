@@ -62,6 +62,7 @@
 
 <script>
 export default {
+  name: 'Parameters',
   data() {
     return {
       show: true,
@@ -93,7 +94,7 @@ export default {
         if (selectedLevel === "level1") {
           this.$router.push({
             name: "MyPlan",
-            params: { level: "Beginer", goal: "Maintain healthy lifestyle" },
+            params: { level: "Beginner", goal: "Maintain healthy lifestyle" },
           });
         } else if (selectedLevel === "level2") {
           this.$router.push({

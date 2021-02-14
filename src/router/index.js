@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import PageNotFound from "../views/PageNotFound.vue";
+import store from "@/store"
 Vue.use(VueRouter)
 
 const routes = [
@@ -22,12 +23,18 @@ const routes = [
   {
     path: '/choose',
     name: 'Choose',
-    component: () => import('../views/Choose.vue')
+    component: () => import('../views/Choose.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/parameters',
     name: 'Parameters',
-    component: () => import('../views/Parameters.vue')
+    component: () => import('../views/Parameters.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/coreadvanced',
@@ -98,6 +105,9 @@ const routes = [
     path: '/dashboard',
     name: 'Dashboard',
     component: () => import('../views/Dashboard.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/dashboard/workouts',
@@ -118,6 +128,11 @@ const routes = [
     path: '/dashboard/BMI',
     name: 'BMI',
     component: () => import('../views/BMI.vue'),
+  },
+  {
+    path: '/dashboard/overview',
+    name: 'Overview',
+    component: () => import('../views/Overview.vue'),
   },
   {
     path: '/editprofile',
@@ -165,5 +180,21 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes
 })
+
+ router.beforeEach((to, from, next) => {
+  console.log("Stara ruta", from.name, ' -> ', "nova ruta:", to.name, "korisnik:", store.currentUser);
+
+  const noUser = store.currentUser === null;
+  console.log(noUser);
+
+  if(noUser && to.meta.needsUser) {
+    next('login');
+    //console.error('Ne dopustam')
+  }else {
+  //console.log(noUser);
+
+  next();
+  }
+}) 
 
 export default router

@@ -21,11 +21,23 @@
         <li v-if="store.currentUser" class="nav-item">
           <img src="https://img.icons8.com/material/24/ffffff/bell.png" width="35" height="35"/>
         </li>
+        <li v-if="store.currentUser" class="nav-item">
+          <router-link to="/choose" class="nav-link text-light">Choose</router-link>
+        </li>
+         <li v-if="store.currentUser" class="nav-item">
+          <router-link to="/parameters" class="nav-link text-light">Parameters</router-link>
+        </li>
+        <li v-if="store.currentUser" class="nav-item">
+          <router-link to="/chooseworkout" class="nav-link text-light">ČUZZZZZZZ</router-link>
+        </li>
+        <li v-if="store.currentUser" class="nav-item">
+          <a href="https://gymbofipu.wordpress.com/" target="_blank" class="nav-link text-light">Web shop</a>
+        </li>
+        <li class="mt-2">
+          <p>({{store.currentUser}})</p>
+        </li>
          <li v-if="store.currentUser" class="nav-item">
           <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
-        </li>
-        <li>
-          <b-avatar v-if="store.currentUser" button @click="onClick" icon="star-fill"></b-avatar>
         </li>
       </ul>
     </div>
@@ -43,23 +55,32 @@ import { firebase } from "@/firebase";
 import { db } from "@/firebase";
 import router from "@/router";
 
-firebase.auth().onAuthStateChanged((user) =>  {
+/* firebase.auth().onAuthStateChanged((user) => {
   const currentRoute = router.currentRoute;
 
+  console.log('Provjera stanja logina!');
   if (user) {
     // User is signed in.
-    console.log("****", user.email);
+    console.log(user.email);
     store.currentUser = user.email;
+
+    if(!currentRoute.meta.needsUser) {
+      router.push({ name: "Home" })
+    }
   } else {
     // User is not signed in.
-    console.log("***", "no user");
+    console.log('No user');
     store.currentUser = null;
 
-    //if ( currentRoute.meta.needsUser) {
-    //  router.push( { name: "login" }); }  //ovaj if je za home i korisnika
-    
+
+    if(currentRoute.meta.needsUser) {
+      router.push({ name: "Login" })
+    }
+   if(router.name !== 'login'){
+    router.push({ name: "Login" })
+    } 
   }
-});
+});  */
 
 export default {
   name: "app",
@@ -102,6 +123,7 @@ export default {
                 console.log("Document data: ", doc.data());
                 store.displayName = doc.data().name;
                 store.currentUser = doc.data().email;
+                store.password = doc.data().password;
               }
               else{
                 console.log("Document undefined");
@@ -113,17 +135,6 @@ export default {
         }
       });
     },
-
-    onClick() {
-        this.$bvModal.msgBoxOk('User name: Fred Flintstone', {
-          title: 'User Info',
-          size: 'sm',
-          buttonSize: 'sm',
-          okVariant: 'success',
-          headerClass: 'p-2 border-bottom-0',
-          footerClass: 'p-2 border-top-0'
-        })
-      }
   }
   
 }

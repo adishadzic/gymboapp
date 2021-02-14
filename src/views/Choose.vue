@@ -6,6 +6,7 @@
     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
     <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
   </ol>
   <div class="carousel-inner">
     <div class="carousel-item active">
@@ -21,12 +22,22 @@
         </div>
     </div>
     <div class="carousel-item">
-      <img class="d-block w-100" src="@/assets/gym2.jpg" alt="Third slide">
+      <img class="d-block w-100" src="@/assets/ropes.jpg" alt="Third slide">
         <div class="carousel-caption">
             <h1>DIY workout</h1>
-            <p>Make your own workout from hundreds of excercises</p>
+            <h5 class="mt-1" style="color: black"><strong>Coming soon!</strong></h5>
         </div>
     </div>
+
+    <div class="carousel-item">
+      <img class="d-block w-100" src="@/assets/gym.jpg" alt="Fourth slide">
+        <div class="carousel-caption">
+            <a class="nav-link text-light" href="https://gymbofipu.wordpress.com/%22%3E"><h1>Go to webshop!</h1></a>
+            <p></p>
+        </div>
+    </div>
+
+
   </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
     <span class="carousel-control-prev-icon" aria-hidden="true"></span>

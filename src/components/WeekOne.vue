@@ -1,5 +1,5 @@
 <template>
-    <div class="card text-white bg-secondary mb-3" style="max-width: 8rem;">
+    <div class="card text-white bg-secondary mb-" style="width: 8rem;">
         <a :href="info.route"><div class="card-header">{{ info.title }}</div></a>
             <div class="card-body">
                 <p class="card-text">{{info.desc}}</p>

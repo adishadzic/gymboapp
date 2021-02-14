@@ -15,6 +15,10 @@
         <b-col cols="8">
           <b-row no-gutters>
             <b-col>
+              <router-link to="/dashboard/overview" class="nav-link active text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Overview</router-link>
+            </b-col>
+
+            <b-col>
               <router-link to="/dashboard/workouts" class="nav-link active text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Workouts</router-link>
             </b-col>
         
@@ -66,9 +70,6 @@ export default {
 }
 .container {
   margin-left: -150px;
-}
-a.router-link-active{
-  background: gray;
 }
 .avatar {
   width: 300px;

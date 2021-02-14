@@ -68,7 +68,7 @@ export default {
   methods: {
     register() {
       let id = this.email;
-      if(this.TermsCheck){
+      if(this.TermsCheck.accept){
       let that = this;
       if(this.password == this.confirmPassword ){
         
@@ -92,7 +92,7 @@ export default {
           store.currentUser = that.email;
           store.password = that.password;
               //alert('Uspješna registracija');
-              that.$router.replace({name: "Home" });  
+              that.$router.replace({name: "Parameters" });  
         })
         .catch(function(error){
           console.error("An error occured", error)
@@ -129,7 +129,7 @@ export default {
       }
     }
       else {
-        this.TermsCheck == false;
+        this.TermsCheck.accept == false;
         alert("You have to accept Terms of service!");
       }
     },

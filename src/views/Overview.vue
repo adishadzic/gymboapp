@@ -17,7 +17,7 @@
             <b-col>
               <router-link to="/dashboard/overview" class="nav-link active text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Overview</router-link>
             </b-col>
-
+            
             <b-col>
               <router-link to="/dashboard/workouts" class="nav-link text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Workouts</router-link>
             </b-col>
@@ -34,23 +34,11 @@
               <router-link to="/dashboard/BMI" class="nav-link text-light"><img src="@/assets/bmi1.png" class="mr-1" height="20">BMI</router-link>
             </b-col>
           </b-row>
-          <b-row class="ml-5 mt-4">
-            <h3>Beginner</h3> 
-          </b-row>
-          <b-row class="content">
-              <test-card class="ml-3" v-for="card in cards" :key="card.url" :info="card" />
-          </b-row>
-          <b-row class="ml-5 mt-4">
-            <h3>Advanced</h3> 
-          </b-row>
-          <b-row class="content">
-              <test-card class="ml-3" v-for="card in cards" :key="card.url" :info="card" />
-          </b-row>
-          <b-row class="ml-5 mt-4">
-            <h3>Intermediate</h3> 
-          </b-row>
-          <b-row class="content">
-              <test-card class="ml-3" v-for="card in cards" :key="card.url" :info="card" />
+          <b-row>
+            <Progress :radius="50" :strokeWidth="10" class="mt-5 ml-5">
+              <template v-slot:footer>
+              </template>
+            </Progress>
           </b-row>
         </b-col>
       </b-row>
@@ -60,55 +48,23 @@
 </template>
 
 <script>
-import TestCard from '@/components/TestCard.vue';
 import { firebase } from '@/firebase';
 import store from '@/store';
-
-let cards = [];
-
-cards = [
-  {img: require('@/assets/pull.jpg'), route: '/pullbeginner', description: "Pull"},
-  {img: require('@/assets/pushup.jpg'), route: '/login', description: "Push"},
-  {img: require('@/assets/legs.jpg'), route: '/login', description: "Legs"},
-  {img: require('@/assets/core.jpg'), route: '/login', description: "Core"},
-];
+import Progress from "@/index.vue";
 
 export default {
-  name: 'Dashboard',
-  data: function() {
+  data() {
     return {
-      cards,
-      store
+      store,
     };
   },
   components: {
-    TestCard, 
+    Progress
   }
-}; 
+}
 </script>
+
 <style scoped>
-.content{
-  margin-left: 20px;
-}
-.container {
-  margin-left: -150px;
-}
-a.router-link-active{
-  background: gray;
-}
-a.router-link-active::after{
-  content: '';
-  display: block;
-  width: 0;
-  height: 2px;
-  background: #fff;
-  transition: width none;
-  margin-top: 10px;
-}
-a.router-link-active:hover::after{
-  width: 100%;
-  transition: width .3s;
-}
 .nav-link::after{
   content: '';
   display: block;
@@ -121,6 +77,12 @@ a.router-link-active:hover::after{
 .nav-link:hover::after{
   width: 100%;
   transition: width .7s;
+}
+.container {
+  margin-left: -150px;
+}
+a.router-link-active{
+  background: gray;
 }
 .avatar {
   width: 300px;

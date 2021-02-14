@@ -6,7 +6,7 @@
       <b-row class="d-flex inline-flex justify-content-start">
         <b-col class="mr-4 ml-3">
           <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
-          <h3 class="mt-3">{{ store.currentUser }}</h3>
+          <h3 class="mt-3">{{ store.displayName }}</h3>
           <router-link to="/editprofile">
           <button type="button" class="btn btn-secondary">Edit Profile</button>
           </router-link>
@@ -14,6 +14,10 @@
 
         <b-col cols="8">
           <b-row no-gutters>
+            <b-col>
+              <router-link to="/dashboard/overview" class="nav-link active text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Overview</router-link>
+            </b-col>
+
             <b-col>
               <router-link to="/dashboard/workouts" class="nav-link text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Workouts</router-link>
             </b-col>
@@ -64,22 +68,27 @@ import store from '@/store';
 let week1, week2, week3 = [];
 
 week1 = [
-  {title: "Whole Body", route: '/pullbeginner', desc: 'blablabla'},
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "Day 1", route: '/pullbeginner', desc: 'Pull'},
+  {title: "Day 2", route: '/pushbeginner', desc: 'Push'},
+  {title: "Day 3", route: '/legsbeginner', desc: 'Legs'},
+  {title: "Day 4", route: '/corebeginner', desc: 'Core'},
+  {title: "Day 5", route: '/', desc: 'Cardio'},
 ];
 
 week2 = [
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "Day 1", route: '/pushadvanced', desc: 'Push'},
+  {title: "Day 2", route: '/pulladvanced', desc: 'Pull'},
+  {title: "Day 3", route: '/coreadvanced', desc: 'Core'},
+  {title: "Day 4", route: '/legsadvanced', desc: 'Legs'},
+  {title: "Day 5", route: '/', desc: 'Mix'},
 ];
 
 week3 = [
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
-  {title: "siahdashbdashuoidhsuoih", route: '/pullbeginner', desc: 'blablabla'},
+  {title: "Day 1", route: '/pullbeginner', desc: 'Legs'},
+  {title: "Day 2", route: '/pushbeginner', desc: 'Pull'},
+  {title: "Day 3", route: '/legsbeginner', desc: 'Push'},
+  {title: "Day 4", route: '/corebeginner', desc: 'Core'},
+  {title: "Day 5", route: '/', desc: 'Mix'},
 ];
 
 export default {
@@ -106,6 +115,32 @@ export default {
 }
 a.router-link-active{
   background: gray;
+}
+a.router-link-active::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width none;
+  margin-top: 10px;
+}
+a.router-link-active:hover::after{
+  width: 100%;
+  transition: width .3s;
+}
+.nav-link::after{
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width .3s;
+  margin-top: 10px;
+}
+.nav-link:hover::after{
+  width: 100%;
+  transition: width .7s;
 }
 .avatar {
   width: 300px;
