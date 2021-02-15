@@ -3,5 +3,7 @@ export default {
     currentUser: null,
     displayName: null,
     password: null,
-    progress: ""
+    progress: "",
+
+    userPicture:'',
 };

@@ -1,9 +1,9 @@
 <template>
      <div class="col-6">
   <div class="card text-center">
-  <!-- <div class="card-header">
-    {{info.desc}}askdasdljkads
-  </div> -->
+  <div class="card-header bg-secondary">
+    {{info.desc}} <p>User's name or email</p>
+  </div> 
   <div class="card-body p-0">
     <img class="card-img-top" :src="info.url">
   </div>
@@ -28,6 +28,9 @@ export default {
 </script>
 
 <style scoped>
+.card{
+  margin-top: 20px
+}
 .card-header{
     height: 49px;
 }

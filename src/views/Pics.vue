@@ -10,7 +10,7 @@
             <button type="button" class="btn btn-secondary">Edit Profile</button>
           </router-link>
           <div class="form-group mt-5"  >
-            <croppa :width="250" :height="250" placeholder="Upload picture"  v-model="imageReference" :margin="auto"></croppa>
+            <croppa :width="250" :height="250" placeholder="Upload picture"  v-model="imageReference"></croppa>
             <form @submit.prevent="postNewImage" class="mb-5">
           
           <div class="form-group">
