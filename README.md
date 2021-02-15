@@ -6,10 +6,9 @@ Gymbo
 # Sastav tima: 
 Alma Smajić, Adis Hadžić, Mihael Cukon
 
--Fakultet informatike u Puli (https://fipu.unipu.hr/)
-
 # Kolegij: 
 Programsko inženjerstvo (http://ntankovic.unipu.hr/pi)
+Fakultet informatike u Puli (https://fipu.unipu.hr/)
 
 # Mentori: 
 doc. dr. sc. Nikola Tanković (http://ntankovic.unipu.hr/) i Toni Starčić, univ. bacc. inf.
@@ -32,11 +31,11 @@ https://www.figma.com/file/kUk7px1A5A6TjWzzWldV35/Gymbo?node-id=0%3A1
 
 # Zaduženja:
  
- Adis: Napraviti "Choose a workout" i stranice svakog treninga te "Workout finished" i "Home" kartice
+ Adis: Home, Choose (carousel), Dashboard (Workout + Plan cards), Password reset, E-mail verification, dohvat imena na dashboardu (1/2), Profile picture upload (Edit profile), odrada treninga + snimanje istih, promo video o aplikaciji
  
- Mihael: Napraviti "Splashscreen", "Create account", "Registration", "Login", "Choose plan"
+ Mihael: Firebase (Registration, Login, Upload pictures - before & after; croppa), Choose workout cards (za svaku ciljanu skupinu i level), pomoćno snimanje vježbi
  
- Alma: Napraviti "Parameters", pripadajuće modale uz njih, snimke vježbi i popis istih, "Loading screen" 
+ Alma: Modal za Parameters, viewovi za svaki trening ponuđen na Dashboard > Workout card, BMI kalkulator, toast alert (za tempirani početak treninga), Firebase - dohvat imena na dashboardu (2/2), izrada webshoppinga, odrada treninga + snimanje i uređivanje istih (upload na YT kanal), dokumentacija
 
 ## Project setup
 ```
