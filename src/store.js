@@ -4,6 +4,5 @@ export default {
     displayName: null,
     password: null,
     progress: "",
-
     userPicture:'',
 };

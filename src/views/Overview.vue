@@ -5,7 +5,7 @@
     <b-container fluid class="container mt-4">
       <b-row class="d-flex inline-flex justify-content-start">
         <b-col class="mr-4 ml-3">
-          <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
+          <img :src="store.userPicture"  alt="profile pic" class="avatar">
           <h3 class="mt-3">{{ store.displayName }}</h3>
           <router-link to="/editprofile">
           <button type="button" class="btn btn-secondary">Edit Profile</button>
@@ -35,10 +35,29 @@
             </b-col>
           </b-row>
           <b-row>
-            <Progress :radius="50" :strokeWidth="10" class="mt-5 ml-5">
-              <template v-slot:footer>
-              </template>
-            </Progress>
+            <radial-progress-bar :diameter="180"
+                                :completedSteps="week_one"
+                                :total-steps="totalWorkouts"
+                                class="mt-5 ml-5"><br>
+            <p>Workouts done: {{ week_one }}</p>
+            <p>Workouts left: {{ totalWorkouts }}</p>
+            </radial-progress-bar>
+            
+            <radial-progress-bar :diameter="180"
+                                :completedSteps="week_two"
+                                :total-steps="totalWorkouts"
+                                class="mt-5 ml-5"><br>
+            <p>Workouts done: {{ week_two }}</p>
+            <p>Workouts left: {{ totalWorkouts }}</p>
+            </radial-progress-bar>
+            
+            <radial-progress-bar :diameter="180"
+                                :completedSteps="week_three"
+                                :total-steps="totalWorkouts"
+                                class="mt-5 ml-5"><br>
+            <p>Workouts done: {{ week_three }}</p>
+            <p>Workouts left: {{ totalWorkouts }}</p>
+            </radial-progress-bar>
           </b-row>
         </b-col>
       </b-row>
@@ -50,16 +69,21 @@
 <script>
 import { firebase } from '@/firebase';
 import store from '@/store';
-import Progress from "@/index.vue";
-
+import RadialProgressBar from 'vue-radial-progress'
+ 
 export default {
-  data() {
+  data () {
     return {
       store,
-    };
+      week_one: 1,
+      week_two: 0,
+      week_three: 0,
+      totalWorkouts: 5
+    }
   },
+ 
   components: {
-    Progress
+    RadialProgressBar
   }
 }
 </script>

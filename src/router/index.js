@@ -97,57 +97,68 @@ const routes = [
     component: () => import('../views/PushWorkouts/PushIntermediate.vue')
   },
   {
-    path: '/view',
-    name: 'view',
-    component: () => import('../views/view.vue')
-  },
-  {
-    path: '/dashboard',
-    name: 'Dashboard',
-    component: () => import('../views/Dashboard.vue'),
+    path: '/dashboard/workouts',
+    name: 'Workouts',
+    component: () => import('../views/Workouts.vue'),
     meta: {
       needsUser: true,
     }
   },
   {
-    path: '/dashboard/workouts',
-    name: 'Workouts',
-    component: () => import('../views/Workouts.vue'),
-  },
-  {
     path: '/dashboard/myplan',
     name: 'MyPlan',
     component: () => import('../views/MyPlan.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/dashboard/pics',
     name: 'Pics',
     component: () => import('../views/Pics.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/dashboard/BMI',
     name: 'BMI',
     component: () => import('../views/BMI.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/dashboard/overview',
     name: 'Overview',
     component: () => import('../views/Overview.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/editprofile',
     name: 'Edit',
     component: () => import('../views/EditProfile.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/chooseworkout',
     name: 'ChooseWorkout',
-    component: () => import('../views/ChooseWorkout.vue')
+    component: () => import('../views/ChooseWorkout.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/levelcards',
     name: 'LevelCards',
-    component: () => import('../views/LevelCards.vue')
+    component: () => import('../views/LevelCards.vue'),
+    meta: {
+      needsUser: true,
+    }
   },
   {
     path: '/push',

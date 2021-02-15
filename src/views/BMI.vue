@@ -5,7 +5,7 @@
     <b-container fluid class="container mt-4">
       <b-row class="d-flex inline-flex justify-content-start">
         <b-col class="mr-4 ml-3">
-          <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar" />
+          <img :src="store.userPicture"  alt="profile pic" class="avatar">
           <h3 class="mt-3">{{ store.displayName }}</h3>
           <router-link to="/editprofile">
             <button type="button" class="btn btn-secondary">
@@ -64,7 +64,7 @@
               <label :for="`type-Height`"> Height </label>
             </b-col>
             <b-col sm="5">
-              <b-form-input :id="`type-Height`" v-model="Height"></b-form-input>
+              <b-form-input :id="`type-Height`" v-model="Height" placeholder="Enter your height in cm"></b-form-input>
             </b-col>
           </b-row>
           <b-row class="my-1 mt-3">
@@ -72,7 +72,7 @@
               <label :for="`type-Weight`"> Weight </label>
             </b-col>
             <b-col sm="5">
-              <b-form-input :id="`type-Weight`" v-model="Weight"></b-form-input>
+              <b-form-input :id="`type-Weight`" v-model="Weight" placeholder="Enter your weight in kg"></b-form-input>
             </b-col>
           </b-row>
 
@@ -120,8 +120,8 @@
           Number(this.Weight) /
           Number((this.Height / 100) * (this.Height / 100))
         ).toFixed(2);
-        this.$bvToast.toast(`This is the bmi ${this.bmi}`, {
-          title: "BootstrapVue Toast",
+        this.$bvToast.toast(`${this.bmi}`, {
+          title: "Your BMI",
           autoHideDelay: 5000,
           toaster: "b-toaster-top-center",
           appendToast: append,

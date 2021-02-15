@@ -5,7 +5,7 @@
     <b-container fluid class="container mt-4">
       <b-row class="d-flex inline-flex justify-content-start">
         <b-col class="mr-4 ml-3">
-          <img src="@/assets/avatar.jpg" alt="Avatar" class="avatar">
+          <img :src="store.userPicture"  alt="profile pic" class="avatar">
           <h3 class="mt-3">{{ store.displayName }}</h3>
           <router-link to="/editprofile">
           <button type="button" class="btn btn-secondary">Edit Profile</button>

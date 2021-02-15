@@ -151,6 +151,7 @@ export default {
           store.displayName = that.name;
           store.currentUser = that.email;
           store.password = that.password;
+          store.userPicture = that.url;
               //alert('Uspješna registracija');
               that.$router.replace({name: "Parameters" });
         })
