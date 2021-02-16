@@ -153,7 +153,7 @@ export default {
           store.password = that.password;
           store.userPicture = that.url;
               //alert('Uspješna registracija');
-              that.$router.replace({name: "Parameters" });
+              that.$router.replace({name: "Choose" });
         })
 
        .then((user) => {

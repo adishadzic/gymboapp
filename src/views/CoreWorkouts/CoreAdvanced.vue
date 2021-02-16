@@ -6,7 +6,7 @@
         <div class="video embed-responsive embed-responsive-16by9 mt-5">
           <iframe
             class="embed-responsive-item"
-            src="https://www.youtube.com/embed/RjexvOAsVtI"
+            src="https://www.youtube.com/embed/-hqYWRib5y8"
             allowfullscreen
           ></iframe>
         </div>
@@ -52,7 +52,7 @@ export default {
   },
   methods: {
     clickToDashboard(){
-      this.$router.push('/Dashboard');
+      this.$router.push('/dashboard/overview');
     }
   }
 };
