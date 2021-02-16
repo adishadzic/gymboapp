@@ -17,7 +17,7 @@
         <b-col cols="8">
           <b-row no-gutters>
             <b-col>
-              <router-link to="/dashboard/overview" class="nav-link active text-light active"><img src="@/assets/dumbbell.png" class="mr-1" height="20">Overview</router-link>
+              <router-link to="/dashboard/overview" class="nav-link active text-light active"><img src="@/assets/overview.png" class="mr-1" height="20">Overview</router-link>
             </b-col>
             
             <b-col>
