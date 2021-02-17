@@ -29,7 +29,7 @@
       <img class="img" src="@/assets/legs2.jpg">
       <div class="info">
         <h1>LEGS</h1>
-        <p>These workouts target your hamstrings, quads, and gluteus</p>
+        <p>These workouts target your hamstrings, quads, and gluteus.</p>
         <b-button pill variant="primary" class="btn" @click="goToLegs">GO TO</b-button>
       </div>
     </div>
