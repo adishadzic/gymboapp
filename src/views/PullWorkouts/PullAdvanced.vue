@@ -54,7 +54,7 @@ export default {
   },
   methods: {
     clickToDashboard(){
-      this.$router.push('/Dashboard');
+      this.$router.push('/dashboard/overview');
     }
   }
 };

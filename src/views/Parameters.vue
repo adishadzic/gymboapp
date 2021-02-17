@@ -98,12 +98,12 @@ export default {
           });
         } else if (selectedLevel === "level2") {
           this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Advanced", goal: "Maintain healthy lifestyle" },
           });
         } else if (selectedLevel === "level3") {
           this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Intermediate", goal: "Maintain healthy lifestyle" },
           });
         } else {
@@ -112,17 +112,17 @@ export default {
       } else if (selectedGoal === "goal2") {
         if (selectedLevel === "level1") {
           this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Beginer", goal: "Lose weight" },
           });
         } else if (selectedLevel === "level2") {
           this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Advanced", goal: "Lose weight" },
           });
         } else if (selectedLevel === "level3") {
           this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Intermediate", goal: "Lose weight" },
           });
         } else {
@@ -131,17 +131,17 @@ export default {
       } else if (selectedGoal === "goal3") {
         if (selectedLevel === "level1") {
              this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Beginer", goal: "Put on muscle mass" },
           });
         } else if (selectedLevel === "level2") {
              this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Advanced", goal: "Put on muscle mass" },
           });
         } else if (selectedLevel === "level3") {
              this.$router.push({
-            name: "view",
+            name: "MyPlan",
             params: { level: "Intermediate", goal: "Put on muscle mass" },
           });
         } else {

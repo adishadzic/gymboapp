@@ -74,7 +74,7 @@ export default {
             .then((result) => {
               console.log("uspjesna prijava", result);
               check.passwordCheck=true;
-              this.$router.replace({name: "Home" });
+              this.$router.replace({name: "Overview" });
             })
             
              

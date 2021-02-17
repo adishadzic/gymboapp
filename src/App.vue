@@ -10,7 +10,7 @@
     <div class="collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ml-auto">
         <li v-if="store.currentUser" class="nav-item">
-          <router-link to="/dashboard" class="nav-link text-light mr-2">Dashboard</router-link>
+          <router-link to="/dashboard/overview" class="nav-link text-light mr-2" style="text-transform: uppercase">Dashboard</router-link>
         </li>
         <li v-if="!store.currentUser" class="nav-item">
             <router-link to="/login" class="nav-link text-light">Login</router-link>
@@ -18,14 +18,17 @@
         <li v-if="!store.currentUser" class="nav-item">
           <router-link to="/register" class="nav-link text-light">Register</router-link>
         </li>
-        <li v-if="store.currentUser" class="nav-item">
-          <img src="@/assets/notification-bell.png" class="notification mr-2" @click="showToast" width="35" height="35"/>
+        <li v-if="store.currentUser" class="nav-item mr-3">
+          <img src="@/assets/notification.png" class="notification" @click="showToast" width="34" height="34"/>
         </li>
-        <li v-if="store.currentUser" class="nav-item">
-          <a href="https://gymbofipu.wordpress.com/" target="_blank"><img src="@/assets/shopping-cart.png" class="shopping-cart mr-2" width="35" height="35"/></a>
+        <li v-if="store.currentUser" class="nav-item mt-1 mr-3">
+          <a href="https://gymbofipu.wordpress.com/" target="_blank"><img src="@/assets/shopping-cart.png" class="shopping-cart" width="34" height="34"/></a>
         </li>
          <li v-if="store.currentUser" class="nav-item">
-          <a href="#" @click.prevent="logout()" class="nav-link">Logout</a>
+          <a href="#" @click.prevent="logout()" class="nav-link text-light" style="text-transform: uppercase">Logout</a>
+        </li>
+        <li v-if="store.currentUser" class="nav-item">
+          <img :src="store.userPicture" alt="profile pic" variant="primary" @click="makeToast('primary')" style="border-radius:50%" width="35" height="35" />
         </li>
       </ul>
     </div>
@@ -86,6 +89,14 @@ export default {
   },
   
   methods: {
+    makeToast() {
+        this.$bvToast.toast(store.currentUser, {
+          title: 'User:',
+          size: 'sm',
+          buttonSize: 'sm',
+          okVariant: 'success',
+        })
+      },
     logout() {
       firebase
         .auth()
@@ -188,6 +199,7 @@ export default {
                 store.displayName = doc.data().name;
                 store.currentUser = doc.data().email;
                 store.password = doc.data().password;
+                store.userPicture = doc.data().userPicture;
               }
               else{
                 console.log("Document undefined");
